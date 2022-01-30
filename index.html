@@ -108,18 +108,64 @@
             <div class="projects__list">
                 <article class="project">
                     <div class="project__wrapper">
-                        <img class="project__img" src="assets/shlist_1.jpg">
+                        <div class="project__carousel">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 's', 6)" src="assets/shlist_1.jpg" data-iid="s0">
+                            <img class="project__img" src="assets/shlist_2.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s1">
+                            <img class="project__img" src="assets/shlist_3.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s2">
+                            <img class="project__img" src="assets/shlist_4.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s3">
+                            <img class="project__img" src="assets/shlist_5.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s4">
+                            <img class="project__img" src="assets/shlist_6.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s5">
+                        </div>
                         <div></div>
                     </div>
-                </article>                <article class="project">
+                </article>               
+                <article class="project">
                     <div class="project__wrapper">
-                        <img class="project__img" src="assets/yoursnext_1.jpg">
+                        <div class="project__carousel">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'y', 5)" src="assets/yoursnext_1.jpg" data-iid="y0">
+                            <img class="project__img" src="assets/yoursnext_2.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y1">
+                            <img class="project__img" src="assets/yoursnext_3.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y2">
+                            <img class="project__img" src="assets/yoursnext_4.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y3">
+                            <img class="project__img" src="assets/yoursnext_5.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y4">
+                        </div>
                         <div></div>
                     </div>
                 </article>
                 <article class="project">
                     <div class="project__wrapper">
-                        <img class="project__img" src="assets/cw_1.jpg">
+                        <div class="project__carousel">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'u', 4)" src="assets/upup_1.jpg" data-iid="u0">
+                            <img class="project__img" src="assets/upup_2.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u1">
+                            <img class="project__img" src="assets/upup_3.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u2">
+                            <img class="project__img" src="assets/upup_4.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u3">
+                        </div>
+                        <section class="project__info">
+                                <p class="project__text">
+                                    Built a full stack application actualizing a design (done with Figma) and
+                                    using React & Express.js. It allows to create and save shopping lists, to
+                                    review shopping history and statistics.
+                                    • Used Redux (Redux Toolkit approach) for complex state management and
+                                    a relational database management system (SQLite) for storage. 
+                                </p>
+                        </section>
+                    </div>
+                </article>
+                <article class="project">
+                    <div class="project__wrapper">
+                        <div class="project__carousel">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'c', 2)" src="assets/cw_1.jpg" data-iid="c0">
+                            <img class="project__img" src="assets/cw_2.jpg" onClick="changeActiveImg(event, 'c', 2)" data-iid="c1">
+                        </div>
+                        <div></div>
+                    </div>
+                </article>
+                <article class="project">
+                    <div class="project__wrapper">
+                        <div class="project__carousel">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'i', 3)" src="assets/iu_1.jpg" data-iid="i0">
+                            <img class="project__img" src="assets/iu_2.jpg" onClick="changeActiveImg(event, 'i', 3)" data-iid="i1">
+                            <img class="project__img" src="assets/iu_3.jpg" onClick="changeActiveImg(event, 'i', 3)" data-iid="i2">
+                        </div>
                         <div></div>
                     </div>
                 </article>
@@ -140,6 +186,20 @@
             projectSlider.style.left = `${idx * -100}vw`;
             target.classList.remove('projects__title--selected');
             title.classList.add('projects__title--selected');
+        }
+
+        function changeActiveImg(e, project, imgNum) {
+            const target = e.currentTarget;
+            const idx = Number(target.dataset.iid[1]) + 1; // only numbers till 10s
+            let img;
+            if (idx === imgNum) {
+                img = document.querySelector(`.project__img[data-iid="${project}${0}"]`); 
+            } else {
+                img = document.querySelector(`.project__img[data-iid="${project}${idx}"]`);
+            }
+
+            target.classList.remove('project__img--active');
+            img.classList.add('project__img--active');
         }
     </script>
 </body>
