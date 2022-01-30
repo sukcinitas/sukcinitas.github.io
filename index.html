@@ -36,18 +36,20 @@
     <main class="main">
 
         <div class="about">
-            <h1 class="about__title">
-                Full Stack
-            </h1>
-            <h1 class="about__title">
-                Dev.
-            </h1>
-            <p class="about__text">
-                <span class="about__category">About</span>
-                I'm a self-driven and highly motivated developer transitioning from the field of
-                medicine. Looking for opportunities to launch a professional career where I can
-                apply acquired skills.
-            </p>
+            <div class="about__wrapper">
+                <h1 class="about__title">
+                    Full Stack
+                </h1>
+                <h1 class="about__title">
+                    Dev.
+                </h1>
+                <p class="about__text">
+                    <span class="about__category">About</span>
+                    I'm a self-driven and highly motivated developer transitioning from the field of
+                    medicine. Looking for opportunities to launch a professional career where I can
+                    apply acquired skills.
+                </p>
+            </div>
         </div>
 
         </div>
@@ -94,8 +96,34 @@
 
         <div class="projects">
             <span class="projects__category">
-                Projects
+                Pet Projects
             </span>
+            <div class="projects__titles">
+                <h4 onClick="slideProjectIn(0)" class="projects__title projects__title--selected" data-tid="0">Shopping List</h4>
+                <h4 onClick="slideProjectIn(1)" class="projects__title" data-tid="1">Yours Next</h4>
+                <h4 onClick="slideProjectIn(2)" class="projects__title" data-tid="2">Up up</h4>
+                <h4 onClick="slideProjectIn(3)" class="projects__title" data-tid="3">Cats Wiki</h4>
+                <h4 onClick="slideProjectIn(4)" class="projects__title" data-tid="4">Image Uploader</h4>
+            </div>
+            <div class="projects__list">
+                <article class="project">
+                    <div class="project__wrapper">
+                        <img class="project__img" src="assets/shlist_1.jpg">
+                        <div></div>
+                    </div>
+                </article>                <article class="project">
+                    <div class="project__wrapper">
+                        <img class="project__img" src="assets/yoursnext_1.jpg">
+                        <div></div>
+                    </div>
+                </article>
+                <article class="project">
+                    <div class="project__wrapper">
+                        <img class="project__img" src="assets/cw_1.jpg">
+                        <div></div>
+                    </div>
+                </article>
+            </div>
         </div>
     </main>
 
@@ -104,6 +132,15 @@
     </footer class="footer">
 
     <script>
+        function slideProjectIn(idx) {
+            const projectSlider = document.querySelector('.projects__list');
+            const target = document.querySelector('.projects__title--selected');
+            const title = document.querySelector(`.projects__title[data-tid="${idx}"]`);
+
+            projectSlider.style.left = `${idx * -100}vw`;
+            target.classList.remove('projects__title--selected');
+            title.classList.add('projects__title--selected');
+        }
     </script>
 </body>
 </html>
