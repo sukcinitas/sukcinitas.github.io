@@ -1,0 +1,262 @@
+@use 'styles/reset';
+@use 'styles/colors';
+
+
+$dark-1: #111;
+$gray-1: #ccc;
+$gray-2: #999; 
+$bright-1: rgb(81, 199, 199);
+$gradient-1: linear-gradient(to right, #3a1c71 , #d76d77 , #ffaf7b);
+$gradient-2: linear-gradient(to right, #756792 , #9c6b6f , #c5a086);
+$page-margin: 4rem;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    &:visited, &:active,  &:focus {
+        color: $gray-2;
+        text-decoration: none;
+    }
+    &:hover {
+        color: transparent;
+    }
+}
+
+
+body {
+    margin: $page-margin;
+    background-color: $dark-1;
+    font-family: 'Teko', sans-serif;
+    color: $gray-2;
+}
+
+.header {
+    $font-size: 18px;
+    position: sticky;
+    padding: 1rem 0;
+    top: 0;
+    background-color: $dark-1;
+    font-family: inherit;
+    color: $gray-2;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: $gradient-1;
+        background-clip: text;
+    }
+
+    &__brand-wrapper {
+        display: flex;
+        justify-content: space-between;   
+        width: 40%;
+    }
+
+    &__brand {
+        font-size: 20px;
+        color: $gray-1;
+    }
+
+    &__brand-additional {
+        font-size: 18px; 
+        align-self: flex-end;
+    }
+
+    &__contact-info {
+        display: flex;
+        font-family: inherit;
+        font-size: $font-size;
+    }
+
+    &__contact-info-item {
+        color: $gray-2;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+
+        & i {
+            font-size: calc(#{$font-size} + 4px);
+            margin-right: 4px;
+        }
+    }
+}
+
+.about {
+    background-image: $gradient-2;
+    background-clip: text;
+    background-size: 400%;
+    animation: bg-animation 12s infinite alternate;
+
+    & h1:last-of-type {
+        margin-right: 4rem;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-size: 13vw;
+        line-height: 14vw;
+        margin: 0;
+        text-transform: uppercase;
+        color: $gray-2;
+        display: inline-block;
+        color: transparent;
+        font-family: 'Black Ops One', cursive;
+    }
+
+    &__text {
+        max-width: 400px;
+        font-size: 18px;
+        display: inline-block;
+    }
+
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.tech-stack {
+    display: flex;
+    flex-direction: column;
+
+    &__tech {
+        background-image: $gradient-1;
+        background-clip: text;
+        color: transparent; 
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 10px;
+
+        & > i {
+            font-size: 4rem;
+            padding: 10px;
+            position: relative;
+            top: 0px;
+            opacity: 1;
+            animation: stack-animation 500ms;
+        }
+    }
+
+    &__list-category {
+        color: $bright-1;
+        font-size: 16px;
+        border-top: 2px solid $bright-1;
+        margin: 2rem 0;
+    }
+}
+
+.about,
+.tech-stack,
+.projects {
+    min-height: 100vh;
+    padding: 6rem 0 6rem;
+
+    &:not(:first-child) {
+        padding: 6rem 0;
+        border-top: 1px solid rgb(48, 48, 48);
+    }
+
+    &__category {
+        text-transform: uppercase;
+        color: $bright-1;
+        font-size: 28px;
+        margin-right: 1rem;
+
+        &::after {
+            content: ":";
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 4rem;
+}
+
+.header__brand,
+.header__brand-additional,
+.header__contact-info-item {
+    color: $gray-2; 
+
+    &:hover {
+        color: transparent;
+    }
+
+    & i:hover {
+        & + a {
+            color: transparent; 
+        }
+    }
+}
+
+.header__brand,
+.header__brand-additional {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+@keyframes stack-animation {
+    0% {
+        top: -20px;
+        opacity: 0.1;
+    }
+    90% {
+        top: 8px;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+
+        &__wrapper {
+            align-items: flex-start;
+        }
+        &__contact-info {
+            flex-direction: column;
+        }
+    }
+
+    .tech-stack {
+        &__list {
+
+            & i {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
