@@ -59,37 +59,37 @@
             <div class="tech-stack__tech">
                 <div class="tech-stack__list">
                     <span class="tech-stack__list-category">_lang</span>
-                    <i class="devicon-html5-plain"></i>
-                    <i class="devicon-css3-plain"></i>
-                    <i class="devicon-javascript-plain"></i>
-                    <i class="devicon-typescript-plain"></i>
-                    <i class="devicon-python-plain"></i>
+                    <i class="devicon-html5-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-css3-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-javascript-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-typescript-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-python-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                 </div>
 
                 <div class="tech-stack__list">
-                    <span class="tech-stack__list-category">_front-end</span>
-                    <i class="devicon-sass-original"></i>
-                    <i class="devicon-react-original"></i>
-                    <i class="devicon-redux-original"></i>
-                    <i class="devicon-vuejs-plain-wordmark"></i>
-                    <i class="devicon-d3js-plain"></i>
+                    <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_front-end</span>
+                    <i class="devicon-sass-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-react-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-redux-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-vuejs-plain-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-d3js-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                 </div>
 
                 <div class="tech-stack__list">
-                    <span class="tech-stack__list-category">_back-end</span>
-                    <i class="devicon-nodejs-plain"></i>
-                    <i class="devicon-express-original-wordmark"></i>
-                    <i class="devicon-socketio-original"></i>
-                    <i class="devicon-django-plain"></i>
-                    <i class="devicon-mongodb-plain-wordmark"></i>  
+                    <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_back-end</span>
+                    <i class="devicon-nodejs-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-express-original-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-socketio-original-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-django-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-mongodb-plain-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>  
                 </div>
 
                 <div class="tech-stack__list">
-                    <span class="tech-stack__list-category">_tools</span>
-                    <i class="devicon-webpack-plain"></i>
-                    <i class="devicon-babel-plain"></i>
-                    <i class="devicon-github-original"></i>
-                    <i class="devicon-vscode-plain"></i>
+                    <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_tools</span>
+                    <i class="devicon-webpack-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-babel-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-github-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
+                    <i class="devicon-vscode-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                 </div>
             </div>
         </div>
@@ -200,6 +200,15 @@
 
             target.classList.remove('project__img--active');
             img.classList.add('project__img--active');
+        }
+
+        function toggleDevIcon (e) {
+            const target = e.currentTarget;
+            if (target.classList.contains('colored')) {
+                target.classList.remove('colored');
+            } else {
+                target.classList.add('colored');  
+            }
         }
     </script>
 </body>
