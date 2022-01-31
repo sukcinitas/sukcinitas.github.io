@@ -142,7 +142,7 @@ body {
     flex-direction: column;
 
     &__tech {
-        background-image: $gradient-2;
+        background-image: $gradient-1;
         background-clip: text;
         color: transparent; 
         display: flex;
@@ -345,37 +345,31 @@ body {
     }
 }
 
-// @for $i from 1 through 6 {
-//     .tech-stack__list > i:nth-child(#{$i}) {
-//         animation: stack-animation 1000ms calc(200ms * #{$i} + 1000ms);
-//         animation-fill-mode: forwards;
-//     }
-// }
 
 @for $i from 2 through 6 {
-    .tech-stack__list:nth-child(1) i:nth-child(#{$i}) {
-        animation: stack-animation 1000ms calc(200ms * #{$i} + 1000ms);
+    .tech-stack__list:nth-child(1) i.active:nth-child(#{$i}) {
+        animation: stack-animation 1000ms calc(200ms * #{$i});
         animation-fill-mode: forwards;
     }
 }
 
 @for $i from 2 through 6 {
-    .tech-stack__list:nth-child(2) i:nth-child(#{$i}) {
-        animation: stack-animation 1000ms calc(200ms * #{$i} + 1600ms);
+    .tech-stack__list:nth-child(2) i.active:nth-child(#{$i}) {
+        animation: stack-animation 1000ms calc(200ms * #{$i} + 600ms);
         animation-fill-mode: forwards;
     }
 }
 
 @for $i from 2 through 6 {
-    .tech-stack__list:nth-child(3) i:nth-child(#{$i}) {
-        animation: stack-animation 1000ms calc(200ms * #{$i} + 2200ms);
+    .tech-stack__list:nth-child(3) i.active:nth-child(#{$i}) {
+        animation: stack-animation 1000ms calc(200ms * #{$i} + 1200ms);
         animation-fill-mode: forwards;
     }
 }
 
 @for $i from 2 through 5 {
-    .tech-stack__list:nth-child(4) i:nth-child(#{$i}) {
-        animation: stack-animation 1000ms calc(200ms * #{$i} + 2800ms);
+    .tech-stack__list:nth-child(4) i.active:nth-child(#{$i}) {
+        animation: stack-animation 1000ms calc(200ms * #{$i} + 1800ms);
         animation-fill-mode: forwards;
     }
 }
@@ -393,6 +387,10 @@ body {
     0% {
         top: -80px;
         opacity: 0;
+    }
+    90% {
+        top: 2px;
+        opacity: 1; 
     }
     100% {
         top: 0px;

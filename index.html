@@ -215,6 +215,28 @@
                 target.classList.add('colored');  
             }
         }
+
+        function comesInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            console.log(rect.top, rect.bottom)
+            return (rect.top >= 100 && rect.top < 500) || (rect.bottom >= 400 && rect.bottom < 1200);
+        }
+
+        document.addEventListener('scroll', function () {
+            const el = document.querySelector('.tech-stack');
+            const divs = document.querySelectorAll('.tech-stack__list i');
+            if (comesInViewport(el)) {
+                for (var i = 0; i < divs.length; i++) {
+                    divs[i].classList.add('active');
+                }
+            } else {
+                for (var i = 0; i < divs.length; i++) {
+                    divs[i].classList.remove('active');
+                }
+            }
+        }, {
+            passive: true
+        });
     </script>
 </body>
 </html>
