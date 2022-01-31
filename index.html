@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@400;600&family=Tourney:wght@500&display=swap" rel="stylesheet"> 
     <link href="styles.css" rel="stylesheet">
     <title>gintarė černiauskaitė | portfolio</title>
 </head>
@@ -99,81 +99,145 @@
             <span class="projects__category">
                 Pet Projects
             </span>
-            <div class="projects__titles">
-                <h4 onClick="slideProjectIn(0)" class="projects__title projects__title--selected" data-tid="0"><span>01.</span>Shopping List</h4>
-                <h4 onClick="slideProjectIn(1)" class="projects__title" data-tid="1"><span>02.</span>Yours Next</h4>
-                <h4 onClick="slideProjectIn(2)" class="projects__title" data-tid="2"><span>03.</span>Up up</h4>
-                <h4 onClick="slideProjectIn(3)" class="projects__title" data-tid="3"><span>04.</span>Cats Wiki</h4>
-                <h4 onClick="slideProjectIn(4)" class="projects__title" data-tid="4"><span>05.</span>Image Uploader</h4>
-            </div>
             <div class="projects__list">
                 <article class="project">
                     <div class="project__wrapper">
                         <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 's', 6)" src="assets/shlist_1.jpg" data-iid="s0">
-                            <img class="project__img" src="assets/shlist_2.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s1">
-                            <img class="project__img" src="assets/shlist_3.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s2">
-                            <img class="project__img" src="assets/shlist_4.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s3">
-                            <img class="project__img" src="assets/shlist_5.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s4">
-                            <img class="project__img" src="assets/shlist_6.jpg" onClick="changeActiveImg(event, 's', 6)" data-iid="s5">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 's', 6, 1)" src="assets/shlist_1.jpg" data-iid="s0">
+                            <img class="project__img" src="assets/shlist_2.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s1">
+                            <img class="project__img" src="assets/shlist_3.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s2">
+                            <img class="project__img" src="assets/shlist_4.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s3">
+                            <img class="project__img" src="assets/shlist_5.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s4">
+                            <img class="project__img" src="assets/shlist_6.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s5">
                         </div>
-                        <div></div>
+                        <span class="project__img-num">01/06</span>
+                        <section class="project__info">
+                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <h3 class="project__title">Shopping List</h3>
+                            <p class="project__links">
+                                <a><i class="devicon-github-original"></i></a>
+                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                            </p>
+                            <p class="project__text">
+                                Built a full stack application actualizing a design (done with Figma) and
+                                using React & Express.js. It allows to create and save shopping lists, to
+                                review shopping history and statistics.
+                                Used Redux (Redux Toolkit approach) for complex state management and
+                                a relational database management system (SQLite) for storage. 
+                            </p>
+                        </section>
                     </div>
                 </article>               
                 <article class="project">
                     <div class="project__wrapper">
                         <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'y', 5)" src="assets/yoursnext_1.jpg" data-iid="y0">
-                            <img class="project__img" src="assets/yoursnext_2.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y1">
-                            <img class="project__img" src="assets/yoursnext_3.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y2">
-                            <img class="project__img" src="assets/yoursnext_4.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y3">
-                            <img class="project__img" src="assets/yoursnext_5.jpg" onClick="changeActiveImg(event, 'y', 5)" data-iid="y4">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'y', 5, 2)" src="assets/yoursnext_1.jpg" data-iid="y0">
+                            <img class="project__img" src="assets/yoursnext_2.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y1">
+                            <img class="project__img" src="assets/yoursnext_3.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y2">
+                            <img class="project__img" src="assets/yoursnext_4.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y3">
+                            <img class="project__img" src="assets/yoursnext_5.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y4">
                         </div>
-                        <div></div>
+                        <span class="project__img-num">01/05</span>
+                        <section class="project__info">
+                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <h3 class="project__title">Yours Next</h3>
+                            <p class="project__links">
+                                <a><i class="devicon-github-original"></i></a>
+                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                            </p>
+                            <p class="project__text">
+                                Built a MEVN (MongoDB, Express.js, Vue.js, Node.js) full stack application
+                                that allows to create groups with shared playlists stored in the database,
+                                to watch Youtube videos separately or in a synchronized manner among
+                                group members and to chat in real-time using Socket.io.
+                                Utilized Youtube Data API, Youtube IFrame Player API, Web Storage API
+                                (sessionStorage).
+                            </p>
+                        </section>
                     </div>
                 </article>
                 <article class="project">
                     <div class="project__wrapper">
                         <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'u', 4)" src="assets/upup_1.jpg" data-iid="u0">
-                            <img class="project__img" src="assets/upup_2.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u1">
-                            <img class="project__img" src="assets/upup_3.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u2">
-                            <img class="project__img" src="assets/upup_4.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u3">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'u', 4, 3)" src="assets/upup_1.jpg" data-iid="u0">
+                            <img class="project__img" src="assets/upup_2.jpg" onClick="changeActiveImg(event, 'u', 4, 3)" data-iid="u1">
+                            <img class="project__img" src="assets/upup_3.jpg" onClick="changeActiveImg(event, 'u', 4, 3)" data-iid="u2">
+                            <img class="project__img" src="assets/upup_4.jpg" onClick="changeActiveImg(event, 'u', 4, 3)" data-iid="u3">
                         </div>
-                    </div>
-                    <section class="project__info">
-                        <p class="project__links">
-                            <a><i class="devicon-github-original"></i></a>
-                            <a><i class="fa fa-link" aria-hidden="true"></i></a>
-                        </p>
-                        <p class="project__text">
-                            Built a full stack application actualizing a design (done with Figma) and
-                            using React & Express.js. It allows to create and save shopping lists, to
-                            review shopping history and statistics.
-                            Used Redux (Redux Toolkit approach) for complex state management and
-                            a relational database management system (SQLite) for storage. 
-                        </p>
-                    </section>
-                </article>
-                <article class="project">
-                    <div class="project__wrapper">
-                        <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'c', 2)" src="assets/cw_1.jpg" data-iid="c0">
-                            <img class="project__img" src="assets/cw_2.jpg" onClick="changeActiveImg(event, 'c', 2)" data-iid="c1">
-                        </div>
-                        <div></div>
+                        <span class="project__img-num">01/04</span>
+                        <section class="project__info">
+                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <h3 class="project__title">Up up</h3>
+                            <p class="project__links">
+                                <a><i class="devicon-github-original"></i></a>
+                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                            </p>
+                            <p class="project__text">
+                                Built a MERN (MongoDB, Express.js, React, Node.js) full stack application
+                                that allows authenticated and unauthenticated users to vote in polls
+                                while authenticated users are allowed to create polls and to manage their
+                                profile information (change email, password, delete account) and polls.
+                                Poll results are represented in a D3.js chart.
+                                Increased app security by implementing user input validation, cookie
+                                protection, protection against brute force attack.
+                                During development the app was migrated from JavaScript to TypeScript.
+                            </p>
+                        </section>
                     </div>
                 </article>
                 <article class="project">
                     <div class="project__wrapper">
                         <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'i', 3)" src="assets/iu_1.jpg" data-iid="i0">
-                            <img class="project__img" src="assets/iu_2.jpg" onClick="changeActiveImg(event, 'i', 3)" data-iid="i1">
-                            <img class="project__img" src="assets/iu_3.jpg" onClick="changeActiveImg(event, 'i', 3)" data-iid="i2">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'c', 2, 4)" src="assets/cw_1.jpg" data-iid="c0">
+                            <img class="project__img" src="assets/cw_2.jpg" onClick="changeActiveImg(event, 'c', 2, 4)" data-iid="c1">
                         </div>
-                        <div></div>
+                        <span class="project__img-num">01/02</span>
+                        <section class="project__info">
+                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <h3 class="project__title">Cats Wiki</h3>
+                            <p class="project__links">
+                                <a><i class="devicon-github-original"></i></a>
+                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                            </p>
+                            <p class="project__text">
+                                Built a responsive React & Express.js app that fetches information about
+                                cat breeds from CatAPI and keeps track of the most searched ones.
+                                While building this app I improved my skills regarding responsive design,
+                                images, and TypeScript.
+                            </p>
+                        </section>
                     </div>
                 </article>
+                <article class="project">
+                    <div class="project__wrapper">
+                        <div class="project__carousel">
+                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'i', 3, 5)" src="assets/iu_1.jpg" data-iid="i0">
+                            <img class="project__img" src="assets/iu_2.jpg" onClick="changeActiveImg(event, 'i', 3, 5)" data-iid="i1">
+                            <img class="project__img" src="assets/iu_3.jpg" onClick="changeActiveImg(event, 'i', 3, 5)" data-iid="i2">
+                        </div>
+                        <span class="project__img-num">01/03</span>
+                        <section class="project__info">
+                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                            <h3 class="project__title">Image Uploader</h3>
+                            <p class="project__links">
+                                <a><i class="devicon-github-original"></i></a>
+                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                            </p>
+                            <p class="project__text">
+                                Built a responsive React & Express.js app that allows to upload images
+                                with removed EXIF data.
+                                Practised file upload, drop events, used browser Clipboard API.
+                            </p>
+                        </section>
+                    </div>
+                </article>
+            </div>
+            <div class="projects__titles">
+                <span onClick="slideProjectIn(0)" class="projects__title projects__title--selected" data-tid="0"><span></span></span>
+                <span onClick="slideProjectIn(1)" class="projects__title" data-tid="1"><span></span></span>
+                <span onClick="slideProjectIn(2)" class="projects__title" data-tid="2"><span></span></span>
+                <span onClick="slideProjectIn(3)" class="projects__title" data-tid="3"><span></span></span>
+                <span onClick="slideProjectIn(4)" class="projects__title" data-tid="4"><span></span></span>
             </div>
         </div>
     </main>
@@ -193,16 +257,20 @@
             title.classList.add('projects__title--selected');
         }
 
-        function changeActiveImg(e, project, imgNum) {
+        function changeActiveImg(e, project, imgNum, projectNum) {
             const target = e.currentTarget;
             const idx = Number(target.dataset.iid[1]) + 1; // only numbers till 10s
+            const imgTrackList = Array.from(document.querySelectorAll(`.project__img-num`));
+            const imgTrack = imgTrackList[projectNum - 1];
             let img;
             if (idx === imgNum) {
                 img = document.querySelector(`.project__img[data-iid="${project}${0}"]`); 
+                imgTrack.innerHTML = `01/0${imgNum}`;
             } else {
                 img = document.querySelector(`.project__img[data-iid="${project}${idx}"]`);
-            }
+                imgTrack.innerHTML = `0${idx + 1}/0${imgNum}`;
 
+            }
             target.classList.remove('project__img--active');
             img.classList.add('project__img--active');
         }
@@ -237,6 +305,22 @@
         }, {
             passive: true
         });
+
+        function toggleInfo(e) {
+            const target = e.target;
+            const isMinified = target.classList.contains('fa-chevron-up');
+            if (isMinified) {
+                const parent = target.parentElement.parentElement;
+                target.classList.remove('fa-chevron-up');
+                target.classList.add('fa-chevron-down');                
+                parent.style.top = 'auto';
+            } else {
+                const parent = target.parentElement.parentElement;
+                target.classList.add('fa-chevron-up');
+                target.classList.remove('fa-chevron-down');
+                parent.style.top = '550px';
+            }
+        }
     </script>
 </body>
 </html>
