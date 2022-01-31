@@ -178,6 +178,25 @@ body {
     display: flex;
     flex-direction: column;
 
+    &__display {
+        background-image: $gradient-1;
+        background-clip: text;
+        font-size: 1.2rem;
+        & i {
+            font-size: 1.8rem;
+            padding: 1rem;
+
+            &:hover {
+                color: transparent;
+                cursor: pointer;   
+            }
+        }
+        & i.selected {
+            color: transparent;
+        }
+        margin-top: -4rem;
+    }
+
     &__titles {
         background-image: $gradient-1;
         background-clip: text;
@@ -185,6 +204,10 @@ body {
         font-size: 2.4rem;
         justify-content: center;
         margin: 4rem;
+
+        &--list {
+            display: none;
+        }
     }
 
     &__title {
@@ -212,6 +235,10 @@ body {
         position: relative;
         display: flex;
         width: 100vw;
+
+        &--list {
+            flex-direction: column;
+        }
     }
 }
 
@@ -222,7 +249,7 @@ body {
     flex-shrink: 0;
     display: flex;
     justify-content: center;
-
+    margin: 10rem 0 0;
 
     &__wrapper {
         position: relative;
@@ -247,7 +274,6 @@ body {
         position: absolute;
         bottom: 0;
         right: 0;
-        left: 0;
         z-index: -1;
         &:hover {
             cursor: pointer;
@@ -326,8 +352,8 @@ body {
     &__category {
         text-transform: uppercase;
         color: $bright-1;
-        font-size: 28px;
-        margin-right: 1rem;
+        font-size: 4rem;
+        margin: 4rem 1rem 4rem 0;
 
         &::after {
             content: ":";
@@ -421,7 +447,7 @@ body {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 840px) {
     :root {
         font-size: 12px;
     }

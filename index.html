@@ -99,6 +99,10 @@
             <span class="projects__category">
                 Pet Projects
             </span>
+            <span class="projects__display"> Choose display:
+                <i class="fa fa-ellipsis-h selected" aria-hidden="true" onClick="chooseDisplay(event)"></i>
+                <i class="fa fa-list" aria-hidden="true" onClick="chooseDisplay(event)"></i>
+            </span>
             <div class="projects__list">
                 <article class="project">
                     <div class="project__wrapper">
@@ -187,7 +191,7 @@
                 </article>
                 <article class="project">
                     <div class="project__wrapper">
-                        <div class="project__carousel">
+                        <div class="project__carousel" style="width: 500px;">
                             <img class="project__img project__img--active" onClick="changeActiveImg(event, 'c', 2, 4)" src="assets/cw_1.jpg" data-iid="c0">
                             <img class="project__img" src="assets/cw_2.jpg" onClick="changeActiveImg(event, 'c', 2, 4)" data-iid="c1">
                         </div>
@@ -320,6 +324,27 @@
                 target.classList.remove('fa-chevron-down');
                 parent.style.top = '550px';
             }
+        }
+
+        function chooseDisplay(e) {
+            const target = e.target;
+            const list = document.querySelector('.projects__list');
+            const titles = document.querySelector('.projects__titles');
+            let sibling;
+            list.style.left = 0;
+            if (target.classList.contains('fa-ellipsis-h')) {
+                sibling = target.nextElementSibling;
+                list.classList.remove('projects__list--list');
+                titles.classList.remove('projects__titles--list');
+
+            } else {
+                sibling = target.previousElementSibling;
+                list.classList.add('projects__list--list');
+                titles.classList.add('projects__titles--list');
+            }
+            console.log(sibling);
+            target.classList.add('selected');
+            sibling.classList.remove('selected');
         }
     </script>
 </body>
