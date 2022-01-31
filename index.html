@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="styles.css" rel="stylesheet">
     <title>gintarė černiauskaitė | portfolio</title>
 </head>
@@ -57,7 +58,7 @@
         <div class="tech-stack">
             <span class="tech-stack__category">What I use</span>
             <div class="tech-stack__tech">
-                <div class="tech-stack__list">
+                <div class="tech-stack__list" data-tidx="1">
                     <span class="tech-stack__list-category">_lang</span>
                     <i class="devicon-html5-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                     <i class="devicon-css3-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
@@ -66,7 +67,7 @@
                     <i class="devicon-python-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                 </div>
 
-                <div class="tech-stack__list">
+                <div class="tech-stack__list"  data-tidx="2">
                     <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_front-end</span>
                     <i class="devicon-sass-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                     <i class="devicon-react-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
@@ -75,7 +76,7 @@
                     <i class="devicon-d3js-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                 </div>
 
-                <div class="tech-stack__list">
+                <div class="tech-stack__list"  data-tidx="3">
                     <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_back-end</span>
                     <i class="devicon-nodejs-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                     <i class="devicon-express-original-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
@@ -84,7 +85,7 @@
                     <i class="devicon-mongodb-plain-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>  
                 </div>
 
-                <div class="tech-stack__list">
+                <div class="tech-stack__list"  data-tidx="4">
                     <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_tools</span>
                     <i class="devicon-webpack-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
                     <i class="devicon-babel-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
@@ -99,11 +100,11 @@
                 Pet Projects
             </span>
             <div class="projects__titles">
-                <h4 onClick="slideProjectIn(0)" class="projects__title projects__title--selected" data-tid="0">Shopping List</h4>
-                <h4 onClick="slideProjectIn(1)" class="projects__title" data-tid="1">Yours Next</h4>
-                <h4 onClick="slideProjectIn(2)" class="projects__title" data-tid="2">Up up</h4>
-                <h4 onClick="slideProjectIn(3)" class="projects__title" data-tid="3">Cats Wiki</h4>
-                <h4 onClick="slideProjectIn(4)" class="projects__title" data-tid="4">Image Uploader</h4>
+                <h4 onClick="slideProjectIn(0)" class="projects__title projects__title--selected" data-tid="0"><span>01.</span>Shopping List</h4>
+                <h4 onClick="slideProjectIn(1)" class="projects__title" data-tid="1"><span>02.</span>Yours Next</h4>
+                <h4 onClick="slideProjectIn(2)" class="projects__title" data-tid="2"><span>03.</span>Up up</h4>
+                <h4 onClick="slideProjectIn(3)" class="projects__title" data-tid="3"><span>04.</span>Cats Wiki</h4>
+                <h4 onClick="slideProjectIn(4)" class="projects__title" data-tid="4"><span>05.</span>Image Uploader</h4>
             </div>
             <div class="projects__list">
                 <article class="project">
@@ -139,16 +140,20 @@
                             <img class="project__img" src="assets/upup_3.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u2">
                             <img class="project__img" src="assets/upup_4.jpg" onClick="changeActiveImg(event, 'u', 4)" data-iid="u3">
                         </div>
-                        <section class="project__info">
-                                <p class="project__text">
-                                    Built a full stack application actualizing a design (done with Figma) and
-                                    using React & Express.js. It allows to create and save shopping lists, to
-                                    review shopping history and statistics.
-                                    • Used Redux (Redux Toolkit approach) for complex state management and
-                                    a relational database management system (SQLite) for storage. 
-                                </p>
-                        </section>
                     </div>
+                    <section class="project__info">
+                        <p class="project__links">
+                            <a><i class="devicon-github-original"></i></a>
+                            <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                        </p>
+                        <p class="project__text">
+                            Built a full stack application actualizing a design (done with Figma) and
+                            using React & Express.js. It allows to create and save shopping lists, to
+                            review shopping history and statistics.
+                            Used Redux (Redux Toolkit approach) for complex state management and
+                            a relational database management system (SQLite) for storage. 
+                        </p>
+                    </section>
                 </article>
                 <article class="project">
                     <div class="project__wrapper">
