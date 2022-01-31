@@ -247,7 +247,7 @@
     </main>
 
     <footer class="footer">
-        <p>Designed & coded by <a href="https://github.com/sukcinitas" target="_blank" rel="noreferrer noopener">@sukcinitas</a></p>
+        <p>Designed & coded by Gintarė Černiauskaitė<a href="https://github.com/sukcinitas" target="_blank" rel="noreferrer noopener"><span>  @sukcinitas</span></a></p>
     </footer class="footer">
 
     <script>
@@ -295,6 +295,7 @@
         }
 
         document.addEventListener('scroll', function () {
+            // checking if tech stack comes in viewport
             const el = document.querySelector('.tech-stack');
             const divs = document.querySelectorAll('.tech-stack__list i');
             if (comesInViewport(el)) {
@@ -306,6 +307,8 @@
                     divs[i].classList.remove('active');
                 }
             }
+
+            //checking if project comes in viewport
         }, {
             passive: true
         });
@@ -322,7 +325,7 @@
                 const parent = target.parentElement.parentElement;
                 target.classList.add('fa-chevron-up');
                 target.classList.remove('fa-chevron-down');
-                parent.style.top = '550px';
+                parent.style.top = '590px';
             }
         }
 

@@ -17,6 +17,10 @@ $sides: 4rem;
     box-sizing: border-box;
 }
 
+:root {
+    font-size: 16px;
+}
+
 a {
     &:visited, &:active,  &:focus {
         color: $gray-2;
@@ -38,12 +42,12 @@ body {
 }
 
 .header {
-    $font-size: 18px;
+    $font-size: 1.2rem;
     position: fixed;
     top: 0rem;
     left: 0;
     right: 0;
-    padding: 1rem 4rem;
+    padding: 4rem 4rem 1rem;
     background-color: $dark-1;
     font-family: inherit;
     color: $gray-2;
@@ -64,12 +68,12 @@ body {
     }
 
     &__brand {
-        font-size: 22px;
+        font-size: 1.4rem;
         color: $gray-1;
     }
 
     &__brand-additional {
-        font-size: 18px; 
+        font-size: 1.2rem; 
         align-self: flex-end;
     }
 
@@ -157,17 +161,21 @@ body {
         margin: 2rem;
 
         & > i {
-            font-size: 4rem;
+            font-size: 4.1rem;
             padding: 10px;
             position: relative;
             top: 0px;
             opacity: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
     &__list-category {
         color: $bright-1;
-        font-size: 16px;
+        font-size: 1.2rem;
         border-top: 2px solid $bright-1;
         margin: 2rem 0;
         padding: 0.6rem 0 0;
@@ -221,6 +229,7 @@ body {
 
         &:hover {
             cursor: pointer;
+            background-image: $gradient-3;
         }
 
         &--selected {
@@ -317,7 +326,7 @@ body {
     &__links {
         font-size: 1.4rem;
         text-align: left;
-        margin: 2rem; 
+        margin: 2rem 0; 
         background-image: $gradient-1;
         background-clip: text;
         display: flex;
@@ -343,6 +352,9 @@ body {
     }
     & .project__info {
         text-align: left;
+    }
+    & .project__links {
+        justify-content: flex-start;
     }
 }
 
@@ -371,12 +383,24 @@ body {
 
 .footer {
     position: relative;
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: -4rem;
+    left: -4rem;
+    right: 4rem;
     text-align: center;
-    height: 4rem;
+    font-size: 1.2rem;
+    background: rgb(22, 22, 22);
+    padding: 1rem;
+    width: 100vw;
+
+    & span {
+        background-image: $gradient-1;
+        background-clip: text;
+
+        &:hover {
+            color: transparent;
+            cursor: pointer;
+        }
+    }
 }
 
 .header__brand,
@@ -510,8 +534,7 @@ body {
             left: 0;
             right: 0;
             background-color: #020002d6;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+            border-radius: 7px;
             margin: 1rem;
         }
 
@@ -521,9 +544,16 @@ body {
 
         &__icons {
             display: initial;
+            align-self: flex-end;
+            background-image: $gradient-1;
+            background-clip: text;
+            font-size: 1.2rem;
+            margin: 1rem 0 2rem;
+            display: inline-block;
 
             &:hover {
                 cursor: pointer;
+                color: transparent;
             }
         }
     }
