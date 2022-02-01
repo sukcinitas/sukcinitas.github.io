@@ -267,14 +267,15 @@ body {
         justify-content: center;    
         flex-direction: row;
         justify-content: center;
-        overflow: hidden;
     }
 
     &__carousel {
+        left: -200px; //animation
         height: 649.6px;
         width: 300px;
         overflow: hidden;
         position: relative;
+        opacity: 0; // animation
     }
 
     &__img {
@@ -294,13 +295,14 @@ body {
     }
 
     &__img-num {
-        content: attr(data-iidx);
         font-size: 2rem;
         font-family: 'Teko', sans-serif;
         color: $bright-1;
         padding: 4px;
         width: 5rem;
         padding: 0.5rem;
+        left: -200px; //animation
+        opacity: 0; //animation
     }
 
     &__info {
@@ -308,6 +310,9 @@ body {
         padding: 0 3rem 0;
         text-align: right;
         align-self: flex-end;
+        position: relative;
+        left: 200px; //animation
+        opacity: 0; //animation
     }
 
     &__title {
@@ -346,7 +351,26 @@ body {
     }
 }
 
-.projects__list--list .project:nth-child(even) {
+.project.active {
+    & .project__carousel {
+        left: -200px;
+        animation: slide-right 500ms ease-in;
+        animation-fill-mode: forwards;
+    }
+    & .project__info {
+        left: 200px;
+        opacity: 0;
+        animation: slide-left 500ms 400ms ease-in;
+        animation-fill-mode: forwards;
+    }
+    & .project__img-num {
+        left: -200px;
+        animation: slide-right 500ms 800ms ease-in;
+        animation-fill-mode: forwards; 
+    }
+}
+
+.project:nth-child(even) {
     & .project__wrapper{
         flex-direction: row-reverse;
     }
@@ -355,6 +379,45 @@ body {
     }
     & .project__links {
         justify-content: flex-start;
+    }
+}
+
+.project.active:nth-child(even) {
+    & .project__carousel {
+        left: 200px;
+        opacity: 0;
+    }
+    & .project__info {
+        left: -200px;
+        opacity: 0;
+    }
+    & .project__img-num {
+        left: 200px;
+        opacity: 0;
+    }
+}
+
+.project.active:nth-child(even) {
+    & .project__wrapper{
+        flex-direction: row-reverse;
+    }
+    & .project__info {
+        text-align: left;
+    }
+    & .project__links {
+        justify-content: flex-start;
+    }
+    & .project__carousel {
+        left: 200px;
+        opacity: 0;
+        animation: slide-left 500ms ease-in;
+        animation-fill-mode: forwards;
+    }
+    & .project__info {
+        left: -200px;
+        opacity: 0;
+        animation: slide-right 500ms 400ms ease-in;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -476,6 +539,28 @@ body {
     100% {
         top: 0px;
         opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        left: -200px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        left: 200px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
     }
 }
 
