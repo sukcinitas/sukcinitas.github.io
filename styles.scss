@@ -25,9 +25,9 @@ a {
     }
     &:hover {
         color: $gray-2;
+        transition: color 250ms ease-in;
     }
 }
-
 
 body {
     width: 100%;
@@ -103,12 +103,7 @@ body {
 
     &__wrapper {
         position: absolute;
-        bottom: 8rem;
-        background-image: $gradient-2;
-        background-clip: text;
-        background-size: 400%;
-        animation: bg-animation 8s infinite alternate;
-        
+        bottom: 8rem;        
     }
 
     & h1:last-of-type {
@@ -121,6 +116,12 @@ body {
     }
 
     &__title {
+        background-image: $gradient-2;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: bg-animation 8s infinite alternate;
+        -webkit-animation: bg-animation 8s infinite alternate;
+        background-size: 400%;
         font-size: 13vw;
         line-height: 14vw;
         margin: 0;
@@ -276,6 +277,9 @@ body {
         justify-content: center;    
         flex-direction: row;
         justify-content: center;
+        padding: 2rem;
+        background-color:rgb(22, 22, 22);
+        border-radius: 20px;
     }
 
     &__carousel {
@@ -369,15 +373,21 @@ body {
         left: -200px;
         animation: slide-right 500ms ease-in;
         animation-fill-mode: forwards;
+        -webkit-animation: slide-right 500ms ease-in;
+        -webkit-animation-fill-mode: forwards;
     }
     & .project__info {
         left: 200px;
         opacity: 0;
         animation: slide-left 500ms 400ms ease-in;
         animation-fill-mode: forwards;
+        -webkit-animation: slide-left 500ms 400ms ease-in;
+        -webkit-animation-fill-mode: forwards;
     }
     & .project__img-num {
         left: -200px;
+        -webkit-animation: slide-right 500ms 800ms ease-in;
+        -webkit-animation-fill-mode: forwards; 
         animation: slide-right 500ms 800ms ease-in;
         animation-fill-mode: forwards; 
     }
@@ -459,9 +469,9 @@ body {
 
 .footer {
     position: relative;
-    bottom: -4rem;
-    left: -4rem;
-    right: 4rem;
+    bottom: -5rem;
+    left: -5rem;
+    right: 5rem;
     text-align: center;
     font-size: 1.2rem;
     background: rgb(22, 22, 22);
@@ -613,6 +623,9 @@ body {
         &__wrapper {
             position: relative;
             overflow: hidden;
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
         }
 
         &__img-num {
