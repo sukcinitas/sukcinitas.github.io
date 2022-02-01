@@ -119,8 +119,9 @@
                             <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                             <h3 class="project__title">Shopping List</h3>
                             <p class="project__links">
-                                <a><i class="devicon-github-original"></i></a>
-                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sukcinitas/dc-shopping-list" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://github.com/sukcinitas/dc-shopping-list-api" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://shlist.netlify.app" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
                             </p>
                             <p class="project__text">
                                 Built a full stack application actualizing a design (done with Figma) and
@@ -146,8 +147,9 @@
                             <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                             <h3 class="project__title">Yours Next</h3>
                             <p class="project__links">
-                                <a><i class="devicon-github-original"></i></a>
-                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sukcinitas/yours-next-client" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://github.com/sukcinitas/yours-next-server" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://yours-next.herokuapp.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
                             </p>
                             <p class="project__text">
                                 Built a MEVN (MongoDB, Express.js, Vue.js, Node.js) full stack application
@@ -173,8 +175,8 @@
                             <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                             <h3 class="project__title">Up up</h3>
                             <p class="project__links">
-                                <a><i class="devicon-github-original"></i></a>
-                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sukcinitas/voting-app" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://up-up.herokuapp.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
                             </p>
                             <p class="project__text">
                                 Built a MERN (MongoDB, Express.js, React, Node.js) full stack application
@@ -200,8 +202,9 @@
                             <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                             <h3 class="project__title">Cats Wiki</h3>
                             <p class="project__links">
-                                <a><i class="devicon-github-original"></i></a>
-                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sukcinitas/dc-cat-wiki" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://github.com/sukcinitas/dc-cat-wiki-api" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://cats-wiki.netlify.app" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
                             </p>
                             <p class="project__text">
                                 Built a responsive React & Express.js app that fetches information about
@@ -224,8 +227,9 @@
                             <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                             <h3 class="project__title">Image Uploader</h3>
                             <p class="project__links">
-                                <a><i class="devicon-github-original"></i></a>
-                                <a><i class="fa fa-link" aria-hidden="true"></i></a>
+                                <a href="https://github.com/sukcinitas/dc-img-uploader" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://github.com/sukcinitas/dc-img-uploader-api" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
+                                <a href="https://imago-uploader.netlify.app" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
                             </p>
                             <p class="project__text">
                                 Built a responsive React & Express.js app that allows to upload images
@@ -266,7 +270,6 @@
                 project.classList.remove('active');
             });
             project.classList.add('active');
-            console.log(project);
         }
 
         function changeActiveImg(e, project, imgNum, projectNum) {
@@ -328,13 +331,11 @@
 
             function toggleActiveClass(element, idx) {
                 if (comesInViewport(element, idx)) {
-                    console.log(idx, 'HEY')
                     element.classList.add('active');
                 } else {
                     element.classList.remove('active');
                 }
             }
-            console.log(projectArray)
         }, {
             passive: true
         });

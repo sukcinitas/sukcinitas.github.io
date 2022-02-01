@@ -22,9 +22,9 @@ $sides: 4rem;
 }
 
 a {
+    text-decoration: none;
     &:visited, &:active,  &:focus {
         color: $gray-2;
-        text-decoration: none;
     }
     &:hover {
         color: transparent;
@@ -598,17 +598,15 @@ body {
         align-items: center;
 
         &__wrapper {
-            padding: 1rem;
             position: relative;
+            overflow: hidden;
         }
 
         &__img-num {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
             padding-right: 2rem;
             background-color: rgba(17, 17, 17, 0.822);
-            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
 
         &__info {
@@ -620,7 +618,6 @@ body {
             right: 0;
             background-color: #020002d6;
             border-radius: 7px;
-            margin: 1rem;
         }
 
         &__text {
