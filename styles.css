@@ -110,9 +110,12 @@ body {
   font-family: "Black Ops One", cursive;
 }
 .about__text {
-  max-width: 400px;
-  font-size: 18px;
+  max-width: 500px;
+  font-size: 1.6rem;
   display: inline-block;
+}
+.about__category {
+  line-height: 0.5;
 }
 .about::after {
   content: "";
@@ -643,6 +646,9 @@ body {
     align-items: center;
     left: -2rem;
   }
+  .project__title {
+    font-size: 2.6rem;
+  }
   .project__wrapper {
     position: relative;
     overflow: hidden;
@@ -669,10 +675,14 @@ body {
     right: 0;
     background-color: #020002d6;
     border-radius: 7px;
+    padding: 1rem;
   }
   .project__text {
-    padding: 0 0 2rem;
+    padding: 0;
     font-size: 1.3rem;
+  }
+  .project__text:last-child {
+    padding: 0 0 2rem;
   }
   .project__icons {
     display: initial;
@@ -681,12 +691,18 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     font-size: 1.2rem;
-    margin: 1rem 0 2rem;
+    margin: 0;
     display: inline-block;
   }
   .project__icons:hover {
     cursor: pointer;
     color: transparent;
+  }
+
+  .about__category,
+.tech-stack__category,
+.projects__category {
+    font-size: 3rem;
   }
 
   .footer {

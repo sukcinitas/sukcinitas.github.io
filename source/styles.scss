@@ -134,9 +134,13 @@ body {
     }
 
     &__text {
-        max-width: 400px;
-        font-size: 18px;
+        max-width: 500px;
+        font-size: 1.6rem;
         display: inline-block;
+    }
+
+    &__category {
+        line-height: 0.5;
     }
 
     &::after {
@@ -649,6 +653,10 @@ body {
         align-items: center;
         left: -2rem; // as body padding
 
+        &__title {
+            font-size: 2.6rem;
+        }
+
         &__wrapper {
             position: relative;
             overflow: hidden;
@@ -678,11 +686,16 @@ body {
             right: 0;
             background-color: #020002d6;
             border-radius: 7px;
+            padding: 1rem;
         }
 
         &__text {
-            padding: 0 0 2rem;
+            padding: 0;
             font-size: 1.3rem;
+
+            &:last-child {
+                padding: 0 0 2rem; 
+            }
         }
 
         &__icons {
@@ -692,7 +705,7 @@ body {
             background-clip: text;
             -webkit-background-clip: text;
             font-size: 1.2rem;
-            margin: 1rem 0 2rem;
+            margin: 0;
             display: inline-block;
 
             &:hover {
@@ -701,6 +714,15 @@ body {
             }
         }
     }
+
+    .about,
+    .tech-stack,
+    .projects {
+        &__category {
+            font-size: 3rem;
+        }
+    }
+    
 
     .footer {
         bottom: -2rem; // padding and 1
