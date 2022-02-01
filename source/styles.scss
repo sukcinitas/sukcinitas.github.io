@@ -346,7 +346,7 @@ body {
     }
 
     &__text {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 1.3;
     }
 
@@ -373,6 +373,11 @@ body {
 
     &__icons {
         display: none;
+    }
+
+    &__stack {
+        word-spacing: 4px;
+        color: #424242;
     }
 }
 
@@ -449,6 +454,17 @@ body {
         opacity: 0;
         animation: slide-right 500ms 400ms ease-in;
         animation-fill-mode: forwards;
+    }
+}
+
+.say-hi {
+    text-align: center;
+    color: rgb(22, 22, 22);
+    font-size: 6vw;
+    font-family: 'Black Ops One', cursive;
+
+    & span {
+        display: block;
     }
 }
 
@@ -723,7 +739,6 @@ body {
         }
     }
     
-
     .footer {
         bottom: -2rem; // padding and 1
         left: -2rem;
