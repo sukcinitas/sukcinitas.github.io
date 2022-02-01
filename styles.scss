@@ -8,6 +8,7 @@ $gray-2: #999;
 $bright-1: rgb(81, 199, 199);
 $gradient-1: linear-gradient(to right, #3a1c71 , #d76d77 , #ffaf7b);
 $gradient-2: linear-gradient(to right, #756792 , #9c6b6f , #c5a086);
+$gradient-4: linear-gradient(to bottom, #756792 , #9c6b6f , #c5a086);
 $gradient-3: radial-gradient(#3a1c71 , #d76d77);
 $sides: 4rem;
 
@@ -23,11 +24,11 @@ $sides: 4rem;
 
 a {
     text-decoration: none;
-    &:visited, &:active,  &:focus {
+    &:visited, &:active,  &:focus, &:focus-within, &:focus-visible {
         color: $gray-2;
     }
     &:hover {
-        color: transparent;
+        color: $gray-2;
     }
 }
 
@@ -59,6 +60,7 @@ body {
         align-items: center;
         background-image: $gradient-1;
         background-clip: text;
+        -webkit-background-clip: text;
     }
 
     &__brand-wrapper {
@@ -88,6 +90,10 @@ body {
         margin: 0 10px;
         display: flex;
         align-items: center;
+
+        & a:hover {
+            color: transparent;
+        }
 
         & i {
             font-size: calc(#{$font-size} + 4px);
@@ -147,9 +153,6 @@ body {
     flex-direction: column;
 
     &__tech {
-        background-image: $gradient-1;
-        background-clip: text;
-        color: transparent; 
         display: flex;
         flex-wrap: wrap;
         margin: 1rem auto;
@@ -161,14 +164,22 @@ body {
         margin: 2rem;
 
         & > i {
+            background-image: $gradient-4;
+            background-clip: text;
+            -webkit-background-clip: text;
             font-size: 4.1rem;
             padding: 10px;
             position: relative;
             top: 0px;
             opacity: 0;
+            color: transparent;
 
             &:hover {
                 cursor: pointer;
+            }
+
+            &.active {
+                color: transparent; 
             }
         }
     }
@@ -189,6 +200,7 @@ body {
     &__display {
         background-image: $gradient-1;
         background-clip: text;
+        -webkit-background-clip: text;
         font-size: 1.2rem;
         & i {
             font-size: 1.8rem;
@@ -208,6 +220,7 @@ body {
     &__titles {
         background-image: $gradient-1;
         background-clip: text;
+        -webkit-background-clip: text;
         display: flex;
         font-size: 2.4rem;
         justify-content: center;
@@ -320,6 +333,7 @@ body {
         font-family: 'Tourney', cursive;
         background-image: $gradient-1;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
     }
 
@@ -334,14 +348,17 @@ body {
         margin: 2rem 0; 
         background-image: $gradient-1;
         background-clip: text;
+        -webkit-background-clip: text;
         display: flex;
         justify-content: flex-end;
         
         & a {
             margin: 1rem;
+            color: $gray-2;
 
             &:hover {
                 cursor: pointer;
+                color: transparent;
             }
         }
     }
@@ -458,6 +475,7 @@ body {
     & span {
         background-image: $gradient-1;
         background-clip: text;
+        -webkit-background-clip: text;
 
         &:hover {
             color: transparent;
@@ -488,7 +506,6 @@ body {
         cursor: pointer;
     }
 }
-
 
 @for $i from 2 through 6 {
     .tech-stack__list:nth-child(1) i.active:nth-child(#{$i}) {
@@ -629,6 +646,7 @@ body {
             align-self: flex-end;
             background-image: $gradient-1;
             background-clip: text;
+            -webkit-background-clip: text;
             font-size: 1.2rem;
             margin: 1rem 0 2rem;
             display: inline-block;
