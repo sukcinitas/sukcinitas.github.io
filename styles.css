@@ -93,8 +93,8 @@ body {
   background-image: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: bg-animation 8s infinite alternate;
-  -webkit-animation: bg-animation 8s infinite alternate;
+  animation: bg-animation 6s infinite alternate;
+  -webkit-animation: bg-animation 6s infinite alternate;
   background-size: 400%;
   font-size: 13vw;
   line-height: 14vw;
@@ -295,7 +295,6 @@ body {
 .project__text {
   font-size: 1.4rem;
   line-height: 1.3;
-  padding: 0 0 1rem;
 }
 .project__links {
   font-size: 1.4rem;
