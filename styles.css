@@ -27,21 +27,24 @@ body {
 .about,
 .tech-stack,
 .projects,
-.list {
+.list,
+.contact {
   min-height: 100vh;
   padding: 6rem 0 6rem;
 }
 .about:not(:first-child),
 .tech-stack:not(:first-child),
 .projects:not(:first-child),
-.list:not(:first-child) {
+.list:not(:first-child),
+.contact:not(:first-child) {
   padding: 6rem 0;
   border-top: 1px solid #303030;
 }
 .about__category,
 .tech-stack__category,
 .projects__category,
-.list__category {
+.list__category,
+.contact__category {
   text-transform: uppercase;
   color: #51c7c7;
   font-size: 2.8rem;
@@ -51,7 +54,8 @@ body {
 .about__category::after,
 .tech-stack__category::after,
 .projects__category::after,
-.list__category::after {
+.list__category::after,
+.contact__category::after {
   content: ":";
 }
 
@@ -430,14 +434,20 @@ body {
 }
 
 .contact {
-  padding: 2rem;
+  min-height: 50vh;
+  margin-bottom: 6rem;
   text-align: center;
-  color: #222;
-  font-family: "Black Ops One", cursive;
-  font-size: 3vw;
 }
-.contact span {
-  display: block;
+.contact__info {
+  font-size: 1.4rem;
+  color: #999;
+  margin: 0;
+}
+.contact__info:first-child {
+  margin: 0;
+  color: gray-1;
+  font-family: "Teko", cursive;
+  font-size: 8rem;
 }
 
 .footer {
