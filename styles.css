@@ -627,6 +627,9 @@ body {
     min-height: calc(100vh - 140px);
     padding-bottom: 3rem;
   }
+  .about__wrapper {
+    bottom: 0rem;
+  }
 
   .tech-stack,
 .projects {
@@ -643,12 +646,15 @@ body {
     flex-direction: column;
     align-items: flex-end;
   }
+  .header__contact-info-item {
+    margin: 0;
+  }
 
   .tech-stack__list {
     margin: 0.4rem;
   }
   .tech-stack__list i {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
   }
 
   .projects__titles {

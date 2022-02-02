@@ -630,6 +630,10 @@ body {
     .about {
         min-height: calc(100vh - 140px); // minus header
         padding-bottom: 3rem;
+
+        &__wrapper {
+            bottom: 0rem;
+        }
     }
 
     .tech-stack,
@@ -646,6 +650,9 @@ body {
             flex-direction: column;
             align-items: flex-end;
         }
+        &__contact-info-item {
+            margin: 0;
+        }
     }
 
     .tech-stack {
@@ -653,7 +660,7 @@ body {
             margin: 0.4rem;
 
             & i {
-                font-size: 2.2rem;
+                font-size: 2.8rem;
             }
         }
     }
