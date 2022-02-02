@@ -383,22 +383,18 @@ body {
 
 .project.active {
     & .project__carousel {
-        left: -200px;
         animation: slide-right 500ms ease-in;
         animation-fill-mode: forwards;
         -webkit-animation: slide-right 500ms ease-in;
         -webkit-animation-fill-mode: forwards;
     }
     & .project__info {
-        left: 200px;
-        opacity: 0;
         animation: slide-left 500ms 400ms ease-in;
         animation-fill-mode: forwards;
         -webkit-animation: slide-left 500ms 400ms ease-in;
         -webkit-animation-fill-mode: forwards;
     }
     & .project__img-num {
-        left: -200px;
         -webkit-animation: slide-right 500ms 800ms ease-in;
         -webkit-animation-fill-mode: forwards; 
         animation: slide-right 500ms 800ms ease-in;
@@ -419,21 +415,6 @@ body {
 }
 
 .project.active:nth-child(even) {
-    & .project__carousel {
-        left: 200px;
-        opacity: 0;
-    }
-    & .project__info {
-        left: -200px;
-        opacity: 0;
-    }
-    & .project__img-num {
-        left: 200px;
-        opacity: 0;
-    }
-}
-
-.project.active:nth-child(even) {
     & .project__wrapper{
         flex-direction: row-reverse;
     }
@@ -444,14 +425,10 @@ body {
         justify-content: flex-start;
     }
     & .project__carousel {
-        left: 200px;
-        opacity: 0;
         animation: slide-left 500ms ease-in;
         animation-fill-mode: forwards;
     }
     & .project__info {
-        left: -200px;
-        opacity: 0;
         animation: slide-right 500ms 400ms ease-in;
         animation-fill-mode: forwards;
     }
@@ -611,6 +588,15 @@ body {
     }
 }
 
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    } 
+}
+
 @media screen and (max-width: 840px) {
     :root {
         font-size: 12px;
@@ -696,7 +682,7 @@ body {
         &__img-num {
             position: absolute;
             padding-right: 2rem;
-            background-color: rgba(17, 17, 17, 0.822);
+            background-color: rgb(22, 22, 22);
             border-bottom-right-radius: 10px;
         }
 
@@ -707,9 +693,10 @@ body {
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: #020002d6;
+            background-color: rgb(22, 22, 22);
             border-radius: 7px;
             padding: 1rem;
+            opacity: 0;
         }
 
         &__text {
@@ -750,5 +737,37 @@ body {
         bottom: -2rem; // padding and 1
         left: -2rem;
         right: 2rem;
+    }
+
+    .project {
+        & .project-info {
+            left: 0;
+            opacity: 0;
+        }
+    }
+
+    .project.active {
+        & .project__info {
+            animation: opacity 500ms 400ms ease-in;
+            animation-fill-mode: forwards;
+            -webkit-animation: opacity 500ms 400ms ease-in;
+            -webkit-animation-fill-mode: forwards;
+        }
+    }
+
+    .project:nth-child(even) {
+        & .project-info {
+            left: 0;
+            opacity: 0;
+        }
+    }
+
+    .project.active:nth-child(even) {
+        & .project__info {
+            animation: opacity 500ms 400ms ease-in;
+            animation-fill-mode: forwards;
+            -webkit-animation: opacity 500ms 400ms ease-in;
+            -webkit-animation-fill-mode: forwards;
+        }
     }
 }
