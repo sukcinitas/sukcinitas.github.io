@@ -2,6 +2,7 @@ $dark-1: #111;
 $gray-1: #ccc;
 $gray-2: #999; 
 $bright-1: rgb(81, 199, 199);
+$bright-2: #9c6b6f;
 $gradient-1: linear-gradient(to right, #3a1c71 , #d76d77 , #ffaf7b);
 $gradient-2: linear-gradient(to right, #756792 , #9c6b6f , #c5a086);
 $gradient-4: linear-gradient(to bottom, #756792 , #9c6b6f , #c5a086);
@@ -38,6 +39,31 @@ body {
     font-family: 'Teko', sans-serif;
     color: $gray-2;
     overflow-x: hidden;
+}
+
+.about,
+.tech-stack,
+.projects, 
+.list {
+    min-height: 100vh;
+    padding: 6rem 0 6rem;
+
+    &:not(:first-child) {
+        padding: 6rem 0;
+        border-top: 1px solid rgb(48, 48, 48);
+    }
+
+    &__category {
+        text-transform: uppercase;
+        color: $bright-1;
+        font-size: 2.8rem;
+        margin: 4rem 1rem 4rem 0;
+        font-family: 'Tourney', cursive;
+
+        &::after {
+            content: ":";
+        }
+    }
 }
 
 .header {
@@ -435,37 +461,37 @@ body {
     }
 }
 
-.say-hi {
-    text-align: center;
-    color: rgb(22, 22, 22);
-    font-size: 6vw;
-    font-family: 'Black Ops One', cursive;
+.list {
+    min-height: 50vh;
 
-    & span {
-        display: block;
-    }
-}
+    &__wrapper {
+        display: flex;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+        flex-wrap: wrap;
 
-.about,
-.tech-stack,
-.projects {
-    min-height: 100vh;
-    padding: 6rem 0 6rem;
+        & div {
+            padding: 2rem;
+        }
 
-    &:not(:first-child) {
-        padding: 6rem 0;
-        border-top: 1px solid rgb(48, 48, 48);
-    }
+        & p, & span {
+            margin: 0;
+            padding-left: 1rem;
+            border-left: 2px solid $bright-1;
+        }
 
-    &__category {
-        text-transform: uppercase;
-        color: $bright-1;
-        font-size: 2.8rem;
-        margin: 4rem 1rem 4rem 0;
-        font-family: 'Tourney', cursive;
+        & p:first-child {
+            color: $bright-2;
+            font-size: 1.6rem;
+        }
 
-        &::after {
-            content: ":";
+        & p:last-of-type {
+            color: $gray-1;
+            font-size: 1.4rem;
+        }
+
+        & span {
+            font-size: 1rem; 
         }
     }
 }

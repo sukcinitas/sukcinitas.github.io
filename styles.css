@@ -24,6 +24,37 @@ body {
   overflow-x: hidden;
 }
 
+.about,
+.tech-stack,
+.projects,
+.list {
+  min-height: 100vh;
+  padding: 6rem 0 6rem;
+}
+.about:not(:first-child),
+.tech-stack:not(:first-child),
+.projects:not(:first-child),
+.list:not(:first-child) {
+  padding: 6rem 0;
+  border-top: 1px solid #303030;
+}
+.about__category,
+.tech-stack__category,
+.projects__category,
+.list__category {
+  text-transform: uppercase;
+  color: #51c7c7;
+  font-size: 2.8rem;
+  margin: 4rem 1rem 4rem 0;
+  font-family: "Tourney", cursive;
+}
+.about__category::after,
+.tech-stack__category::after,
+.projects__category::after,
+.list__category::after {
+  content: ":";
+}
+
 .header {
   position: fixed;
   top: 0rem;
@@ -369,41 +400,33 @@ body {
   animation-fill-mode: forwards;
 }
 
-.say-hi {
-  text-align: center;
-  color: #161616;
-  font-size: 6vw;
-  font-family: "Black Ops One", cursive;
+.list {
+  min-height: 50vh;
 }
-.say-hi span {
-  display: block;
+.list__wrapper {
+  display: flex;
+  font-size: 1.2rem;
+  padding: 2rem 0;
+  flex-wrap: wrap;
 }
-
-.about,
-.tech-stack,
-.projects {
-  min-height: 100vh;
-  padding: 6rem 0 6rem;
+.list__wrapper div {
+  padding: 2rem;
 }
-.about:not(:first-child),
-.tech-stack:not(:first-child),
-.projects:not(:first-child) {
-  padding: 6rem 0;
-  border-top: 1px solid #303030;
+.list__wrapper p, .list__wrapper span {
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 2px solid #51c7c7;
 }
-.about__category,
-.tech-stack__category,
-.projects__category {
-  text-transform: uppercase;
-  color: #51c7c7;
-  font-size: 2.8rem;
-  margin: 4rem 1rem 4rem 0;
-  font-family: "Tourney", cursive;
+.list__wrapper p:first-child {
+  color: #9c6b6f;
+  font-size: 1.6rem;
 }
-.about__category::after,
-.tech-stack__category::after,
-.projects__category::after {
-  content: ":";
+.list__wrapper p:last-of-type {
+  color: #ccc;
+  font-size: 1.4rem;
+}
+.list__wrapper span {
+  font-size: 1rem;
 }
 
 .footer {
