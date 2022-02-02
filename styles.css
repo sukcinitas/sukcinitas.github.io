@@ -11,12 +11,8 @@
 a {
   text-decoration: none;
 }
-a:visited, a:active, a:focus, a:focus-within, a:focus-visible {
-  color: #999;
-}
-a:hover {
-  color: #999;
-  transition: color 250ms ease-in;
+a:visited, a:active, a:focus, a:focus-within, a:focus-visible, a:hover {
+  color: inherit;
 }
 
 body {
@@ -282,7 +278,7 @@ body {
 .project__info {
   max-width: 400px;
   padding: 0 3rem 0;
-  text-align: right;
+  text-align: left;
   align-self: flex-end;
   position: relative;
   left: 200px;
@@ -299,6 +295,7 @@ body {
 .project__text {
   font-size: 1.4rem;
   line-height: 1.3;
+  padding: 0 0 1rem;
 }
 .project__links {
   font-size: 1.4rem;
@@ -400,8 +397,9 @@ body {
 .projects__category {
   text-transform: uppercase;
   color: #51c7c7;
-  font-size: 4rem;
+  font-size: 2.8rem;
   margin: 4rem 1rem 4rem 0;
+  font-family: "Tourney", cursive;
 }
 .about__category::after,
 .tech-stack__category::after,
@@ -602,12 +600,9 @@ body {
   }
 
   body {
+    background-color: #181818;
     padding: 2rem;
     margin: 0;
-  }
-
-  .header {
-    padding: 0;
   }
 
   .about {
@@ -624,6 +619,8 @@ body {
   }
 
   .header {
+    padding: 0;
+    background-color: #181818;
     position: static;
   }
   .header__wrapper {
@@ -682,12 +679,13 @@ body {
     right: 0;
     background-color: #161616;
     border-radius: 7px;
-    padding: 1rem;
+    padding: 2rem;
     opacity: 0;
   }
   .project__text {
     padding: 0;
     font-size: 1.3rem;
+    text-align: left;
   }
   .project__text:last-child {
     padding: 0 0 2rem;
@@ -734,6 +732,7 @@ body {
   .project:nth-child(even) .project-info {
     left: 0;
     opacity: 0;
+    text-align: left;
   }
 
   .project.active:nth-child(even) .project__info {
