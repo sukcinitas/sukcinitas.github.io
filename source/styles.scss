@@ -351,13 +351,14 @@ body {
   }
 
   &__carousel {
-    left: -200px; //animation
-    opacity: 0; // animation
     height: 649.6px;
     width: 300px;
     overflow: hidden;
     position: relative;
     align-self: flex-end;
+    left: -200px;
+    opacity: 0;
+    transition: opacity 500ms, left 500ms;
   }
 
   &__img {
@@ -382,8 +383,6 @@ body {
     color: $bright-1;
     padding: 0.5rem;
     width: 5rem;
-    left: -200px; //animation
-    opacity: 0; //animation
     position: absolute;
     top: 0;
     left: 0;
@@ -391,6 +390,7 @@ body {
     background-color: $dark-3;
     border-bottom-right-radius: 7px;
     border-top-left-radius: 7px;
+    position: absolute;
   }
 
   &__info {
@@ -399,8 +399,10 @@ body {
     text-align: left;
     align-self: flex-end;
     position: relative;
-    left: 200px; //animation
-    opacity: 0; //animation
+    left: 200px;
+    opacity: 0;
+    transition: opacity 500ms, left 500ms;
+    transition-delay: 500ms;
   }
 
   &__title {
@@ -451,51 +453,46 @@ body {
       flex-direction: row-reverse;
     }
 
-    & .project__img-num {
-      left: 100px; // animation
+    & .project__carousel {
+      opacity: 0;
+      left: 200px;
+      transition: opacity 500ms, left 500ms;
+      transition-delay: 500ms;
+    }
+
+    & .project__info {
+      opacity: 0;
+      left: -200px;
+      transition: opacity 500ms, left 500ms;
     }
   }
 }
 
 .project.active {
   & .project__carousel {
-    animation: slide-right 400ms ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation: slide-right 400ms ease-in;
-    -webkit-animation-fill-mode: forwards;
+    opacity: 1;
+    left: 0;
+    transition: opacity 500ms, left 500ms;
   }
   & .project__info {
-    animation: slide-left 400ms 400ms ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation: slide-left 400ms 400ms ease-in;
-    -webkit-animation-fill-mode: forwards;
-  }
-  & .project__img-num {
-    -webkit-animation: slide-right 400ms 800ms ease-in;
-    -webkit-animation-fill-mode: forwards;
-    animation: slide-right 400ms 800ms ease-in;
-    animation-fill-mode: forwards;
+    opacity: 1;
+    left: 0;
+    transition: opacity 500ms, left 500ms;
+    transition-delay: 500ms;
   }
 }
 
 .project.active:nth-child(even) {
   & .project__carousel {
-    animation: slide-left 400ms ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation: slide-left 400ms ease-in;
-    -webkit-animation-fill-mode: forwards;
+    opacity: 1;
+    left: 0;
+    transition: opacity 500ms, left 500ms;
+    transition-delay: 500ms;
   }
   & .project__info {
-    -webkit-animation: slide-right 400ms 400ms ease-in;
-    -webkit-animation-fill-mode: forwards;
-    animation: slide-right 400ms 400ms ease-in;
-    animation-fill-mode: forwards;
-  }
-  & .project__img-num {
-    -webkit-animation: slide-left 400ms 800ms ease-in;
-    -webkit-animation-fill-mode: forwards;
-    animation: slide-left 400ms 800ms ease-in;
-    animation-fill-mode: forwards;
+    opacity: 1;
+    left: 0;
+    transition: opacity 500ms, left 500ms;
   }
 }
 
@@ -595,39 +592,6 @@ body {
   }
 }
 
-@keyframes slide-right {
-  0% {
-    opacity: 0;
-    left: -200px;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    opacity: 0;
-    left: 200px;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@keyframes slide-top {
-  0% {
-    opacity: 0;
-    bottom: -700px;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0;
-  }
-}
-
 @media screen and (max-width: 840px) {
   $sides: 2rem;
 
@@ -695,23 +659,21 @@ body {
     &__carousel {
       height: 562.9px;
       width: 260px;
-    }
-
-    &__img-num {
-      position: absolute;
       left: 0;
       opacity: 1;
     }
 
     &__info {
       position: absolute;
-      bottom: -300px;
+      bottom: -500px;
       left: 0;
       right: 0;
       background-color: $dark-2;
       border-radius: 7px;
       padding: 2rem;
-      opacity: 0;
+      opacity: 1;
+      transition: bottom 1000ms;
+      height: 100%;
     }
 
     &__text {
@@ -739,8 +701,16 @@ body {
     }
 
     &:nth-child(even) {
-      & .project__img-num {
+      & .project__carousel {
         left: 0;
+        opacity: 1;
+      }
+
+      & .project__info {
+        left: 0;
+        bottom: -500px;
+        transition: bottom 1000ms;
+        opacity: 1;
       }
     }
   }
@@ -755,19 +725,16 @@ body {
 
   .project.active,
   .project.active:nth-child(even) {
-    & .project__info {
-      animation: slide-top 900ms 400ms ease-out;
-      animation-fill-mode: forwards;
-      -webkit-animation: slide-top 900ms 400ms ease-out;
-      -webkit-animation-fill-mode: forwards;
+    & .project__carousel {
+      left: 0;
+      opacity: 1;
+      transition: none;
     }
-  }
 
-  .project.active,
-  .project.active:nth-child(even) {
-    & .project__img-num {
-      animation: none;
-      -webkit-animation: none;
+    & .project__info {
+      bottom: 0;
+      transition: bottom 500ms;
+      left: 0;
     }
   }
 }

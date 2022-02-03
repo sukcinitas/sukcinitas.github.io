@@ -87,6 +87,15 @@ document.addEventListener(
     function toggleActiveClass(element, idx) {
       if (comesInViewport(element, idx)) {
         element.classList.add('active');
+        const target = element
+          .querySelector('.project__wrapper')
+          .querySelector('.project__info')
+          .querySelector('.project__icons')
+          .querySelector('.fa-chevron-up');
+        if (target) {
+          target.classList.remove('fa-chevron-up');
+          target.classList.add('fa-chevron-down');
+        }
       } else {
         element.classList.remove('active');
       }
@@ -101,16 +110,15 @@ function toggleInfo(e) {
   e.stopPropagation();
   const target = e.target;
   const isMinified = target.classList.contains('fa-chevron-up');
+  const parent = target.parentElement.parentElement.parentElement.parentElement;
   if (isMinified) {
-    const parent = target.parentElement.parentElement;
     target.classList.remove('fa-chevron-up');
     target.classList.add('fa-chevron-down');
-    parent.style.top = 'auto';
+    parent.classList.add('active');
   } else {
-    const parent = target.parentElement.parentElement;
     target.classList.add('fa-chevron-up');
     target.classList.remove('fa-chevron-down');
-    parent.style.top = '500px';
+    parent.classList.remove('active');
   }
 }
 
