@@ -27,29 +27,35 @@ function changeActiveImg(e, project, imgNum, projectNum) {
     img = document.querySelector(`.project__img[data-iid="${project}${0}"]`);
     imgTrack.innerHTML = `01/0${imgNum}`;
   } else {
-    img = document.querySelector(`.project__img[data-iid="${project}${idx}"]`);
+    img = target.nextElementSibling;
     imgTrack.innerHTML = `0${idx + 1}/0${imgNum}`;
   }
   target.classList.remove('project__img--active');
   img.classList.add('project__img--active');
 }
 
-function toggleDevIcon(e) {
-  const target = e.currentTarget;
-  if (target.classList.contains('colored')) {
-    target.classList.remove('colored');
+function toggleDevIcon(event) {
+  const icon = event.currentTarget;
+  if (event.type === 'mouseout') {
+    icon.classList.remove('colored');
   } else {
-    target.classList.add('colored');
+    icon.classList.add('colored');
   }
 }
+
+const techIcons = Array.from(document.querySelectorAll('.tech-stack__icon'));
+techIcons.forEach((techIcon) => {
+  techIcon.addEventListener('mouseover', toggleDevIcon);
+  techIcon.addEventListener('mouseout', toggleDevIcon);
+});
 
 function comesInViewport(element, idx) {
   const rect = element.getBoundingClientRect();
   return (
     rect.top >=
-      -0.6 * (window.innerHeight || document.documentElement.clientHeight) &&
+      -0.7 * (window.innerHeight || document.documentElement.clientHeight) &&
     rect.top <=
-      0.6 * (window.innerHeight || document.documentElement.clientHeight) &&
+      0.7 * (window.innerHeight || document.documentElement.clientHeight) &&
     rect.left >= 0 &&
     rect.right <=
       (window.innerWidth || document.documentElement.clientWidth) + 100
