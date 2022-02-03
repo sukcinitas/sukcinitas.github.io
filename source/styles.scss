@@ -1,6 +1,6 @@
 $dark-1: #111;
 $dark-2: #161616;
-$dark-3: #181818;
+$dark-3: #1b1b1b;
 $gray-1: #ccc;
 $gray-2: #999;
 $gray-3: #424242;
@@ -36,6 +36,7 @@ a {
 
   &:hover {
     cursor: pointer;
+    transition: color 100ms ease-out;
   }
 }
 
@@ -48,6 +49,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   position: relative;
+  visibility: hidden;
 }
 
 .about,
@@ -116,6 +118,7 @@ body {
   &__brand-additional {
     font-size: $font-size;
     align-self: flex-end;
+    color: $gray-2;
 
     &:hover {
       color: transparent;
@@ -127,10 +130,11 @@ body {
     display: flex;
     font-family: inherit;
     font-size: $font-size;
+    color: $gray-2;
   }
 
   &__contact-info-item {
-    color: $gray-2;
+    color: gray-2;
     margin-left: 10px;
 
     &:hover {
@@ -138,7 +142,12 @@ body {
     }
 
     & i {
+      color: $gray-2;
       font-size: calc(#{$font-size} + 4px);
+
+      &:hover {
+        color: transparent;
+      }
     }
   }
 }
@@ -561,6 +570,7 @@ body {
     background-image: $gradient-1;
     background-clip: text;
     -webkit-background-clip: text;
+    color: $gray-2;
 
     &:hover {
       color: transparent;

@@ -146,3 +146,7 @@ function chooseDisplay(e) {
     project.classList.remove('active');
   });
 }
+
+function loadBody() {
+  document.body.style.visibility = 'visible';
+}

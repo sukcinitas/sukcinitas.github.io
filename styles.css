@@ -16,6 +16,7 @@ a:visited, a:active, a:focus, a:focus-within, a:focus-visible, a:hover {
 }
 a:hover {
   cursor: pointer;
+  transition: color 100ms ease-out;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   position: relative;
+  visibility: hidden;
 }
 
 .about,
@@ -99,6 +101,7 @@ body {
 .header__brand-additional {
   font-size: 1.2rem;
   align-self: flex-end;
+  color: #999;
 }
 .header__brand-additional:hover {
   color: transparent;
@@ -108,16 +111,21 @@ body {
   display: flex;
   font-family: inherit;
   font-size: 1.2rem;
+  color: #999;
 }
 .header__contact-info-item {
-  color: #999;
+  color: gray-2;
   margin-left: 10px;
 }
 .header__contact-info-item:hover {
   color: transparent;
 }
 .header__contact-info-item i {
+  color: #999;
   font-size: calc(1.2rem + 4px);
+}
+.header__contact-info-item i:hover {
+  color: transparent;
 }
 
 .about {
@@ -444,7 +452,7 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
-  background-color: #181818;
+  background-color: #1b1b1b;
   border-bottom-right-radius: 7px;
   border-top-left-radius: 7px;
   position: absolute;
@@ -592,6 +600,7 @@ body {
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
   background-clip: text;
   -webkit-background-clip: text;
+  color: #999;
 }
 .footer__link:hover {
   color: transparent;
@@ -625,7 +634,7 @@ body {
   }
 
   body {
-    background-color: #181818;
+    background-color: #1b1b1b;
     padding: 2rem;
   }
 
