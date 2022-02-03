@@ -696,7 +696,7 @@ body {
     border-radius: 7px;
     padding: 2rem;
     opacity: 1;
-    transition: bottom 1000ms;
+    transition: bottom 1200ms;
     height: 100%;
   }
   .project__text {
@@ -726,7 +726,7 @@ body {
   .project:nth-child(even) .project__info {
     left: 0;
     bottom: -500px;
-    transition: bottom 1000ms;
+    transition: bottom 1200ms;
     opacity: 1;
   }
 
@@ -745,7 +745,7 @@ body {
   .project.active .project__info,
 .project.active:nth-child(even) .project__info {
     bottom: 0;
-    transition: bottom 500ms;
+    transition: bottom 1200ms;
     left: 0;
   }
 }
