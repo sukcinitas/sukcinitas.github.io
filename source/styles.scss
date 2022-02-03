@@ -221,8 +221,8 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(1) i.active:nth-child(#{$i}) {
-    animation: stack-animation 1000ms calc(100ms * #{$i});
-    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i});
+    animation: stack-animation 600ms calc(100ms * #{$i});
+    -webkit-animation: stack-animation 600ms calc(100ms * #{$i});
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -230,8 +230,8 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(2) i.active:nth-child(#{$i}) {
-    animation: stack-animation 1000ms calc(100ms * #{$i} + 800ms);
-    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 800ms);
+    animation: stack-animation 600ms calc(100ms * #{$i} + 500ms);
+    -webkit-animation: stack-animation 600ms calc(100ms * #{$i} + 500ms);
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -239,8 +239,8 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(3) i.active:nth-child(#{$i}) {
-    animation: stack-animation 1000ms calc(100ms * #{$i} + 1400ms);
-    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 1400ms);
+    animation: stack-animation 600ms calc(100ms * #{$i} + 1000ms);
+    -webkit-animation: stack-animation 600ms calc(100ms * #{$i} + 1000ms);
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -248,8 +248,8 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(4) i.active:nth-child(#{$i}) {
-    animation: stack-animation 1000ms calc(100ms * #{$i} + 1800ms);
-    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 1800ms);
+    animation: stack-animation 600ms calc(100ms * #{$i} + 1500ms);
+    -webkit-animation: stack-animation 600ms calc(100ms * #{$i} + 1500ms);
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -656,7 +656,7 @@ body {
 
   .about {
     min-height: calc(
-      100vh - 70px
+      100vh - 70px - 70px
     ); // minus header as on bigger screen it is fixed
   }
 
@@ -699,6 +699,8 @@ body {
 
     &__img-num {
       position: absolute;
+      left: 0;
+      opacity: 1;
     }
 
     &__info {
@@ -735,6 +737,12 @@ body {
         color: transparent;
       }
     }
+
+    &:nth-child(even) {
+      & .project__img-num {
+        left: 0;
+      }
+    }
   }
 
   .about,
@@ -748,10 +756,18 @@ body {
   .project.active,
   .project.active:nth-child(even) {
     & .project__info {
-      animation: slide-top 1000ms 400ms ease-out;
+      animation: slide-top 900ms 400ms ease-out;
       animation-fill-mode: forwards;
-      -webkit-animation: slide-top 1000ms 400ms ease-out;
+      -webkit-animation: slide-top 900ms 400ms ease-out;
       -webkit-animation-fill-mode: forwards;
+    }
+  }
+
+  .project.active,
+  .project.active:nth-child(even) {
+    & .project__img-num {
+      animation: none;
+      -webkit-animation: none;
     }
   }
 }

@@ -188,141 +188,141 @@ body {
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(2) {
-  animation: stack-animation 1000ms calc(100ms * 2);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 2);
+  animation: stack-animation 600ms calc(100ms * 2);
+  -webkit-animation: stack-animation 600ms calc(100ms * 2);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(3) {
-  animation: stack-animation 1000ms calc(100ms * 3);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 3);
+  animation: stack-animation 600ms calc(100ms * 3);
+  -webkit-animation: stack-animation 600ms calc(100ms * 3);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(4) {
-  animation: stack-animation 1000ms calc(100ms * 4);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 4);
+  animation: stack-animation 600ms calc(100ms * 4);
+  -webkit-animation: stack-animation 600ms calc(100ms * 4);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(5) {
-  animation: stack-animation 1000ms calc(100ms * 5);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 5);
+  animation: stack-animation 600ms calc(100ms * 5);
+  -webkit-animation: stack-animation 600ms calc(100ms * 5);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(6) {
-  animation: stack-animation 1000ms calc(100ms * 6);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 6);
+  animation: stack-animation 600ms calc(100ms * 6);
+  -webkit-animation: stack-animation 600ms calc(100ms * 6);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(2) {
-  animation: stack-animation 1000ms calc(100ms * 2 + 800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 800ms);
+  animation: stack-animation 600ms calc(100ms * 2 + 500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(3) {
-  animation: stack-animation 1000ms calc(100ms * 3 + 800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 800ms);
+  animation: stack-animation 600ms calc(100ms * 3 + 500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(4) {
-  animation: stack-animation 1000ms calc(100ms * 4 + 800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 800ms);
+  animation: stack-animation 600ms calc(100ms * 4 + 500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(5) {
-  animation: stack-animation 1000ms calc(100ms * 5 + 800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 800ms);
+  animation: stack-animation 600ms calc(100ms * 5 + 500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(6) {
-  animation: stack-animation 1000ms calc(100ms * 6 + 800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 800ms);
+  animation: stack-animation 600ms calc(100ms * 6 + 500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(2) {
-  animation: stack-animation 1000ms calc(100ms * 2 + 1400ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 1400ms);
+  animation: stack-animation 600ms calc(100ms * 2 + 1000ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1000ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(3) {
-  animation: stack-animation 1000ms calc(100ms * 3 + 1400ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 1400ms);
+  animation: stack-animation 600ms calc(100ms * 3 + 1000ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 1000ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(4) {
-  animation: stack-animation 1000ms calc(100ms * 4 + 1400ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 1400ms);
+  animation: stack-animation 600ms calc(100ms * 4 + 1000ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 1000ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(5) {
-  animation: stack-animation 1000ms calc(100ms * 5 + 1400ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 1400ms);
+  animation: stack-animation 600ms calc(100ms * 5 + 1000ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 1000ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(6) {
-  animation: stack-animation 1000ms calc(100ms * 6 + 1400ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 1400ms);
+  animation: stack-animation 600ms calc(100ms * 6 + 1000ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 1000ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(2) {
-  animation: stack-animation 1000ms calc(100ms * 2 + 1800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 2 + 1500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(3) {
-  animation: stack-animation 1000ms calc(100ms * 3 + 1800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 3 + 1500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 1500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(4) {
-  animation: stack-animation 1000ms calc(100ms * 4 + 1800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 4 + 1500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 1500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(5) {
-  animation: stack-animation 1000ms calc(100ms * 5 + 1800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 5 + 1500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 1500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(6) {
-  animation: stack-animation 1000ms calc(100ms * 6 + 1800ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 6 + 1500ms);
+  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 1500ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -676,7 +676,7 @@ body {
   }
 
   .about {
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px - 70px);
   }
 
   .tech-stack,
@@ -712,6 +712,8 @@ body {
   }
   .project__img-num {
     position: absolute;
+    left: 0;
+    opacity: 1;
   }
   .project__info {
     position: absolute;
@@ -743,6 +745,9 @@ body {
     cursor: pointer;
     color: transparent;
   }
+  .project:nth-child(even) .project__img-num {
+    left: 0;
+  }
 
   .about__category,
 .tech-stack__category,
@@ -752,10 +757,16 @@ body {
 
   .project.active .project__info,
 .project.active:nth-child(even) .project__info {
-    animation: slide-top 1000ms 400ms ease-out;
+    animation: slide-top 900ms 400ms ease-out;
     animation-fill-mode: forwards;
-    -webkit-animation: slide-top 1000ms 400ms ease-out;
+    -webkit-animation: slide-top 900ms 400ms ease-out;
     -webkit-animation-fill-mode: forwards;
+  }
+
+  .project.active .project__img-num,
+.project.active:nth-child(even) .project__img-num {
+    animation: none;
+    -webkit-animation: none;
   }
 }
 
