@@ -643,12 +643,14 @@ body {
     left: 0;
   }
 }
-@keyframes opacity {
+@keyframes slide-top {
   0% {
     opacity: 0;
+    bottom: -700px;
   }
   100% {
     opacity: 1;
+    bottom: 0;
   }
 }
 @media screen and (max-width: 840px) {
@@ -713,7 +715,7 @@ body {
   }
   .project__info {
     position: absolute;
-    bottom: 0;
+    bottom: -300px;
     left: 0;
     right: 0;
     background-color: #161616;
@@ -750,9 +752,9 @@ body {
 
   .project.active .project__info,
 .project.active:nth-child(even) .project__info {
-    animation: opacity 500ms 500ms ease-in;
+    animation: slide-top 1000ms 400ms ease-out;
     animation-fill-mode: forwards;
-    -webkit-animation: opacity 500ms 500ms ease-in;
+    -webkit-animation: slide-top 1000ms 400ms ease-out;
     -webkit-animation-fill-mode: forwards;
   }
 }

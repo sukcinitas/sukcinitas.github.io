@@ -98,6 +98,7 @@ document.addEventListener(
 );
 
 function toggleInfo(e) {
+  e.stopPropagation();
   const target = e.target;
   const isMinified = target.classList.contains('fa-chevron-up');
   if (isMinified) {
