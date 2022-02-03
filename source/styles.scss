@@ -230,8 +230,8 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(2) i.active:nth-child(#{$i}) {
-    animation: stack-animation 1000ms calc(100ms * #{$i} + 600ms);
-    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 600ms);
+    animation: stack-animation 1000ms calc(100ms * #{$i} + 800ms);
+    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 800ms);
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -239,8 +239,8 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(3) i.active:nth-child(#{$i}) {
-    animation: stack-animation 1000ms calc(100ms * #{$i} + 1200ms);
-    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 1200ms);
+    animation: stack-animation 1000ms calc(100ms * #{$i} + 1400ms);
+    -webkit-animation: stack-animation 1000ms calc(100ms * #{$i} + 1400ms);
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
@@ -459,42 +459,42 @@ body {
 
 .project.active {
   & .project__carousel {
-    animation: slide-right 500ms ease-in;
+    animation: slide-right 400ms ease-in;
     animation-fill-mode: forwards;
-    -webkit-animation: slide-right 500ms ease-in;
+    -webkit-animation: slide-right 400ms ease-in;
     -webkit-animation-fill-mode: forwards;
   }
   & .project__info {
-    animation: slide-left 500ms 400ms ease-in;
+    animation: slide-left 400ms 400ms ease-in;
     animation-fill-mode: forwards;
-    -webkit-animation: slide-left 500ms 400ms ease-in;
+    -webkit-animation: slide-left 400ms 400ms ease-in;
     -webkit-animation-fill-mode: forwards;
   }
   & .project__img-num {
-    -webkit-animation: slide-right 500ms 800ms ease-in;
+    -webkit-animation: slide-right 400ms 800ms ease-in;
     -webkit-animation-fill-mode: forwards;
-    animation: slide-right 500ms 800ms ease-in;
+    animation: slide-right 400ms 800ms ease-in;
     animation-fill-mode: forwards;
   }
 }
 
 .project.active:nth-child(even) {
   & .project__carousel {
-    animation: slide-left 500ms ease-in;
+    animation: slide-left 400ms ease-in;
     animation-fill-mode: forwards;
-    -webkit-animation: slide-left 500ms ease-in;
+    -webkit-animation: slide-left 400ms ease-in;
     -webkit-animation-fill-mode: forwards;
   }
   & .project__info {
-    -webkit-animation: slide-right 500ms 400ms ease-in;
+    -webkit-animation: slide-right 400ms 400ms ease-in;
     -webkit-animation-fill-mode: forwards;
-    animation: slide-right 500ms 400ms ease-in;
+    animation: slide-right 400ms 400ms ease-in;
     animation-fill-mode: forwards;
   }
   & .project__img-num {
-    -webkit-animation: slide-left 500ms 800ms ease-in;
+    -webkit-animation: slide-left 400ms 800ms ease-in;
     -webkit-animation-fill-mode: forwards;
-    animation: slide-left 500ms 800ms ease-in;
+    animation: slide-left 400ms 800ms ease-in;
     animation-fill-mode: forwards;
   }
 }

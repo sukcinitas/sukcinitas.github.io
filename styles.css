@@ -223,71 +223,71 @@ body {
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(2) {
-  animation: stack-animation 1000ms calc(100ms * 2 + 600ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 600ms);
+  animation: stack-animation 1000ms calc(100ms * 2 + 800ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 800ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(3) {
-  animation: stack-animation 1000ms calc(100ms * 3 + 600ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 600ms);
+  animation: stack-animation 1000ms calc(100ms * 3 + 800ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 800ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(4) {
-  animation: stack-animation 1000ms calc(100ms * 4 + 600ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 600ms);
+  animation: stack-animation 1000ms calc(100ms * 4 + 800ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 800ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(5) {
-  animation: stack-animation 1000ms calc(100ms * 5 + 600ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 600ms);
+  animation: stack-animation 1000ms calc(100ms * 5 + 800ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 800ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(6) {
-  animation: stack-animation 1000ms calc(100ms * 6 + 600ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 600ms);
+  animation: stack-animation 1000ms calc(100ms * 6 + 800ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 800ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(2) {
-  animation: stack-animation 1000ms calc(100ms * 2 + 1200ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 1200ms);
+  animation: stack-animation 1000ms calc(100ms * 2 + 1400ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 2 + 1400ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(3) {
-  animation: stack-animation 1000ms calc(100ms * 3 + 1200ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 1200ms);
+  animation: stack-animation 1000ms calc(100ms * 3 + 1400ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 3 + 1400ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(4) {
-  animation: stack-animation 1000ms calc(100ms * 4 + 1200ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 1200ms);
+  animation: stack-animation 1000ms calc(100ms * 4 + 1400ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 4 + 1400ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(5) {
-  animation: stack-animation 1000ms calc(100ms * 5 + 1200ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 1200ms);
+  animation: stack-animation 1000ms calc(100ms * 5 + 1400ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 5 + 1400ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(6) {
-  animation: stack-animation 1000ms calc(100ms * 6 + 1200ms);
-  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 1200ms);
+  animation: stack-animation 1000ms calc(100ms * 6 + 1400ms);
+  -webkit-animation: stack-animation 1000ms calc(100ms * 6 + 1400ms);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
 }
@@ -502,40 +502,40 @@ body {
 }
 
 .project.active .project__carousel {
-  animation: slide-right 500ms ease-in;
+  animation: slide-right 400ms ease-in;
   animation-fill-mode: forwards;
-  -webkit-animation: slide-right 500ms ease-in;
+  -webkit-animation: slide-right 400ms ease-in;
   -webkit-animation-fill-mode: forwards;
 }
 .project.active .project__info {
-  animation: slide-left 500ms 400ms ease-in;
+  animation: slide-left 400ms 400ms ease-in;
   animation-fill-mode: forwards;
-  -webkit-animation: slide-left 500ms 400ms ease-in;
+  -webkit-animation: slide-left 400ms 400ms ease-in;
   -webkit-animation-fill-mode: forwards;
 }
 .project.active .project__img-num {
-  -webkit-animation: slide-right 500ms 800ms ease-in;
+  -webkit-animation: slide-right 400ms 800ms ease-in;
   -webkit-animation-fill-mode: forwards;
-  animation: slide-right 500ms 800ms ease-in;
+  animation: slide-right 400ms 800ms ease-in;
   animation-fill-mode: forwards;
 }
 
 .project.active:nth-child(even) .project__carousel {
-  animation: slide-left 500ms ease-in;
+  animation: slide-left 400ms ease-in;
   animation-fill-mode: forwards;
-  -webkit-animation: slide-left 500ms ease-in;
+  -webkit-animation: slide-left 400ms ease-in;
   -webkit-animation-fill-mode: forwards;
 }
 .project.active:nth-child(even) .project__info {
-  -webkit-animation: slide-right 500ms 400ms ease-in;
+  -webkit-animation: slide-right 400ms 400ms ease-in;
   -webkit-animation-fill-mode: forwards;
-  animation: slide-right 500ms 400ms ease-in;
+  animation: slide-right 400ms 400ms ease-in;
   animation-fill-mode: forwards;
 }
 .project.active:nth-child(even) .project__img-num {
-  -webkit-animation: slide-left 500ms 800ms ease-in;
+  -webkit-animation: slide-left 400ms 800ms ease-in;
   -webkit-animation-fill-mode: forwards;
-  animation: slide-left 500ms 800ms ease-in;
+  animation: slide-left 400ms 800ms ease-in;
   animation-fill-mode: forwards;
 }
 
