@@ -1,444 +1,787 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@400;600&family=Tourney:wght@300;400&display=swap" rel="stylesheet"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@400;600&family=Tourney:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <title>gintarė černiauskaitė | portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="header__wrapper">
-            <div class="header__brand-wrapper">
-                <span class="header__brand">Gintarė Černiauskaitė</span>
-                <span class="header__brand-additional">_portfolio</span>
-            </div>
-            <div class="header__contact-info">
-                <div class="header__contact-info-item">
-                    <span>sukcinitas@gmail.com</span>
-                </div>
-                <div class="header__contact-info-item">           
-                    <a href="https://github.com/sukcinitas" target="_blank" rel="noreferrer noopener">
-                        <i class="devicon-github-original"></i>
-                    </a>
-                </div>
-                <div class="header__contact-info-item">            
-                    <a href="https://www.linkedin.com/in/gintarecerniauskaite/" target="_blank" rel="noreferrer noopener">
-                        <i class="devicon-linkedin-plain"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="header__wrapper">
+        <div class="header__brand-wrapper">
+          <span class="header__brand">Gintarė Černiauskaitė</span>
+          <span class="header__brand-additional">_portfolio</span>
         </div>
+        <div class="header__contact-info">
+          <div class="header__contact-info-item">
+            <span>sukcinitas@gmail.com</span>
+          </div>
+          <div class="header__contact-info-item">
+            <a
+              href="https://github.com/sukcinitas"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i class="devicon-github-original"></i>
+            </a>
+          </div>
+          <div class="header__contact-info-item">
+            <a
+              href="https://www.linkedin.com/in/gintarecerniauskaite/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i class="devicon-linkedin-plain"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="main">
+      <div class="about">
+        <div class="about__wrapper">
+          <h1 class="about__title">JavaScript</h1>
+          <h1 class="about__title">Dev.</h1>
+          <p class="about__text">
+            <span class="about__category">About</span>
+            I'm a self-taught developer transitioning from the field of medicine
+            looking for opportunities to launch a professional career in IT. I'm
+            driven and highly motivated, I love learning new things and a good
+            challenge always gets me energized.
+          </p>
+        </div>
+      </div>
 
-        <div class="about">
-            <div class="about__wrapper">
-                <h1 class="about__title">
-                    JavaScript
-                </h1>
-                <h1 class="about__title">
-                    Dev.
-                </h1>
-                <p class="about__text">
-                    <span class="about__category">About</span>
-                    I'm a self-taught developer transitioning from the field of medicine
-                    looking for opportunities to launch a professional career in IT.
-                    I'm driven and highly motivated, I love learning new things and
-                    a good challenge always gets me energized.
+      <div class="tech-stack">
+        <span class="tech-stack__category">What I use</span>
+        <div class="tech-stack__tech">
+          <div class="tech-stack__list" data-tidx="1">
+            <span class="tech-stack__list-category">_lang</span>
+            <i
+              class="devicon-html5-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-css3-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-javascript-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-typescript-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-python-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+          </div>
 
+          <div class="tech-stack__list" data-tidx="2">
+            <span
+              class="tech-stack__list-category"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+              >_front-end</span
+            >
+            <i
+              class="devicon-sass-original"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-react-original"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-redux-original"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-vuejs-plain-wordmark"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-d3js-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+          </div>
+
+          <div class="tech-stack__list" data-tidx="3">
+            <span
+              class="tech-stack__list-category"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+              >_back-end</span
+            >
+            <i
+              class="devicon-nodejs-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-express-original-wordmark"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-socketio-original-wordmark"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-django-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-mongodb-plain-wordmark"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+          </div>
+
+          <div class="tech-stack__list" data-tidx="4">
+            <span
+              class="tech-stack__list-category"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+              >_tools</span
+            >
+            <i
+              class="devicon-webpack-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-babel-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-github-original"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+            <i
+              class="devicon-vscode-plain"
+              onmouseover="toggleDevIcon(event)"
+              onmouseout="toggleDevIcon(event)"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <span class="projects__category"> Pet Projects </span>
+        <span class="projects__display">
+          Choose display:
+          <i
+            class="fa fa-ellipsis-h selected"
+            aria-hidden="true"
+            onClick="chooseDisplay(event)"
+          ></i>
+          <i
+            class="fa fa-list"
+            aria-hidden="true"
+            onClick="chooseDisplay(event)"
+          ></i>
+        </span>
+        <div class="projects__list">
+          <article class="project">
+            <div class="project__wrapper">
+              <div class="project__carousel">
+                <img
+                  class="project__img project__img--active"
+                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  src="assets/shlist_1.jpg"
+                  data-iid="s0"
+                />
+                <img
+                  class="project__img"
+                  src="assets/shlist_2.jpg"
+                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  data-iid="s1"
+                />
+                <img
+                  class="project__img"
+                  src="assets/shlist_3.jpg"
+                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  data-iid="s2"
+                />
+                <img
+                  class="project__img"
+                  src="assets/shlist_4.jpg"
+                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  data-iid="s3"
+                />
+                <img
+                  class="project__img"
+                  src="assets/shlist_5.jpg"
+                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  data-iid="s4"
+                />
+                <img
+                  class="project__img"
+                  src="assets/shlist_6.jpg"
+                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  data-iid="s5"
+                />
+              </div>
+              <span class="project__img-num">01/06</span>
+              <section class="project__info">
+                <span class="project__icons" onClick="toggleInfo(event)"
+                  ><i class="fa fa-chevron-down" aria-hidden="true"></i
+                ></span>
+                <h3 class="project__title">Shopping List</h3>
+                <p class="project__links">
+                  <a
+                    href="https://github.com/sukcinitas/dc-shopping-list"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://github.com/sukcinitas/dc-shopping-list-api"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://shlist.netlify.app"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="fa fa-link" aria-hidden="true"></i
+                  ></a>
                 </p>
+                <p class="project__text">
+                  A full stack React & Express.js. It allows to create and save
+                  shopping lists, to review shopping history and statistics.
+                  This app was built for completing a challenge actualizing a
+                  readily made design (Figma).
+                </p>
+                <p class="project__text">
+                  While building this app I practised using Redux (Redux Toolkit
+                  approach) for complex state management and a relational
+                  database management system (SQLite) for storage.
+                </p>
+                <span class="project__stack"
+                  >Typescript Sass React Express Mocha & Chai</span
+                >
+              </section>
             </div>
-        </div>
-
-        </div>
-
-        <div class="tech-stack">
-            <span class="tech-stack__category">What I use</span>
-            <div class="tech-stack__tech">
-                <div class="tech-stack__list" data-tidx="1">
-                    <span class="tech-stack__list-category">_lang</span>
-                    <i class="devicon-html5-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-css3-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-javascript-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-typescript-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-python-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                </div>
-
-                <div class="tech-stack__list"  data-tidx="2">
-                    <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_front-end</span>
-                    <i class="devicon-sass-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-react-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-redux-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-vuejs-plain-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-d3js-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                </div>
-
-                <div class="tech-stack__list"  data-tidx="3">
-                    <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_back-end</span>
-                    <i class="devicon-nodejs-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-express-original-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-socketio-original-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-django-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-mongodb-plain-wordmark" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>  
-                </div>
-
-                <div class="tech-stack__list"  data-tidx="4">
-                    <span class="tech-stack__list-category" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)">_tools</span>
-                    <i class="devicon-webpack-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-babel-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-github-original" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                    <i class="devicon-vscode-plain" onmouseover="toggleDevIcon(event)" onmouseout="toggleDevIcon(event)"></i>
-                </div>
+          </article>
+          <article class="project">
+            <div class="project__wrapper">
+              <div class="project__carousel">
+                <img
+                  class="project__img project__img--active"
+                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  src="assets/yoursnext_1.jpg"
+                  data-iid="y0"
+                />
+                <img
+                  class="project__img"
+                  src="assets/yoursnext_2.jpg"
+                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  data-iid="y1"
+                />
+                <img
+                  class="project__img"
+                  src="assets/yoursnext_3.jpg"
+                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  data-iid="y2"
+                />
+                <img
+                  class="project__img"
+                  src="assets/yoursnext_4.jpg"
+                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  data-iid="y3"
+                />
+                <img
+                  class="project__img"
+                  src="assets/yoursnext_5.jpg"
+                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  data-iid="y4"
+                />
+              </div>
+              <span class="project__img-num">01/05</span>
+              <section class="project__info">
+                <span class="project__icons" onClick="toggleInfo(event)"
+                  ><i class="fa fa-chevron-down" aria-hidden="true"></i
+                ></span>
+                <h3 class="project__title">Yours Next</h3>
+                <p class="project__links">
+                  <a
+                    href="https://github.com/sukcinitas/yours-next-client"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://github.com/sukcinitas/yours-next-server"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://yours-next.herokuapp.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="fa fa-link" aria-hidden="true"></i
+                  ></a>
+                </p>
+                <p class="project__text">
+                  A full stack application which allows to create groups with
+                  shared playlists stored in the database, to watch Youtube
+                  videos separately or in a synchronized manner among group
+                  members and to chat in real-time using Socket.io.
+                </p>
+                <p class="project__text">
+                  I learned how to use Socket.io for bidirectional communication
+                  and utilize several APIs such as Youtube Data API, Youtube
+                  IFrame Player API, Web Storage API (sessionStorage) for my
+                  goals.
+                </p>
+                <span class="project__stack"
+                  >Sass Vue Vuex Express MongoDB Passport.js Bcryptjs Socket.io
+                  Jest</span
+                >
+              </section>
             </div>
-        </div>
-
-        <div class="projects">
-            <span class="projects__category">
-                Pet Projects
-            </span>
-            <span class="projects__display"> Choose display:
-                <i class="fa fa-ellipsis-h selected" aria-hidden="true" onClick="chooseDisplay(event)"></i>
-                <i class="fa fa-list" aria-hidden="true" onClick="chooseDisplay(event)"></i>
-            </span>
-            <div class="projects__list">
-                <article class="project">
-                    <div class="project__wrapper">
-                        <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 's', 6, 1)" src="assets/shlist_1.jpg" data-iid="s0">
-                            <img class="project__img" src="assets/shlist_2.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s1">
-                            <img class="project__img" src="assets/shlist_3.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s2">
-                            <img class="project__img" src="assets/shlist_4.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s3">
-                            <img class="project__img" src="assets/shlist_5.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s4">
-                            <img class="project__img" src="assets/shlist_6.jpg" onClick="changeActiveImg(event, 's', 6, 1)" data-iid="s5">
-                        </div>
-                        <span class="project__img-num">01/06</span>
-                        <section class="project__info">
-                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            <h3 class="project__title">Shopping List</h3>
-                            <p class="project__links">
-                                <a href="https://github.com/sukcinitas/dc-shopping-list" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://github.com/sukcinitas/dc-shopping-list-api" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://shlist.netlify.app" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
-                            </p>
-                            <p class="project__text">
-                                A full stack React & Express.js. It allows to create and save shopping lists, to
-                                review shopping history and statistics.
-                                This app was built for completing a challenge actualizing a readily made design (Figma).
-                            </p>
-                            <p class="project__text">
-                                While building this app I practised using Redux (Redux Toolkit approach) for complex state management and
-                                a relational database management system (SQLite) for storage. 
-                            </p>
-                            <span class="project__stack">Typescript Sass React Express Mocha & Chai</span>
-                        </section>
-                    </div>
-                </article>               
-                <article class="project">
-                    <div class="project__wrapper">
-                        <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'y', 5, 2)" src="assets/yoursnext_1.jpg" data-iid="y0">
-                            <img class="project__img" src="assets/yoursnext_2.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y1">
-                            <img class="project__img" src="assets/yoursnext_3.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y2">
-                            <img class="project__img" src="assets/yoursnext_4.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y3">
-                            <img class="project__img" src="assets/yoursnext_5.jpg" onClick="changeActiveImg(event, 'y', 5, 2)" data-iid="y4">
-                        </div>
-                        <span class="project__img-num">01/05</span>
-                        <section class="project__info">
-                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            <h3 class="project__title">Yours Next</h3>
-                            <p class="project__links">
-                                <a href="https://github.com/sukcinitas/yours-next-client" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://github.com/sukcinitas/yours-next-server" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://yours-next.herokuapp.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
-                            </p>
-                            <p class="project__text">
-                                A full stack application
-                                which allows to create groups with shared playlists stored in the database,
-                                to watch Youtube videos separately or in a synchronized manner among
-                                group members and to chat in real-time using Socket.io.
-                            </p>
-                            <p class="project__text">
-                                I learned how to use Socket.io for bidirectional communication and utilize several APIs
-                                such as Youtube Data API, Youtube IFrame Player API, Web Storage API
-                                (sessionStorage) for my goals.
-                            </p>
-                            <span class="project__stack">Sass Vue Vuex Express MongoDB Passport.js Bcryptjs Socket.io Jest</span>
-                        </section>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="project__wrapper">
-                        <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'u', 4, 3)" src="assets/upup_1.jpg" data-iid="u0">
-                            <img class="project__img" src="assets/upup_2.jpg" onClick="changeActiveImg(event, 'u', 4, 3)" data-iid="u1">
-                            <img class="project__img" src="assets/upup_3.jpg" onClick="changeActiveImg(event, 'u', 4, 3)" data-iid="u2">
-                            <img class="project__img" src="assets/upup_4.jpg" onClick="changeActiveImg(event, 'u', 4, 3)" data-iid="u3">
-                        </div>
-                        <span class="project__img-num">01/04</span>
-                        <section class="project__info">
-                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            <h3 class="project__title">Up up</h3>
-                            <p class="project__links">
-                                <a href="https://github.com/sukcinitas/voting-app" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://up-up.herokuapp.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
-                            </p>
-                            <p class="project__text">
-                                A full stack app that allows users to vote in polls
-                                while authenticated users are allowed to create polls and to manage their
-                                profile information and created polls.
-                                Poll results are represented in a D3.js chart.
-                            </p>
-                            <p class="project__text">
-                                I started building my skills up by realizing this app as my first big project.
-                                I also learned measures that can be taken to increase app security. 
-                                The app was my playground migrating from JavaScript to TypeScript, from
-                                class based React components to functional components with hooks.
-                            </p>
-                            <span class="project__stack">Typescript Sass React Redux D3.js Express MongoDB Passport.js Jest & React Testing Library</span>
-                        </section>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="project__wrapper">
-                        <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'c', 2, 4)" src="assets/cw_1.jpg" data-iid="c0">
-                            <img class="project__img" src="assets/cw_2.jpg" onClick="changeActiveImg(event, 'c', 2, 4)" data-iid="c1">
-                        </div>
-                        <span class="project__img-num">01/02</span>
-                        <section class="project__info">
-                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            <h3 class="project__title">Cats Wiki</h3>
-                            <p class="project__links">
-                                <a href="https://github.com/sukcinitas/dc-cat-wiki" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://github.com/sukcinitas/dc-cat-wiki-api" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://cats-wiki.netlify.app" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
-                            </p>
-                            <p class="project__text">
-                                A responsive React & Express.js app that fetches information about
-                                cat breeds from CatAPI and keeps track of the most searched ones. 
-                                This app was built for completing a challenge actualizing a readily made design (Figma).
-                            </p>
-                            <p class="project__text">
-                                While building this app I improved skills regarding responsive design,
-                                images, and TypeScript.
-                            </p>
-                            <span class="project__stack">Typescript Sass React Express Mocha & Chai</span>
-                        </section>
-                    </div>
-                </article>
-                <article class="project">
-                    <div class="project__wrapper">
-                        <div class="project__carousel">
-                            <img class="project__img project__img--active" onClick="changeActiveImg(event, 'i', 3, 5)" src="assets/iu_1.jpg" data-iid="i0">
-                            <img class="project__img" src="assets/iu_2.jpg" onClick="changeActiveImg(event, 'i', 3, 5)" data-iid="i1">
-                            <img class="project__img" src="assets/iu_3.jpg" onClick="changeActiveImg(event, 'i', 3, 5)" data-iid="i2">
-                        </div>
-                        <span class="project__img-num">01/03</span>
-                        <section class="project__info">
-                            <span class="project__icons" onClick="toggleInfo(event)"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-                            <h3 class="project__title">Image Uploader</h3>
-                            <p class="project__links">
-                                <a href="https://github.com/sukcinitas/dc-img-uploader" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://github.com/sukcinitas/dc-img-uploader-api" rel="noopener noreferrer" target="_blank"><i class="devicon-github-original"></i></a>
-                                <a href="https://imago-uploader.netlify.app" rel="noopener noreferrer" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
-                            </p>
-                            <p class="project__text">
-                                A responsive React & Express.js app that allows to upload images
-                                with removed EXIF data. Images are stored on a server.
-                                This app was also built for completing a challenge actualizing a readily made design (Figma).
-                            </p>
-                            <p class="project__text">
-                                While building this app I learned about file upload, drop events, browser Clipboard API.
-                            </p>
-                            <span class="project__stack">React Express Piexifjs</span>
-                        </section>
-                    </div>
-                </article>
+          </article>
+          <article class="project">
+            <div class="project__wrapper">
+              <div class="project__carousel">
+                <img
+                  class="project__img project__img--active"
+                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  src="assets/upup_1.jpg"
+                  data-iid="u0"
+                />
+                <img
+                  class="project__img"
+                  src="assets/upup_2.jpg"
+                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  data-iid="u1"
+                />
+                <img
+                  class="project__img"
+                  src="assets/upup_3.jpg"
+                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  data-iid="u2"
+                />
+                <img
+                  class="project__img"
+                  src="assets/upup_4.jpg"
+                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  data-iid="u3"
+                />
+              </div>
+              <span class="project__img-num">01/04</span>
+              <section class="project__info">
+                <span class="project__icons" onClick="toggleInfo(event)"
+                  ><i class="fa fa-chevron-down" aria-hidden="true"></i
+                ></span>
+                <h3 class="project__title">Up up</h3>
+                <p class="project__links">
+                  <a
+                    href="https://github.com/sukcinitas/voting-app"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://up-up.herokuapp.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="fa fa-link" aria-hidden="true"></i
+                  ></a>
+                </p>
+                <p class="project__text">
+                  A full stack app that allows users to vote in polls while
+                  authenticated users are allowed to create polls and to manage
+                  their profile information and created polls. Poll results are
+                  represented in a D3.js chart.
+                </p>
+                <p class="project__text">
+                  I started building my skills up by realizing this app as my
+                  first big project. I also learned measures that can be taken
+                  to increase app security. The app was my playground migrating
+                  from JavaScript to TypeScript, from class based React
+                  components to functional components with hooks.
+                </p>
+                <span class="project__stack"
+                  >Typescript Sass React Redux D3.js Express MongoDB Passport.js
+                  Jest & React Testing Library</span
+                >
+              </section>
             </div>
-            <div class="projects__titles">
-                <span onClick="slideProjectIn(0)" class="projects__title projects__title--selected" data-tid="0"><span></span></span>
-                <span onClick="slideProjectIn(1)" class="projects__title" data-tid="1"><span></span></span>
-                <span onClick="slideProjectIn(2)" class="projects__title" data-tid="2"><span></span></span>
-                <span onClick="slideProjectIn(3)" class="projects__title" data-tid="3"><span></span></span>
-                <span onClick="slideProjectIn(4)" class="projects__title" data-tid="4"><span></span></span>
+          </article>
+          <article class="project">
+            <div class="project__wrapper">
+              <div class="project__carousel">
+                <img
+                  class="project__img project__img--active"
+                  onClick="changeActiveImg(event, 'c', 2, 4)"
+                  src="assets/cw_1.jpg"
+                  data-iid="c0"
+                />
+                <img
+                  class="project__img"
+                  src="assets/cw_2.jpg"
+                  onClick="changeActiveImg(event, 'c', 2, 4)"
+                  data-iid="c1"
+                />
+              </div>
+              <span class="project__img-num">01/02</span>
+              <section class="project__info">
+                <span class="project__icons" onClick="toggleInfo(event)"
+                  ><i class="fa fa-chevron-down" aria-hidden="true"></i
+                ></span>
+                <h3 class="project__title">Cats Wiki</h3>
+                <p class="project__links">
+                  <a
+                    href="https://github.com/sukcinitas/dc-cat-wiki"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://github.com/sukcinitas/dc-cat-wiki-api"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://cats-wiki.netlify.app"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="fa fa-link" aria-hidden="true"></i
+                  ></a>
+                </p>
+                <p class="project__text">
+                  A responsive React & Express.js app that fetches information
+                  about cat breeds from CatAPI and keeps track of the most
+                  searched ones. This app was built for completing a challenge
+                  actualizing a readily made design (Figma).
+                </p>
+                <p class="project__text">
+                  While building this app I improved skills regarding responsive
+                  design, images, and TypeScript.
+                </p>
+                <span class="project__stack"
+                  >Typescript Sass React Express Mocha & Chai</span
+                >
+              </section>
             </div>
-        </div>
-
-        <div class="list">
-            <span class="list__category">Education</span>
-            <div class="list__wrapper">
-                <div>
-                    <p>Medical Doctor, Master’s Degree in Medicine</p>
-                    <p>Vilnius University, Vilnius</p>
-                    <span>Sep 2012 – Jun 2018</span>
-                </div>
-                <div>
-                    <p>Legacy Full Stack</p>
-                    <p>FreeCodeCamp</p>
-                    <span>Sep 2018 – Dec 2019</span>
-                </div>
+          </article>
+          <article class="project">
+            <div class="project__wrapper">
+              <div class="project__carousel">
+                <img
+                  class="project__img project__img--active"
+                  onClick="changeActiveImg(event, 'i', 3, 5)"
+                  src="assets/iu_1.jpg"
+                  data-iid="i0"
+                />
+                <img
+                  class="project__img"
+                  src="assets/iu_2.jpg"
+                  onClick="changeActiveImg(event, 'i', 3, 5)"
+                  data-iid="i1"
+                />
+                <img
+                  class="project__img"
+                  src="assets/iu_3.jpg"
+                  onClick="changeActiveImg(event, 'i', 3, 5)"
+                  data-iid="i2"
+                />
+              </div>
+              <span class="project__img-num">01/03</span>
+              <section class="project__info">
+                <span class="project__icons" onClick="toggleInfo(event)"
+                  ><i class="fa fa-chevron-down" aria-hidden="true"></i
+                ></span>
+                <h3 class="project__title">Image Uploader</h3>
+                <p class="project__links">
+                  <a
+                    href="https://github.com/sukcinitas/dc-img-uploader"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://github.com/sukcinitas/dc-img-uploader-api"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="devicon-github-original"></i
+                  ></a>
+                  <a
+                    href="https://imago-uploader.netlify.app"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><i class="fa fa-link" aria-hidden="true"></i
+                  ></a>
+                </p>
+                <p class="project__text">
+                  A responsive React & Express.js app that allows to upload
+                  images with removed EXIF data. Images are stored on a server.
+                  This app was also built for completing a challenge actualizing
+                  a readily made design (Figma).
+                </p>
+                <p class="project__text">
+                  While building this app I learned about file upload, drop
+                  events, browser Clipboard API.
+                </p>
+                <span class="project__stack">React Express Piexifjs</span>
+              </section>
             </div>
+          </article>
         </div>
+        <div class="projects__titles">
+          <span
+            onClick="slideProjectIn(0)"
+            class="projects__title projects__title--selected"
+            data-tid="0"
+            ><span></span
+          ></span>
+          <span onClick="slideProjectIn(1)" class="projects__title" data-tid="1"
+            ><span></span
+          ></span>
+          <span onClick="slideProjectIn(2)" class="projects__title" data-tid="2"
+            ><span></span
+          ></span>
+          <span onClick="slideProjectIn(3)" class="projects__title" data-tid="3"
+            ><span></span
+          ></span>
+          <span onClick="slideProjectIn(4)" class="projects__title" data-tid="4"
+            ><span></span
+          ></span>
+        </div>
+      </div>
 
-        <div class="list">
-            <span class="list__category">Experience</span>
-            <div class="list__wrapper">
-                <div>
-                    <p>Intern</p>
-                    <p>Vaikų ligoninė, VšĮ VUL Santaros klinikų filialas,
-                        VUL Santaros klinikos, VšĮ Vilniaus miesto klinikinė
-                        ligoninė
-                    </p>
-                    <span>Feb 2018 – May 2018</span>
-                </div>
-            </div>
+      <div class="list">
+        <span class="list__category">Education</span>
+        <div class="list__wrapper">
+          <div>
+            <p>Medical Doctor, Master’s Degree in Medicine</p>
+            <p>Vilnius University, Vilnius</p>
+            <span>Sep 2012 – Jun 2018</span>
+          </div>
+          <div>
+            <p>Legacy Full Stack</p>
+            <p>FreeCodeCamp</p>
+            <span>Sep 2018 – Dec 2019</span>
+          </div>
         </div>
+      </div>
 
-        <div class="contact">
-            <p class="contact__info">Hello.</p>
-            <p class="contact__info">sukcinitas@gmail.com</p>
+      <div class="list">
+        <span class="list__category">Experience</span>
+        <div class="list__wrapper">
+          <div>
+            <p>Intern</p>
+            <p>
+              Vaikų ligoninė, VšĮ VUL Santaros klinikų filialas, VUL Santaros
+              klinikos, VšĮ Vilniaus miesto klinikinė ligoninė
+            </p>
+            <span>Feb 2018 – May 2018</span>
+          </div>
         </div>
+      </div>
+
+      <div class="contact">
+        <p class="contact__info">Hello.</p>
+        <p class="contact__info">sukcinitas@gmail.com</p>
+      </div>
     </main>
 
     <footer class="footer">
-        <p>Designed & coded by Gintarė Černiauskaitė<a href="https://github.com/sukcinitas" target="_blank" rel="noreferrer noopener"><span>  @sukcinitas</span></a></p>
-    </footer class="footer">
+      <p>
+        Designed & coded by Gintarė Černiauskaitė
+        <a
+          href="https://github.com/sukcinitas"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <span> @sukcinitas</span>
+        </a>
+      </p>
+    </footer>
 
     <script>
-        function slideProjectIn(idx) {
-            const projectSlider = document.querySelector('.projects__list');
-            const projectSliderArray = Array.from(projectSlider.children);
-            const project = projectSliderArray[idx];
-            const target = document.querySelector('.projects__title--selected');
-            const title = document.querySelector(`.projects__title[data-tid="${idx}"]`);
+      function slideProjectIn(idx) {
+        const projectSlider = document.querySelector('.projects__list');
+        const projectSliderArray = Array.from(projectSlider.children);
+        const project = projectSliderArray[idx];
+        const target = document.querySelector('.projects__title--selected');
+        const title = document.querySelector(
+          `.projects__title[data-tid="${idx}"]`
+        );
 
-            projectSlider.style.left = `${idx * -100}vw`;
-            target.classList.remove('projects__title--selected');
-            title.classList.add('projects__title--selected');
+        projectSlider.style.left = `${idx * -100}vw`;
+        target.classList.remove('projects__title--selected');
+        title.classList.add('projects__title--selected');
 
-            projectSliderArray.forEach((project) => {
-                project.classList.remove('active');
-            });
-            project.classList.add('active');
-        }
-
-        function changeActiveImg(e, project, imgNum, projectNum) {
-            const target = e.currentTarget;
-            const idx = Number(target.dataset.iid[1]) + 1; // only numbers till 10s
-            const imgTrackList = Array.from(document.querySelectorAll(`.project__img-num`));
-            const imgTrack = imgTrackList[projectNum - 1];
-            let img;
-            if (idx === imgNum) {
-                img = document.querySelector(`.project__img[data-iid="${project}${0}"]`); 
-                imgTrack.innerHTML = `01/0${imgNum}`;
-            } else {
-                img = document.querySelector(`.project__img[data-iid="${project}${idx}"]`);
-                imgTrack.innerHTML = `0${idx + 1}/0${imgNum}`;
-
-            }
-            target.classList.remove('project__img--active');
-            img.classList.add('project__img--active');
-        }
-
-        function toggleDevIcon (e) {
-            const target = e.currentTarget;
-            if (target.classList.contains('colored')) {
-                target.classList.remove('colored');
-            } else {
-                target.classList.add('colored');  
-            }
-        }
-
-        function comesInViewport(element, idx) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= -0.6 * (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.top <= 0.6 * (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.left >= 0 &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 100
-            );
-        }
-
-        document.addEventListener('scroll', function () {
-            // checking if tech stack comes in viewport
-            const el = document.querySelector('.tech-stack');
-            const divs = document.querySelectorAll('.tech-stack__list i');
-            if (comesInViewport(el, 0)) {
-                for (var i = 0; i < divs.length; i++) {
-                    divs[i].classList.add('active');
-                }
-            } else {
-                for (var i = 0; i < divs.length; i++) {
-                    divs[i].classList.remove('active');
-                }
-            }
-            //checking if project comes in viewport
-            const projectArray = Array.from(document.querySelectorAll('.project'));
-
-            projectArray.forEach((project, idx) => {
-                toggleActiveClass(project, idx);
-            });
-
-            function toggleActiveClass(element, idx) {
-                if (comesInViewport(element, idx)) {
-                    element.classList.add('active');
-                } else {
-                    element.classList.remove('active');
-                }
-            }
-        }, {
-            passive: true
+        projectSliderArray.forEach((project) => {
+          project.classList.remove('active');
         });
+        project.classList.add('active');
+      }
 
-        function toggleInfo(e) {
-            const target = e.target;
-            const isMinified = target.classList.contains('fa-chevron-up');
-            if (isMinified) {
-                const parent = target.parentElement.parentElement;
-                target.classList.remove('fa-chevron-up');
-                target.classList.add('fa-chevron-down');                
-                parent.style.top = 'auto';
-            } else {
-                const parent = target.parentElement.parentElement;
-                target.classList.add('fa-chevron-up');
-                target.classList.remove('fa-chevron-down');
-                parent.style.top = '500px';
-            }
+      function changeActiveImg(e, project, imgNum, projectNum) {
+        const target = e.currentTarget;
+        const idx = Number(target.dataset.iid[1]) + 1; // only numbers till 10s
+        const imgTrackList = Array.from(
+          document.querySelectorAll(`.project__img-num`)
+        );
+        const imgTrack = imgTrackList[projectNum - 1];
+        let img;
+        if (idx === imgNum) {
+          img = document.querySelector(
+            `.project__img[data-iid="${project}${0}"]`
+          );
+          imgTrack.innerHTML = `01/0${imgNum}`;
+        } else {
+          img = document.querySelector(
+            `.project__img[data-iid="${project}${idx}"]`
+          );
+          imgTrack.innerHTML = `0${idx + 1}/0${imgNum}`;
         }
+        target.classList.remove('project__img--active');
+        img.classList.add('project__img--active');
+      }
 
-        function chooseDisplay(e) {
-            const target = e.target;
-            const list = document.querySelector('.projects__list');
-            const titles = document.querySelector('.projects__titles');
-            let sibling;
-            list.style.left = 0;
-            if (target.classList.contains('fa-ellipsis-h')) {
-                sibling = target.nextElementSibling;
-                list.classList.remove('projects__list--list');
-                titles.classList.remove('projects__titles--list');
-
-            } else {
-                sibling = target.previousElementSibling;
-                list.classList.add('projects__list--list');
-                titles.classList.add('projects__titles--list');
-            }
-            target.classList.add('selected');
-            sibling.classList.remove('selected');
-
-            const projectSlider = document.querySelector('.projects__list');
-            const projectSliderArray = Array.from(projectSlider.children);
-            projectSliderArray.forEach((project) => {
-                project.classList.remove('active');
-            });
+      function toggleDevIcon(e) {
+        const target = e.currentTarget;
+        if (target.classList.contains('colored')) {
+          target.classList.remove('colored');
+        } else {
+          target.classList.add('colored');
         }
+      }
+
+      function comesInViewport(element, idx) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >=
+            -0.6 *
+              (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.top <=
+            0.6 *
+              (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.left >= 0 &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth) + 100
+        );
+      }
+
+      document.addEventListener(
+        'scroll',
+        function () {
+          // checking if tech stack comes in viewport
+          const el = document.querySelector('.tech-stack');
+          const divs = document.querySelectorAll('.tech-stack__list i');
+          if (comesInViewport(el, 0)) {
+            for (var i = 0; i < divs.length; i++) {
+              divs[i].classList.add('active');
+            }
+          } else {
+            for (var i = 0; i < divs.length; i++) {
+              divs[i].classList.remove('active');
+            }
+          }
+          //checking if project comes in viewport
+          const projectArray = Array.from(
+            document.querySelectorAll('.project')
+          );
+
+          projectArray.forEach((project, idx) => {
+            toggleActiveClass(project, idx);
+          });
+
+          function toggleActiveClass(element, idx) {
+            if (comesInViewport(element, idx)) {
+              element.classList.add('active');
+            } else {
+              element.classList.remove('active');
+            }
+          }
+        },
+        {
+          passive: true,
+        }
+      );
+
+      function toggleInfo(e) {
+        const target = e.target;
+        const isMinified = target.classList.contains('fa-chevron-up');
+        if (isMinified) {
+          const parent = target.parentElement.parentElement;
+          target.classList.remove('fa-chevron-up');
+          target.classList.add('fa-chevron-down');
+          parent.style.top = 'auto';
+        } else {
+          const parent = target.parentElement.parentElement;
+          target.classList.add('fa-chevron-up');
+          target.classList.remove('fa-chevron-down');
+          parent.style.top = '500px';
+        }
+      }
+
+      function chooseDisplay(e) {
+        const target = e.target;
+        const list = document.querySelector('.projects__list');
+        const titles = document.querySelector('.projects__titles');
+        let sibling;
+        list.style.left = 0;
+        if (target.classList.contains('fa-ellipsis-h')) {
+          sibling = target.nextElementSibling;
+          list.classList.remove('projects__list--list');
+          titles.classList.remove('projects__titles--list');
+        } else {
+          sibling = target.previousElementSibling;
+          list.classList.add('projects__list--list');
+          titles.classList.add('projects__titles--list');
+        }
+        target.classList.add('selected');
+        sibling.classList.remove('selected');
+
+        const projectSlider = document.querySelector('.projects__list');
+        const projectSliderArray = Array.from(projectSlider.children);
+        projectSliderArray.forEach((project) => {
+          project.classList.remove('active');
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
