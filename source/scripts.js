@@ -49,7 +49,7 @@ techIcons.forEach((techIcon) => {
   techIcon.addEventListener('mouseout', toggleDevIcon);
 });
 
-function comesInViewport(element, idx) {
+function comesInViewport(element, idx = 0) {
   const rect = element.getBoundingClientRect();
   return (
     rect.top >=
@@ -99,6 +99,15 @@ document.addEventListener(
       } else {
         element.classList.remove('active');
       }
+    }
+
+    // checking if title is in viewport
+    const title = document.querySelector('.about__wrapper');
+    if (comesInViewport(title)) {
+      console.log(title, comesInViewport(title));
+      title.classList.remove('paused');
+    } else {
+      title.classList.add('paused');
     }
   },
   {

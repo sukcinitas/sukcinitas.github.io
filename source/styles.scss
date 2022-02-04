@@ -12,6 +12,12 @@ $gradient-3: radial-gradient(#d76d77, #3a1c71);
 $sides: 4rem;
 $shadow-1: 2px 2px 10px #0000000d;
 
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -95,8 +101,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-image: $gradient-1;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
   }
 
   &__brand-wrapper {
@@ -156,13 +161,15 @@ body {
   display: flex;
   align-items: flex-end;
 
-  &__title {
+  &__wrapper {
     background-image: $gradient-2;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: bg-animation 5s infinite alternate;
-    -webkit-animation: bg-animation 5s infinite alternate;
+    @include vendor-prefix('background-clip', 'text');
     background-size: 400%;
+    color: transparent;
+    @include vendor-prefix('animation', 'bg-animation 5s infinite alternate');
+  }
+
+  &__title {
     font-size: 13vw;
     line-height: 14vw;
     margin: 0;
@@ -180,11 +187,19 @@ body {
     max-width: 500px;
     font-size: 1.6rem;
     display: inline-block;
+    color: $gray-2;
   }
 
   &__category {
     line-height: 0.5;
   }
+}
+
+.paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .tech-stack {
@@ -205,8 +220,7 @@ body {
 
   &__icon {
     background: $gradient-3;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
     font-size: 4.1rem;
     padding: 10px;
     position: relative;
@@ -230,37 +244,41 @@ body {
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(1) i.active:nth-child(#{$i}) {
-    animation: stack-animation 600ms calc(100ms * #{$i});
-    -webkit-animation: stack-animation 600ms calc(100ms * #{$i});
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i})'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 }
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(2) i.active:nth-child(#{$i}) {
-    animation: stack-animation 600ms calc(100ms * #{$i} + 500ms);
-    -webkit-animation: stack-animation 600ms calc(100ms * #{$i} + 500ms);
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i} + 600ms)'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 }
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(3) i.active:nth-child(#{$i}) {
-    animation: stack-animation 600ms calc(100ms * #{$i} + 1000ms);
-    -webkit-animation: stack-animation 600ms calc(100ms * #{$i} + 1000ms);
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i} + 1200ms)'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 }
 
 @for $i from 2 through 6 {
   .tech-stack__list:nth-child(4) i.active:nth-child(#{$i}) {
-    animation: stack-animation 600ms calc(100ms * #{$i} + 1500ms);
-    -webkit-animation: stack-animation 600ms calc(100ms * #{$i} + 1500ms);
-    animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i} + 1800ms)'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 }
 
@@ -271,8 +289,7 @@ body {
 
   &__display {
     background-image: $gradient-1;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
     font-size: 1.4rem;
     margin-top: -3rem;
   }
@@ -293,8 +310,7 @@ body {
 
   &__titles {
     background-image: $gradient-1;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
     display: flex;
     font-size: 2.4rem;
     justify-content: center;
@@ -418,8 +434,7 @@ body {
     font-size: 3rem;
     font-family: 'Tourney', cursive;
     background-image: $gradient-1;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
     color: transparent;
   }
 
@@ -433,8 +448,7 @@ body {
     text-align: left;
     margin: 2rem 0;
     background-image: $gradient-1;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
     display: flex;
     justify-content: flex-start;
 
@@ -568,8 +582,7 @@ body {
 
   &__link {
     background-image: $gradient-1;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include vendor-prefix('background-clip', 'text');
     color: $gray-2;
 
     &:hover {
@@ -698,8 +711,8 @@ body {
 
     &__icons {
       background-image: $gradient-1;
-      background-clip: text;
-      -webkit-background-clip: text;
+      @include vendor-prefix('background-clip', 'text');
+
       font-size: 1.2rem;
       margin: 0;
       display: inline-block;

@@ -83,8 +83,11 @@ body {
   justify-content: space-between;
   align-items: center;
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
 }
 .header__brand-wrapper {
   display: flex;
@@ -133,13 +136,22 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.about__title {
+.about__wrapper {
   background-image: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
   background-clip: text;
-  animation: bg-animation 5s infinite alternate;
-  -webkit-animation: bg-animation 5s infinite alternate;
   background-size: 400%;
+  color: transparent;
+  -webkit-animation: bg-animation 5s infinite alternate;
+  -moz-animation: bg-animation 5s infinite alternate;
+  -ms-animation: bg-animation 5s infinite alternate;
+  -o-animation: bg-animation 5s infinite alternate;
+  animation: bg-animation 5s infinite alternate;
+}
+.about__title {
   font-size: 13vw;
   line-height: 14vw;
   margin: 0;
@@ -155,9 +167,17 @@ body {
   max-width: 500px;
   font-size: 1.6rem;
   display: inline-block;
+  color: #999;
 }
 .about__category {
   line-height: 0.5;
+}
+
+.paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .tech-stack {
@@ -176,8 +196,11 @@ body {
 }
 .tech-stack__icon {
   background: radial-gradient(#d76d77, #3a1c71);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
   font-size: 4.1rem;
   padding: 10px;
   position: relative;
@@ -197,143 +220,263 @@ body {
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(2) {
-  animation: stack-animation 600ms calc(100ms * 2);
   -webkit-animation: stack-animation 600ms calc(100ms * 2);
-  animation-fill-mode: forwards;
+  -moz-animation: stack-animation 600ms calc(100ms * 2);
+  -ms-animation: stack-animation 600ms calc(100ms * 2);
+  -o-animation: stack-animation 600ms calc(100ms * 2);
+  animation: stack-animation 600ms calc(100ms * 2);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(3) {
-  animation: stack-animation 600ms calc(100ms * 3);
   -webkit-animation: stack-animation 600ms calc(100ms * 3);
-  animation-fill-mode: forwards;
+  -moz-animation: stack-animation 600ms calc(100ms * 3);
+  -ms-animation: stack-animation 600ms calc(100ms * 3);
+  -o-animation: stack-animation 600ms calc(100ms * 3);
+  animation: stack-animation 600ms calc(100ms * 3);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(4) {
-  animation: stack-animation 600ms calc(100ms * 4);
   -webkit-animation: stack-animation 600ms calc(100ms * 4);
-  animation-fill-mode: forwards;
+  -moz-animation: stack-animation 600ms calc(100ms * 4);
+  -ms-animation: stack-animation 600ms calc(100ms * 4);
+  -o-animation: stack-animation 600ms calc(100ms * 4);
+  animation: stack-animation 600ms calc(100ms * 4);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(5) {
-  animation: stack-animation 600ms calc(100ms * 5);
   -webkit-animation: stack-animation 600ms calc(100ms * 5);
-  animation-fill-mode: forwards;
+  -moz-animation: stack-animation 600ms calc(100ms * 5);
+  -ms-animation: stack-animation 600ms calc(100ms * 5);
+  -o-animation: stack-animation 600ms calc(100ms * 5);
+  animation: stack-animation 600ms calc(100ms * 5);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(1) i.active:nth-child(6) {
-  animation: stack-animation 600ms calc(100ms * 6);
   -webkit-animation: stack-animation 600ms calc(100ms * 6);
-  animation-fill-mode: forwards;
+  -moz-animation: stack-animation 600ms calc(100ms * 6);
+  -ms-animation: stack-animation 600ms calc(100ms * 6);
+  -o-animation: stack-animation 600ms calc(100ms * 6);
+  animation: stack-animation 600ms calc(100ms * 6);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(2) {
-  animation: stack-animation 600ms calc(100ms * 2 + 500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 2 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 2 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 2 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 2 + 600ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(3) {
-  animation: stack-animation 600ms calc(100ms * 3 + 500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 3 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 3 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 3 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 3 + 600ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(4) {
-  animation: stack-animation 600ms calc(100ms * 4 + 500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 4 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 4 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 4 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 4 + 600ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(5) {
-  animation: stack-animation 600ms calc(100ms * 5 + 500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 5 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 5 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 5 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 5 + 600ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(2) i.active:nth-child(6) {
-  animation: stack-animation 600ms calc(100ms * 6 + 500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 6 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 6 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 6 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 6 + 600ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(2) {
-  animation: stack-animation 600ms calc(100ms * 2 + 1000ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1000ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 2 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 2 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 2 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 2 + 1200ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(3) {
-  animation: stack-animation 600ms calc(100ms * 3 + 1000ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 1000ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 3 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 3 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 3 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 3 + 1200ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(4) {
-  animation: stack-animation 600ms calc(100ms * 4 + 1000ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 1000ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 4 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 4 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 4 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 4 + 1200ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(5) {
-  animation: stack-animation 600ms calc(100ms * 5 + 1000ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 1000ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 5 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 5 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 5 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 5 + 1200ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(3) i.active:nth-child(6) {
-  animation: stack-animation 600ms calc(100ms * 6 + 1000ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 1000ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 6 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 6 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 6 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 6 + 1200ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(2) {
-  animation: stack-animation 600ms calc(100ms * 2 + 1500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(3) {
-  animation: stack-animation 600ms calc(100ms * 3 + 1500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 1500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 3 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 3 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 3 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 3 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 3 + 1800ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(4) {
-  animation: stack-animation 600ms calc(100ms * 4 + 1500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 1500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 4 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 4 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 4 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 4 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 4 + 1800ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(5) {
-  animation: stack-animation 600ms calc(100ms * 5 + 1500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 1500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 5 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 5 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 5 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 5 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 5 + 1800ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .tech-stack__list:nth-child(4) i.active:nth-child(6) {
-  animation: stack-animation 600ms calc(100ms * 6 + 1500ms);
-  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 1500ms);
-  animation-fill-mode: forwards;
+  -webkit-animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
   -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .projects {
@@ -343,8 +486,11 @@ body {
 }
 .projects__display {
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
   font-size: 1.4rem;
   margin-top: -3rem;
 }
@@ -361,8 +507,11 @@ body {
 }
 .projects__titles {
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
   display: flex;
   font-size: 2.4rem;
   justify-content: center;
@@ -473,8 +622,11 @@ body {
   font-size: 3rem;
   font-family: "Tourney", cursive;
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 .project__text {
@@ -486,8 +638,11 @@ body {
   text-align: left;
   margin: 2rem 0;
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
   display: flex;
   justify-content: flex-start;
 }
@@ -599,8 +754,11 @@ body {
 }
 .footer__link {
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
   color: #999;
 }
 .footer__link:hover {
@@ -710,8 +868,11 @@ body {
   }
   .project__icons {
     background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-    background-clip: text;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
     font-size: 1.2rem;
     margin: 0;
     display: inline-block;
