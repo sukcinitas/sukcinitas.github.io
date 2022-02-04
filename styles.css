@@ -151,21 +151,6 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.about__wrapper {
-  background-image: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
-  background-clip: text;
-  background-size: 400%;
-  color: transparent;
-  -webkit-animation: bg-animation 5s 2100ms infinite alternate;
-  -moz-animation: bg-animation 5s 2100ms infinite alternate;
-  -ms-animation: bg-animation 5s 2100ms infinite alternate;
-  -o-animation: bg-animation 5s 2100ms infinite alternate;
-  animation: bg-animation 5s 2100ms infinite alternate;
-}
 .about__title {
   font-size: 13vw;
   line-height: 14vw;
@@ -176,31 +161,29 @@ body {
   opacity: 0;
   position: relative;
   right: -200px;
-  -webkit-animation: slide-left 500ms 500ms ease-out;
-  -moz-animation: slide-left 500ms 500ms ease-out;
-  -ms-animation: slide-left 500ms 500ms ease-out;
-  -o-animation: slide-left 500ms 500ms ease-out;
-  animation: slide-left 500ms 500ms ease-out;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  background-image: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  background-size: 400%;
+  color: transparent;
+  -webkit-animation: slide-left 500ms 500ms ease-out forwards, bg-animation 5s 2100ms infinite alternate;
+  -moz-animation: slide-left 500ms 500ms ease-out forwards, bg-animation 5s 2100ms infinite alternate;
+  -ms-animation: slide-left 500ms 500ms ease-out forwards, bg-animation 5s 2100ms infinite alternate;
+  -o-animation: slide-left 500ms 500ms ease-out forwards, bg-animation 5s 2100ms infinite alternate;
+  animation: slide-left 500ms 500ms ease-out forwards, bg-animation 5s 2100ms infinite alternate;
 }
 .about h1:last-of-type {
   margin-right: 4rem;
   display: inline-block;
   left: -200px;
-  -webkit-animation: slide-right 500ms 1000ms ease-out;
-  -moz-animation: slide-right 500ms 1000ms ease-out;
-  -ms-animation: slide-right 500ms 1000ms ease-out;
-  -o-animation: slide-right 500ms 1000ms ease-out;
-  animation: slide-right 500ms 1000ms ease-out;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -webkit-animation: slide-right 500ms 1000ms ease-out forwards,bg-animation 5s 2100ms infinite alternate;
+  -moz-animation: slide-right 500ms 1000ms ease-out forwards,bg-animation 5s 2100ms infinite alternate;
+  -ms-animation: slide-right 500ms 1000ms ease-out forwards,bg-animation 5s 2100ms infinite alternate;
+  -o-animation: slide-right 500ms 1000ms ease-out forwards,bg-animation 5s 2100ms infinite alternate;
+  animation: slide-right 500ms 1000ms ease-out forwards,bg-animation 5s 2100ms infinite alternate;
 }
 .about__text {
   max-width: 500px;

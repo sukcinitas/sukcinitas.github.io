@@ -103,11 +103,14 @@ document.addEventListener(
 
     // checking if title is in viewport
     const title = document.querySelector('.about__wrapper');
-    if (comesInViewport(title)) {
-      title.classList.remove('paused');
-    } else {
-      title.classList.add('paused');
-    }
+    const titles = Array.from(document.querySelector('.about__title'));
+    titles.forEach((title) => {
+      if (comesInViewport(title)) {
+        title.classList.remove('paused');
+      } else {
+        title.classList.add('paused');
+      }
+    });
   },
   {
     passive: true,
