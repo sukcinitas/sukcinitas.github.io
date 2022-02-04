@@ -705,6 +705,7 @@ body {
 
     &__wrapper {
       align-items: flex-start;
+      overflow: hidden;
     }
 
     &__contact-info {
@@ -831,5 +832,17 @@ body {
       transition: bottom 1000ms;
       left: 0;
     }
+  }
+
+  .header,
+  .about__title,
+  .about h1:last-of-type,
+  .about__text {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    @include vendor-prefix('animation', 'none');
   }
 }
