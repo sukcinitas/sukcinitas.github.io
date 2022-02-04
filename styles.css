@@ -73,7 +73,8 @@ body {
 
 .header {
   position: fixed;
-  top: 0;
+  top: -200px;
+  opacity: 0;
   left: 0;
   right: 0;
   padding: 4rem 4rem 1rem;
@@ -81,6 +82,16 @@ body {
   font-family: inherit;
   color: #999;
   z-index: 1;
+  -webkit-animation: slide-down 500ms ease-out;
+  -moz-animation: slide-down 500ms ease-out;
+  -ms-animation: slide-down 500ms ease-out;
+  -o-animation: slide-down 500ms ease-out;
+  animation: slide-down 500ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .header__wrapper {
   display: flex;
@@ -149,11 +160,11 @@ body {
   background-clip: text;
   background-size: 400%;
   color: transparent;
-  -webkit-animation: bg-animation 5s infinite alternate;
-  -moz-animation: bg-animation 5s infinite alternate;
-  -ms-animation: bg-animation 5s infinite alternate;
-  -o-animation: bg-animation 5s infinite alternate;
-  animation: bg-animation 5s infinite alternate;
+  -webkit-animation: bg-animation 5s 2100ms infinite alternate;
+  -moz-animation: bg-animation 5s 2100ms infinite alternate;
+  -ms-animation: bg-animation 5s 2100ms infinite alternate;
+  -o-animation: bg-animation 5s 2100ms infinite alternate;
+  animation: bg-animation 5s 2100ms infinite alternate;
 }
 .about__title {
   font-size: 13vw;
@@ -162,16 +173,53 @@ body {
   text-transform: uppercase;
   color: transparent;
   font-family: "Black Ops One", cursive;
+  opacity: 0;
+  position: relative;
+  right: -200px;
+  -webkit-animation: slide-left 500ms 500ms ease-out;
+  -moz-animation: slide-left 500ms 500ms ease-out;
+  -ms-animation: slide-left 500ms 500ms ease-out;
+  -o-animation: slide-left 500ms 500ms ease-out;
+  animation: slide-left 500ms 500ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .about h1:last-of-type {
   margin-right: 4rem;
   display: inline-block;
+  left: -200px;
+  -webkit-animation: slide-right 500ms 1000ms ease-out;
+  -moz-animation: slide-right 500ms 1000ms ease-out;
+  -ms-animation: slide-right 500ms 1000ms ease-out;
+  -o-animation: slide-right 500ms 1000ms ease-out;
+  animation: slide-right 500ms 1000ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .about__text {
   max-width: 500px;
   font-size: 1.6rem;
   display: inline-block;
   color: #999;
+  position: relative;
+  bottom: -200px;
+  opacity: 0;
+  -webkit-animation: slide-up 500ms 1500ms ease-out;
+  -moz-animation: slide-up 500ms 1500ms ease-out;
+  -ms-animation: slide-up 500ms 1500ms ease-out;
+  -o-animation: slide-up 500ms 1500ms ease-out;
+  animation: slide-up 500ms 1500ms ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .about__category {
   line-height: 0.5;
@@ -788,6 +836,46 @@ body {
   }
   100% {
     top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes slide-right {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    right: -200px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
     opacity: 1;
   }
 }

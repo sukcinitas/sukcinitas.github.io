@@ -91,7 +91,8 @@ body {
 .header {
   $font-size: 1.4rem;
   position: fixed;
-  top: 0;
+  top: -200px;
+  opacity: 0;
   left: 0;
   right: 0;
   padding: $sides $sides 1rem;
@@ -99,6 +100,8 @@ body {
   font-family: inherit;
   color: $gray-2;
   z-index: 1;
+  @include vendor-prefix('animation', 'slide-down 500ms ease-out');
+  @include vendor-prefix('animation-fill-mode', 'forwards');
 
   &__wrapper {
     display: flex;
@@ -170,7 +173,10 @@ body {
     @include vendor-prefix('background-clip', 'text');
     background-size: 400%;
     color: transparent;
-    @include vendor-prefix('animation', 'bg-animation 5s infinite alternate');
+    @include vendor-prefix(
+      'animation',
+      'bg-animation 5s 2100ms infinite alternate'
+    );
   }
 
   &__title {
@@ -180,11 +186,19 @@ body {
     text-transform: uppercase;
     color: transparent;
     font-family: 'Black Ops One', cursive;
+    opacity: 0;
+    position: relative;
+    right: -200px;
+    @include vendor-prefix('animation', 'slide-left 500ms 500ms ease-out');
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 
   & h1:last-of-type {
     margin-right: 4rem;
     display: inline-block;
+    left: -200px;
+    @include vendor-prefix('animation', 'slide-right 500ms 1000ms ease-out');
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 
   &__text {
@@ -192,6 +206,11 @@ body {
     font-size: 1.6rem;
     display: inline-block;
     color: $gray-2;
+    position: relative;
+    bottom: -200px;
+    opacity: 0;
+    @include vendor-prefix('animation', 'slide-up 500ms 1500ms ease-out');
+    @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 
   &__category {
@@ -615,6 +634,50 @@ body {
   }
   100% {
     top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    right: -200px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
     opacity: 1;
   }
 }
