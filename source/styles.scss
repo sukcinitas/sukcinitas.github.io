@@ -28,6 +28,10 @@ $shadow-1: 2px 2px 10px #0000000d;
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   &:visited,

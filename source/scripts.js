@@ -104,7 +104,6 @@ document.addEventListener(
     // checking if title is in viewport
     const title = document.querySelector('.about__wrapper');
     if (comesInViewport(title)) {
-      console.log(title, comesInViewport(title));
       title.classList.remove('paused');
     } else {
       title.classList.add('paused');
@@ -159,3 +158,13 @@ function chooseDisplay(e) {
 function loadBody() {
   document.body.style.visibility = 'visible';
 }
+
+const portfolioBtn = document.querySelector('.header__brand-additional');
+portfolioBtn.addEventListener('click', () => {
+  window.scrollTo(0, document.querySelector('.projects').offsetTop);
+});
+
+const homeBtn = document.querySelector('.header__brand');
+homeBtn.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});
