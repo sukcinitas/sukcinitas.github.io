@@ -13,6 +13,7 @@ a {
 }
 a:visited, a:active, a:focus, a:focus-within, a:focus-visible, a:hover {
   color: inherit;
+  transition: color 50ms ease-in;
 }
 a:hover {
   cursor: pointer;
@@ -91,7 +92,7 @@ body {
   width: 40%;
 }
 .header__brand {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #ccc;
 }
 .header__brand:hover {
@@ -99,7 +100,7 @@ body {
   cursor: pointer;
 }
 .header__brand-additional {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   align-self: flex-end;
   color: #999;
 }
@@ -110,7 +111,7 @@ body {
 .header__contact-info {
   display: flex;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #999;
 }
 .header__contact-info-item {
@@ -122,7 +123,7 @@ body {
 }
 .header__contact-info-item i {
   color: #999;
-  font-size: calc(1.2rem + 4px);
+  font-size: calc(1.4rem + 4px);
 }
 .header__contact-info-item i:hover {
   color: transparent;
@@ -174,7 +175,7 @@ body {
   margin: 2rem;
 }
 .tech-stack__icon {
-  background-image: linear-gradient(to bottom, #756792, #9c6b6f, #c5a086);
+  background: radial-gradient(#d76d77, #3a1c71);
   background-clip: text;
   -webkit-background-clip: text;
   font-size: 4.1rem;
@@ -381,10 +382,10 @@ body {
 }
 .projects__title:hover {
   cursor: pointer;
-  background-image: radial-gradient(#3a1c71, #d76d77);
+  background-image: radial-gradient(#d76d77, #3a1c71);
 }
 .projects__title--selected {
-  background-image: radial-gradient(#3a1c71, #d76d77);
+  background-image: radial-gradient(#d76d77, #3a1c71);
   width: 13px;
   height: 13px;
   border: none;
@@ -502,7 +503,7 @@ body {
 }
 .project__stack {
   word-spacing: 4px;
-  color: #424242;
+  color: #653273;
 }
 .project:nth-child(even) .project__wrapper {
   flex-direction: row-reverse;
@@ -562,7 +563,7 @@ body {
   font-size: 1rem;
 }
 .info__item p:first-child {
-  color: #9c6b6f;
+  color: #653273;
   font-size: 1.6rem;
 }
 .info__item p:last-of-type {
@@ -726,7 +727,7 @@ body {
   .project:nth-child(even) .project__info {
     left: 0;
     bottom: -500px;
-    transition: bottom 1200ms;
+    transition: bottom 1000ms;
     opacity: 1;
   }
 
@@ -745,7 +746,7 @@ body {
   .project.active .project__info,
 .project.active:nth-child(even) .project__info {
     bottom: 0;
-    transition: bottom 1200ms;
+    transition: bottom 1000ms;
     left: 0;
   }
 }

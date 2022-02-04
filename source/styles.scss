@@ -5,11 +5,10 @@ $gray-1: #ccc;
 $gray-2: #999;
 $gray-3: #424242;
 $bright-1: rgb(81, 199, 199);
-$bright-2: #9c6b6f;
+$bright-2: #653273;
 $gradient-1: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
 $gradient-2: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
-$gradient-4: linear-gradient(to bottom, #756792, #9c6b6f, #c5a086);
-$gradient-3: radial-gradient(#3a1c71, #d76d77);
+$gradient-3: radial-gradient(#d76d77, #3a1c71);
 $sides: 4rem;
 $shadow-1: 2px 2px 10px #0000000d;
 
@@ -32,6 +31,7 @@ a {
   &:focus-visible,
   &:hover {
     color: inherit;
+    transition: color 50ms ease-in;
   }
 
   &:hover {
@@ -79,7 +79,7 @@ body {
 }
 
 .header {
-  $font-size: 1.2rem;
+  $font-size: 1.4rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -106,7 +106,7 @@ body {
   }
 
   &__brand {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: $gray-1;
 
     &:hover {
@@ -204,7 +204,7 @@ body {
   }
 
   &__icon {
-    background-image: $gradient-4;
+    background: $gradient-3;
     background-clip: text;
     -webkit-background-clip: text;
     font-size: 4.1rem;
@@ -454,7 +454,7 @@ body {
 
   &__stack {
     word-spacing: 4px;
-    color: $gray-3;
+    color: $bright-2;
   }
 
   &:nth-child(even) {
