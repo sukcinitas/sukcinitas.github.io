@@ -842,4 +842,11 @@ body {
   //   bottom: 0;
   //   @include vendor-prefix('animation', 'none');
   // }
+  // .about__title,
+  // .about h1:last-of-type {
+  //   @include vendor-prefix(
+  //     'animation',
+  //     'bg-animation 5s 2100ms infinite alternate'
+  //   );
+  // }
 }

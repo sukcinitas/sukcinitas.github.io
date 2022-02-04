@@ -990,22 +990,6 @@ body {
     transition: bottom 1000ms;
     left: 0;
   }
-
-  .header,
-.about__title,
-.about h1:last-of-type,
-.about__text {
-    opacity: 1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-animation: none;
-    -moz-animation: none;
-    -ms-animation: none;
-    -o-animation: none;
-    animation: none;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
