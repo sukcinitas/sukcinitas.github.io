@@ -74,21 +74,6 @@ body {
   content: ":";
 }
 
-@supports (scroll-snap-align: start) {
-  .main {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-  }
-
-  .about,
-.tech-stack,
-.projects,
-.info,
-.contact {
-    scroll-snap-align: start;
-  }
-}
 .header {
   position: fixed;
   top: -200px;
