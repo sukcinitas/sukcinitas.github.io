@@ -26,7 +26,6 @@ a:hover {
 
 body {
   width: 100%;
-  padding: 4rem;
   background-color: #111;
   font-family: "Teko", sans-serif;
   color: #999;
@@ -34,6 +33,11 @@ body {
   margin: 0;
   position: relative;
   visibility: hidden;
+}
+
+.main {
+  padding: 4rem;
+  width: 100vw;
 }
 
 .about,
@@ -49,8 +53,7 @@ body {
 .projects:not(:first-child),
 .info:not(:first-child),
 .contact:not(:first-child) {
-  padding: 6rem 0;
-  border-top: 1px solid #303030;
+  border-top: 1px solid #1b1b1b;
 }
 .about__category,
 .tech-stack__category,
@@ -71,6 +74,21 @@ body {
   content: ":";
 }
 
+@supports (scroll-snap-align: start) {
+  .main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .about,
+.tech-stack,
+.projects,
+.info,
+.contact {
+    scroll-snap-align: start;
+  }
+}
 .header {
   position: fixed;
   top: -200px;
@@ -873,12 +891,23 @@ body {
 
   body {
     background-color: #1b1b1b;
+  }
+
+  .main {
     padding: 2rem;
+  }
+
+  .about:not(:first-child),
+.tech-stack:not(:first-child),
+.projects:not(:first-child),
+.info:not(:first-child),
+.contact:not(:first-child) {
+    border-top: 1px solid #424242;
   }
 
   .header {
     position: relative;
-    padding: 0;
+    padding: 2rem;
   }
   .header__wrapper {
     align-items: flex-start;
@@ -932,7 +961,6 @@ body {
     left: 0;
     right: 0;
     background-color: #161616;
-    border-radius: 7px;
     padding: 2rem;
     opacity: 1;
     transition: bottom 1200ms;

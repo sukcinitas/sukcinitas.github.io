@@ -52,7 +52,6 @@ a {
 
 body {
   width: 100%;
-  padding: $sides;
   background-color: $dark-1;
   font-family: 'Teko', sans-serif;
   color: $gray-2;
@@ -60,6 +59,11 @@ body {
   margin: 0;
   position: relative;
   visibility: hidden;
+}
+
+.main {
+  padding: $sides;
+  width: 100vw;
 }
 
 .about,
@@ -71,8 +75,7 @@ body {
   padding: 6rem 0 6rem;
 
   &:not(:first-child) {
-    padding: 6rem 0;
-    border-top: 1px solid rgb(48, 48, 48);
+    border-top: 1px solid $dark-3;
   }
 
   &__category {
@@ -693,12 +696,25 @@ body {
 
   body {
     background-color: $dark-3;
+  }
+
+  .main {
     padding: $sides;
+  }
+
+  .about,
+  .tech-stack,
+  .projects,
+  .info,
+  .contact {
+    &:not(:first-child) {
+      border-top: 1px solid $gray-3;
+    }
   }
 
   .header {
     position: relative;
-    padding: 0;
+    padding: $sides;
 
     &__wrapper {
       align-items: flex-start;
@@ -762,7 +778,6 @@ body {
       left: 0;
       right: 0;
       background-color: $dark-2;
-      border-radius: 7px;
       padding: 2rem;
       opacity: 1;
       transition: bottom 1200ms;
