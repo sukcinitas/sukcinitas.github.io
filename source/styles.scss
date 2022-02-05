@@ -64,6 +64,7 @@ body {
 .main {
   padding: $sides;
   width: 100vw;
+  overflow: hidden;
 }
 
 .about,
