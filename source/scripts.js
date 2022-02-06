@@ -123,9 +123,9 @@ arrow.addEventListener('click', () => {
   }
 
   if (next.classList.contains('project')) {
-    window.scrollTo(0, next.offsetTop + next.parentElement.offsetTop - 70);
+    window.scrollTo(0, next.offsetTop + next.parentElement.offsetTop);
   } else {
-    window.scrollTo(0, next.offsetTop - 70);
+    window.scrollTo(0, next.offsetTop);
   }
 });
 

@@ -70,11 +70,11 @@ body {
   min-height: 100vh;
   padding: 6rem 0 6rem;
 }
-.about:not(:first-child),
-.tech-stack:not(:first-child),
-.projects:not(:first-child),
-.info:not(:first-child),
-.contact:not(:first-child) {
+.about:not(.about),
+.tech-stack:not(.about),
+.projects:not(.about),
+.info:not(.about),
+.contact:not(.about) {
   border-top: 1px solid #1b1b1b;
 }
 .about__category,
