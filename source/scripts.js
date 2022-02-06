@@ -53,15 +53,16 @@ function toggleInfo(e) {
   e.stopPropagation();
   const target = e.target;
   const isMinified = target.classList.contains('fa-chevron-up');
-  const parent = target.parentElement.parentElement.parentElement.parentElement;
+  const parent = target.parentElement.parentElement;
   if (isMinified) {
+    console.log(parent);
     target.classList.remove('fa-chevron-up');
     target.classList.add('fa-chevron-down');
-    parent.classList.add('active');
+    parent.classList.remove('minified');
   } else {
     target.classList.add('fa-chevron-up');
     target.classList.remove('fa-chevron-down');
-    parent.classList.remove('active');
+    parent.classList.add('minified');
   }
 }
 
@@ -104,11 +105,11 @@ homeBtn.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
 
-const arrow = document.querySelector('.arrow-down');
-arrow.addEventListener('click', function () {
-  const target = document.querySelector('.tech-stack');
-  window.scrollTo(0, target.offsetTop);
-});
+// const arrow = document.querySelector('.arrow-down');
+// arrow.addEventListener('click', function () {
+//   const target = document.querySelector('.tech-stack');
+//   window.scrollTo(0, target.offsetTop);
+// });
 if (!!window.IntersectionObserver) {
   //intersection
   const options = {
@@ -147,15 +148,6 @@ if (!!window.IntersectionObserver) {
       } else {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          const chevron = entry.target
-            .querySelector('.project__wrapper')
-            .querySelector('.project__info')
-            .querySelector('.project__icons')
-            .querySelector('.fa-chevron-up');
-          if (chevron) {
-            chevron.classList.remove('fa-chevron-up');
-            chevron.classList.add('fa-chevron-down');
-          }
         } else {
           entry.target.classList.remove('active');
         }

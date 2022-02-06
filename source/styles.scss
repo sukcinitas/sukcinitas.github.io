@@ -624,7 +624,7 @@ body {
   background-image: $gradient-1;
   @include vendor-prefix('background-clip', 'text');
   color: transparent;
-  position: fixed;
+  position: absolute;
   bottom: $sides;
   right: $sides;
   font-size: 2rem;
@@ -804,7 +804,7 @@ body {
 
     &__info {
       position: absolute;
-      bottom: -500px;
+      bottom: 0px;
       left: 0;
       right: 0;
       background-color: $dark-2;
@@ -812,6 +812,10 @@ body {
       opacity: 1;
       transition: bottom 1200ms;
       height: 100%;
+
+      &.minified {
+        bottom: -500px;
+      }
     }
 
     &__text {
@@ -846,9 +850,13 @@ body {
 
       & .project__info {
         left: 0;
-        bottom: -500px;
+        bottom: 0px;
         transition: bottom 1000ms;
         opacity: 1;
+
+        &.minified {
+          bottom: -500px;
+        }
       }
     }
   }
@@ -873,6 +881,10 @@ body {
       bottom: 0;
       transition: bottom 1000ms;
       left: 0;
+
+      &.minified {
+        bottom: -500px;
+      }
     }
   }
 }

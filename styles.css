@@ -816,7 +816,7 @@ body {
   -o-background-clip: text;
   background-clip: text;
   color: transparent;
-  position: fixed;
+  position: absolute;
   bottom: 4rem;
   right: 4rem;
   font-size: 2rem;
@@ -975,7 +975,7 @@ body {
   }
   .project__info {
     position: absolute;
-    bottom: -500px;
+    bottom: 0px;
     left: 0;
     right: 0;
     background-color: #161616;
@@ -983,6 +983,9 @@ body {
     opacity: 1;
     transition: bottom 1200ms;
     height: 100%;
+  }
+  .project__info.minified {
+    bottom: -500px;
   }
   .project__text {
     padding: 0;
@@ -1013,9 +1016,12 @@ body {
   }
   .project:nth-child(even) .project__info {
     left: 0;
-    bottom: -500px;
+    bottom: 0px;
     transition: bottom 1000ms;
     opacity: 1;
+  }
+  .project:nth-child(even) .project__info.minified {
+    bottom: -500px;
   }
 
   .about__category,
@@ -1035,6 +1041,10 @@ body {
     bottom: 0;
     transition: bottom 1000ms;
     left: 0;
+  }
+  .project.active .project__info.minified,
+.project.active:nth-child(even) .project__info.minified {
+    bottom: -500px;
   }
 }
 
