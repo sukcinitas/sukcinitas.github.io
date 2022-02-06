@@ -36,6 +36,27 @@ body {
   overflow-y: scroll;
 }
 
+.scroll-arrow {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  font-size: 2rem;
+  z-index: 2;
+  color: #999;
+  transition: color 50ms ease-in;
+}
+.scroll-arrow:hover {
+  color: transparent;
+  cursor: pointer;
+  transition: color 100ms ease-out;
+}
+
 .main {
   padding: 4rem;
   width: 100vw;
@@ -766,9 +787,13 @@ body {
 }
 
 .contact {
-  min-height: 50vh;
+  min-height: calc(100vh - 200px);
   margin-bottom: 6rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .contact__info {
   font-size: 1.4rem;
@@ -887,6 +912,18 @@ body {
     opacity: 1;
   }
 }
+.scroll-arrow {
+  bottom: 4rem;
+  right: 4rem;
+  transform: rotate(0deg);
+  transition: transform 100ms ease-in-out;
+}
+
+.scroll-arrow--rotated {
+  transform: rotate(180deg);
+  transition: transform 100ms ease-in-out;
+}
+
 @media screen and (max-width: 840px) {
   :root {
     font-size: 12px;
@@ -950,6 +987,11 @@ body {
   }
   .tech-stack__icon {
     font-size: 3.4rem;
+  }
+
+  .scroll-arrow {
+    bottom: 2rem;
+    right: 2rem;
   }
 
   .project {

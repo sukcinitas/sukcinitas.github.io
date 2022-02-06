@@ -105,13 +105,31 @@ homeBtn.addEventListener('click', () => {
   window.scrollTo(0, 0);
 });
 
-// const arrow = document.querySelector('.arrow-down');
-// arrow.addEventListener('click', function () {
-//   const target = document.querySelector('.tech-stack');
-//   window.scrollTo(0, target.offsetTop);
-// });
+const arrow = document.querySelector('.scroll-arrow');
+arrow.addEventListener('click', () => {
+  const sections = [
+    document.querySelector('.about'),
+    document.querySelector('.tech-stack'),
+    ...Array.from(document.querySelectorAll('.project')),
+    ...Array.from(document.querySelectorAll('.info')),
+    document.querySelector('.contact'),
+  ];
+  let next;
+  const current = document.querySelector('.in');
+  if (current === sections[sections.length - 1]) {
+    next = sections[0];
+  } else {
+    next = sections[sections.indexOf(current) + 1];
+  }
+
+  if (next.classList.contains('project')) {
+    window.scrollTo(0, next.offsetTop + next.parentElement.offsetTop - 70);
+  } else {
+    window.scrollTo(0, next.offsetTop - 70);
+  }
+});
+
 if (!!window.IntersectionObserver) {
-  //intersection
   const options = {
     rootMargin: '0px',
     threshold: [0.3, 0.6],
@@ -119,8 +137,16 @@ if (!!window.IntersectionObserver) {
   const callback = (entries) => {
     const about = document.querySelector('.about');
     const tech = document.querySelector('.tech-stack');
+    const arrow = document.querySelector('.scroll-arrow');
+    const contact = document.querySelector('.contact');
 
     entries.forEach((entry) => {
+      entry.isIntersecting
+        ? entry.target.classList.add('in')
+        : entry.target.classList.remove('in');
+      console.log(entry.target);
+      arrow.classList.remove('scroll-arrow--rotated');
+      console.log(entry.target);
       if (entry.target === tech) {
         // animate tech stacking whenever comes in viewport
         const divs = document.querySelectorAll('.tech-stack__list i');
@@ -145,6 +171,8 @@ if (!!window.IntersectionObserver) {
             title.classList.add('paused');
           });
         }
+      } else if (document.querySelector('.in') === contact) {
+        arrow.classList.add('scroll-arrow--rotated');
       } else {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
@@ -159,6 +187,8 @@ if (!!window.IntersectionObserver) {
     document.querySelector('.about'),
     document.querySelector('.tech-stack'),
     ...Array.from(document.querySelectorAll('.project')),
+    ...Array.from(document.querySelectorAll('.info')),
+    document.querySelector('.contact'),
   ];
   const observer = new IntersectionObserver(callback, options);
 
