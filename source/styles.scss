@@ -95,10 +95,11 @@ body {
 .header {
   $font-size: 1.4rem;
   position: fixed;
-  top: -200px;
+  top: 0;
   opacity: 0;
   left: 0;
   right: 0;
+  transform: translateY(-200px);
   padding: $sides $sides 1rem;
   background-color: inherit;
   font-family: inherit;
@@ -180,25 +181,24 @@ body {
     color: transparent;
     font-family: 'Black Ops One', cursive;
     opacity: 0;
-    position: relative;
-    right: -200px;
+    transform: translateX(-200px);
     background-image: $gradient-2;
     @include vendor-prefix('background-clip', 'text');
     background-size: 400%;
     color: transparent;
     @include vendor-prefix(
       'animation',
-      'slide-left 500ms 500ms ease-out forwards, bg-animation 5s 2100ms infinite alternate'
+      'slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate'
     );
   }
 
   & h1:last-of-type {
     margin-right: 4rem;
     display: inline-block;
-    left: -200px;
+    transform: translateX(200px);
     @include vendor-prefix(
       'animation',
-      'slide-right 500ms 1000ms ease-out forwards,bg-animation 5s 2100ms infinite alternate'
+      'slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate'
     );
   }
 
@@ -208,9 +208,9 @@ body {
     display: inline-block;
     color: $gray-2;
     position: relative;
-    bottom: -200px;
+    transform: translateY(200px);
     opacity: 0;
-    @include vendor-prefix('animation', 'slide-up 500ms 1500ms ease-out');
+    @include vendor-prefix('animation', 'slide-up 500ms 900ms ease-out');
     @include vendor-prefix('animation-fill-mode', 'forwards');
   }
 
@@ -247,8 +247,7 @@ body {
     @include vendor-prefix('background-clip', 'text');
     font-size: 4.1rem;
     padding: 10px;
-    position: relative;
-    top: 0; // animation
+    transform: translateY(0); // animation
     opacity: 0; // animation
     color: transparent;
 
@@ -631,59 +630,59 @@ body {
 
 @keyframes stack-animation {
   0% {
-    top: -80px;
+    transform: translateY(-80px);
     opacity: 0;
   }
   90% {
-    top: 2px;
+    transform: translateY(2px);
     opacity: 1;
   }
   100% {
-    top: 0px;
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 
 @keyframes slide-down {
   0% {
-    top: -200px;
+    transform: translateY(-200px);
     opacity: 0;
   }
   100% {
-    top: 0;
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 
 @keyframes slide-up {
   0% {
-    bottom: -200px;
+    transform: translateY(200px);
     opacity: 0;
   }
   100% {
-    bottom: 0;
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 
 @keyframes slide-right {
   0% {
-    left: -200px;
+    transform: translateX(-200px);
     opacity: 0;
   }
   100% {
-    left: 0;
+    transform: translateX(0px);
     opacity: 1;
   }
 }
 
 @keyframes slide-left {
   0% {
-    right: -200px;
+    transform: translateX(200px);
     opacity: 0;
   }
   100% {
-    right: 0;
+    transform: translateX(0px);
     opacity: 1;
   }
 }
@@ -701,6 +700,22 @@ body {
 
   .main {
     padding: $sides;
+  }
+
+  @supports (will-change: transform) {
+    .header,
+    .about__title,
+    .about h1:last-of-type,
+    .about__text {
+      will-change: transform;
+    }
+  }
+
+  .header,
+  .about__title,
+  .about h1:last-of-type,
+  .about__text {
+    transform: translateZ(0);
   }
 
   .about,
