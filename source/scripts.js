@@ -124,6 +124,8 @@ arrow.addEventListener('click', () => {
 
   if (next.classList.contains('project')) {
     window.scrollTo(0, next.offsetTop + next.parentElement.offsetTop);
+  } else if (next.classList.contains('about')) {
+    window.scrollTo(0, 0);
   } else {
     window.scrollTo(0, next.offsetTop);
   }
@@ -196,6 +198,7 @@ if (!!window.IntersectionObserver) {
     observer.observe(section);
   });
 } else {
+  document.querySelector('.scroll-arrow').style.dislay = 'none';
   function comesInViewport(element, idx = 0) {
     const rect = element.getBoundingClientRect();
     return (

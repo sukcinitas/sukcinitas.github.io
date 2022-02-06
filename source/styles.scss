@@ -111,12 +111,9 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: -3rem;
   $font-size: 1.4rem;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  left: 0;
-  right: 0;
   transform: translateY(-200px);
   padding: $sides $sides 1rem;
   background-color: inherit;
@@ -191,6 +188,7 @@ body {
   display: flex;
   align-items: flex-end;
   position: relative;
+  margin-top: calc(-5rem - 37px);
 
   &__title {
     font-size: 13vw;
@@ -404,6 +402,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 10rem 0 0;
+  padding: 5rem;
 
   &__wrapper {
     position: relative;
@@ -778,6 +777,7 @@ body {
 
   .header {
     position: relative;
+    top: 0;
     padding: $sides;
 
     &__wrapper {
@@ -792,9 +792,7 @@ body {
   }
 
   .about {
-    min-height: calc(
-      100vh - 70px - 40px
-    ); // minus header as on bigger screen it is fixed
+    margin-top: calc(-2rem - 79px);
   }
 
   .tech-stack,
@@ -821,6 +819,7 @@ body {
     flex-direction: column;
     align-items: center;
     left: calc(-1 * #{$sides}); // as body padding
+    padding: 0;
 
     &__title {
       font-size: 2.6rem;
