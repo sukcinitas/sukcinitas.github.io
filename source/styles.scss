@@ -59,12 +59,12 @@ body {
   margin: 0;
   position: relative;
   visibility: hidden;
+  overflow-y: scroll;
 }
 
 .main {
   padding: $sides;
   width: 100vw;
-  overflow: hidden;
 }
 
 .about,
@@ -172,6 +172,7 @@ body {
 .about {
   display: flex;
   align-items: flex-end;
+  position: relative;
 
   &__title {
     font-size: 13vw;
@@ -184,11 +185,11 @@ body {
     transform: translateX(-200px);
     background-image: $gradient-2;
     @include vendor-prefix('background-clip', 'text');
-    background-size: 400%;
+    background-size: 200%;
     color: transparent;
     @include vendor-prefix(
       'animation',
-      'slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate'
+      'slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate'
     );
   }
 
@@ -619,6 +620,19 @@ body {
   }
 }
 
+.arrow-down {
+  background-image: $gradient-1;
+  @include vendor-prefix('background-clip', 'text');
+  color: transparent;
+  position: fixed;
+  bottom: $sides;
+  right: $sides;
+  font-size: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @keyframes bg-animation {
   0% {
     background-position: left;
@@ -861,23 +875,4 @@ body {
       left: 0;
     }
   }
-
-  // .header,
-  // .about__title,
-  // .about h1:last-of-type,
-  // .about__text {
-  //   opacity: 1;
-  //   left: 0;
-  //   right: 0;
-  //   top: 0;
-  //   bottom: 0;
-  //   @include vendor-prefix('animation', 'none');
-  // }
-  // .about__title,
-  // .about h1:last-of-type {
-  //   @include vendor-prefix(
-  //     'animation',
-  //     'bg-animation 5s 2100ms infinite alternate'
-  //   );
-  // }
 }

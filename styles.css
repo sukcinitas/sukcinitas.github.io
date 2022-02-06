@@ -33,12 +33,12 @@ body {
   margin: 0;
   position: relative;
   visibility: hidden;
+  overflow-y: scroll;
 }
 
 .main {
   padding: 4rem;
   width: 100vw;
-  overflow: hidden;
 }
 
 .about,
@@ -155,6 +155,7 @@ body {
 .about {
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 .about__title {
   font-size: 13vw;
@@ -171,13 +172,13 @@ body {
   -ms-background-clip: text;
   -o-background-clip: text;
   background-clip: text;
-  background-size: 400%;
+  background-size: 200%;
   color: transparent;
-  -webkit-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
-  -moz-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
-  -ms-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
-  -o-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
-  animation: slide-left 500ms 300ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
+  -webkit-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
+  -moz-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
+  -ms-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
+  -o-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
+  animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
 }
 .about h1:last-of-type {
   margin-right: 4rem;
@@ -805,6 +806,23 @@ body {
 }
 .footer__link:hover {
   color: transparent;
+}
+
+.arrow-down {
+  background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  font-size: 2rem;
+}
+.arrow-down:hover {
+  cursor: pointer;
 }
 
 @keyframes bg-animation {
