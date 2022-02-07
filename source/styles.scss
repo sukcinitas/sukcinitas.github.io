@@ -215,7 +215,7 @@ body {
     transform: translateX(200px);
     @include vendor-prefix(
       'animation',
-      'slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate'
+      'slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate'
     );
   }
 
@@ -227,8 +227,10 @@ body {
     position: relative;
     transform: translateY(200px);
     opacity: 0;
-    @include vendor-prefix('animation', 'slide-up 500ms 900ms ease-out');
-    @include vendor-prefix('animation-fill-mode', 'forwards');
+    @include vendor-prefix(
+      'animation',
+      'slide-up 500ms 900ms ease-out forwards'
+    );
   }
 
   &__category {
@@ -237,10 +239,7 @@ body {
 }
 
 .paused {
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -o-animation-play-state: paused;
-  animation-play-state: paused;
+  @include vendor-prefix('animation-play-state', 'paused');
 }
 
 .tech-stack {
@@ -508,7 +507,6 @@ body {
   }
 
   &__stack {
-    word-spacing: 4px;
     color: $bright-2;
   }
 
@@ -629,6 +627,7 @@ body {
   font-size: 1.2rem;
   background-color: $dark-2;
   padding: 1rem;
+  word-spacing: 2px;
 
   &__link {
     background-image: $gradient-1;

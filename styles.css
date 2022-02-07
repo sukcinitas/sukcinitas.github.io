@@ -203,11 +203,11 @@ body {
   margin-right: 4rem;
   display: inline-block;
   transform: translateX(200px);
-  -webkit-animation: slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate;
-  -moz-animation: slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate;
-  -ms-animation: slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate;
-  -o-animation: slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate;
-  animation: slide-right 500ms 600ms ease-out forwards,bg-animation 5s 1200ms infinite alternate;
+  -webkit-animation: slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
+  -moz-animation: slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
+  -ms-animation: slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
+  -o-animation: slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
+  animation: slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate;
 }
 .about__text {
   max-width: 500px;
@@ -217,16 +217,11 @@ body {
   position: relative;
   transform: translateY(200px);
   opacity: 0;
-  -webkit-animation: slide-up 500ms 900ms ease-out;
-  -moz-animation: slide-up 500ms 900ms ease-out;
-  -ms-animation: slide-up 500ms 900ms ease-out;
-  -o-animation: slide-up 500ms 900ms ease-out;
-  animation: slide-up 500ms 900ms ease-out;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -webkit-animation: slide-up 500ms 900ms ease-out forwards;
+  -moz-animation: slide-up 500ms 900ms ease-out forwards;
+  -ms-animation: slide-up 500ms 900ms ease-out forwards;
+  -o-animation: slide-up 500ms 900ms ease-out forwards;
+  animation: slide-up 500ms 900ms ease-out forwards;
 }
 .about__category {
   line-height: 0.5;
@@ -235,6 +230,7 @@ body {
 .paused {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
   -o-animation-play-state: paused;
   animation-play-state: paused;
 }
@@ -716,7 +712,6 @@ body {
   display: none;
 }
 .project__stack {
-  word-spacing: 4px;
   color: #653273;
 }
 .project:nth-child(even) .project__wrapper {
@@ -818,6 +813,7 @@ body {
   font-size: 1.2rem;
   background-color: #161616;
   padding: 1rem;
+  word-spacing: 2px;
 }
 .footer__link {
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
