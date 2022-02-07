@@ -713,6 +713,7 @@ body {
 }
 .project__stack {
   color: #653273;
+  word-spacing: 4px;
 }
 .project:nth-child(even) .project__wrapper {
   flex-direction: row-reverse;
