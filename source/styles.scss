@@ -629,6 +629,10 @@ body {
   padding: 1rem;
   word-spacing: 2px;
 
+  & p {
+    margin: 1rem 2rem;
+  }
+
   &__link {
     background-image: $gradient-1;
     @include vendor-prefix('background-clip', 'text');

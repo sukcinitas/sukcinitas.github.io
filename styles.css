@@ -815,6 +815,9 @@ body {
   padding: 1rem;
   word-spacing: 2px;
 }
+.footer p {
+  margin: 1rem 2rem;
+}
 .footer__link {
   background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
   -webkit-background-clip: text;
