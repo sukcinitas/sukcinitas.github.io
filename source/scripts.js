@@ -55,7 +55,6 @@ function toggleInfo(e) {
   const isMinified = target.classList.contains('fa-chevron-up');
   const parent = target.parentElement.parentElement;
   if (isMinified) {
-    console.log(parent);
     target.classList.remove('fa-chevron-up');
     target.classList.add('fa-chevron-down');
     parent.classList.remove('minified');
@@ -146,9 +145,7 @@ if (!!window.IntersectionObserver) {
       entry.isIntersecting
         ? entry.target.classList.add('in')
         : entry.target.classList.remove('in');
-      console.log(entry.target);
       arrow.classList.remove('scroll-arrow--rotated');
-      console.log(entry.target);
       if (entry.target === tech) {
         // animate tech stacking whenever comes in viewport
         const divs = document.querySelectorAll('.tech-stack__list i');
