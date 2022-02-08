@@ -83,7 +83,7 @@ body {
 .info__category,
 .contact__category {
   text-transform: uppercase;
-  color: #51c7c7;
+  color: #ffaf7b;
   font-size: 2.8rem;
   margin: 0 1rem 4rem 0;
   font-family: "Tourney", cursive;
@@ -269,9 +269,9 @@ body {
   cursor: pointer;
 }
 .tech-stack__list-sub {
-  color: #51c7c7;
+  color: #ffaf7b;
   font-size: 1.2rem;
-  border-top: 2px solid #51c7c7;
+  border-top: 2px solid #ffaf7b;
   margin: 2rem 0;
   padding: 0.6rem 0 0;
 }
@@ -653,7 +653,7 @@ body {
 .project__img-num {
   font-size: 2rem;
   font-family: "Teko", sans-serif;
-  color: #51c7c7;
+  color: #ffaf7b;
   padding: 0.5rem;
   width: 5rem;
   position: absolute;
@@ -715,7 +715,7 @@ body {
   display: none;
 }
 .project__stack {
-  color: #653273;
+  color: #d76d77;
   word-spacing: 4px;
 }
 .project:nth-child(even) .project__wrapper {
@@ -769,14 +769,14 @@ body {
 .info__item {
   margin: 2rem;
   padding-left: 1rem;
-  border-left: 2px solid #51c7c7;
+  border-left: 2px solid #ffaf7b;
 }
 .info__item p, .info__item span {
   margin: 0;
   font-size: 1rem;
 }
 .info__item p:first-child {
-  color: #653273;
+  color: #d76d77;
   font-size: 1.6rem;
 }
 .info__item p:last-of-type {
