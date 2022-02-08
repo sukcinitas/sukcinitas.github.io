@@ -873,6 +873,10 @@ body {
       }
     }
 
+    &__img-num {
+      background-color: $dark-2;
+    }
+
     &__icons {
       background-image: $gradient-1;
       @include vendor-prefix('background-clip', 'text');

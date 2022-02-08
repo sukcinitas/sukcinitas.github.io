@@ -1041,6 +1041,9 @@ body {
   .project__text:last-child {
     padding: 0 0 2rem;
   }
+  .project__img-num {
+    background-color: #161616;
+  }
   .project__icons {
     background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
     -webkit-background-clip: text;
