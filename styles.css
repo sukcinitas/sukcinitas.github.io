@@ -87,7 +87,7 @@ body {
 .info__category,
 .contact__category {
   text-transform: uppercase;
-  color: #8c6ec8;
+  color: #28bfbf;
   font-size: 2.8rem;
   margin: 0 1rem 4rem 0;
   font-family: "Tourney", cursive;
@@ -191,7 +191,7 @@ body {
   color: transparent;
   font-family: "Black Ops One", cursive;
   opacity: 0;
-  transform: translateX(-200px);
+  transform: translateX(200px);
   background-image: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -273,9 +273,9 @@ body {
   cursor: pointer;
 }
 .tech-stack__list-sub {
-  color: #8c6ec8;
+  color: #28bfbf;
   font-size: 1.2rem;
-  border-top: 2px solid #8c6ec8;
+  border-top: 2px solid #28bfbf;
   margin: 2rem 0;
   padding: 0.6rem 0 0;
 }
@@ -657,7 +657,7 @@ body {
 .project__img-num {
   font-size: 2rem;
   font-family: "Teko", sans-serif;
-  color: #8c6ec8;
+  color: #28bfbf;
   padding: 0.5rem;
   width: 5rem;
   position: absolute;
@@ -719,7 +719,7 @@ body {
   display: none;
 }
 .project__stack {
-  color: #d76d77;
+  color: #af5795;
   word-spacing: 4px;
 }
 .project:nth-child(even) .project__wrapper {
@@ -773,14 +773,14 @@ body {
 .info__item {
   margin: 2rem;
   padding-left: 1rem;
-  border-left: 2px solid #8c6ec8;
+  border-left: 2px solid #28bfbf;
 }
 .info__item p, .info__item span {
   margin: 0;
   font-size: 1rem;
 }
 .info__item p:first-child {
-  color: #d76d77;
+  color: #af5795;
   font-size: 1.6rem;
 }
 .info__item p:last-of-type {
