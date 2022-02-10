@@ -50,6 +50,10 @@ a {
   }
 }
 
+img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
 body {
   width: 100%;
   background-color: $dark-1;
