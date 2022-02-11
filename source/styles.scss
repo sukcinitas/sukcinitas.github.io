@@ -41,7 +41,6 @@ a {
   &:focus-within,
   &:focus-visible,
   &:hover {
-    color: inherit;
     transition: color 50ms ease-in;
   }
 
@@ -576,6 +575,15 @@ body {
 .note {
   font-size: 1.2rem;
   color: $bright-2;
+}
+
+.link {
+  font-size: 1rem;
+  color: $gray-2;
+
+  &:hover {
+    color: $bright-2;
+  }
 }
 
 .info {

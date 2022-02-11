@@ -16,7 +16,6 @@ a {
   text-decoration: none;
 }
 a:visited, a:active, a:focus, a:focus-within, a:focus-visible, a:hover {
-  color: inherit;
   transition: color 50ms ease-in;
 }
 a:hover {
@@ -769,6 +768,14 @@ body {
 
 .note {
   font-size: 1.2rem;
+  color: #af5795;
+}
+
+.link {
+  font-size: 1rem;
+  color: #a6a6a6;
+}
+.link:hover {
   color: #af5795;
 }
 
