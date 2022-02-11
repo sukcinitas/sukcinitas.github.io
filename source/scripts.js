@@ -5,7 +5,8 @@ function slideProjectIn(idx) {
   const target = document.querySelector('.projects__title--selected');
   const title = document.querySelector(`.projects__title[data-tid="${idx}"]`);
 
-  projectSlider.style.left = `${idx * -100}vw`;
+  const whichScreen = `${idx * -100}vw`;
+  projectSlider.style.setProperty('left', `calc(50% + ${whichScreen})`);
   target.classList.remove('projects__title--selected');
   title.classList.add('projects__title--selected');
 
@@ -70,7 +71,7 @@ function chooseDisplay(e) {
   const list = document.querySelector('.projects__list');
   const titles = document.querySelector('.projects__titles');
   let sibling;
-  list.style.left = 0;
+  list.style.left = `${50}%`;
   if (target.classList.contains('fa-ellipsis-h')) {
     sibling = target.nextElementSibling;
     list.classList.remove('projects__list--list');
@@ -249,7 +250,6 @@ if (!!window.IntersectionObserver) {
       }
 
       // checking if title is in viewport
-      const title = document.querySelector('.about__wrapper');
       const titles = Array.from(document.querySelector('.about__title'));
       titles.forEach((title) => {
         if (comesInViewport(title)) {

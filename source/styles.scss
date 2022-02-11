@@ -11,6 +11,7 @@ $gradient-2: linear-gradient(to right, #756792, #9c6b6f, #c5a086);
 $gradient-3: radial-gradient(#d76d77, #ffaf7b);
 $sides: 4rem;
 $shadow-1: 2px 2px 10px #0000000d;
+$max-width: 1540px;
 
 @mixin vendor-prefix($name, $value) {
   @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
@@ -84,11 +85,6 @@ body {
   }
 }
 
-.main {
-  padding: $sides;
-  width: 100vw;
-}
-
 .about,
 .tech-stack,
 .projects,
@@ -112,6 +108,13 @@ body {
       content: ':';
     }
   }
+}
+
+.main,
+.header {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $sides;
 }
 
 .header {
@@ -198,7 +201,8 @@ body {
   margin-top: calc(-5rem - 37px);
 
   &__title {
-    font-size: 13vw;
+    font-size: 12rem;
+    font-size: 11.6vw;
     line-height: 14vw;
     margin: 0;
     text-transform: uppercase;
@@ -393,6 +397,10 @@ body {
     position: relative;
     display: flex;
     width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 
     &--list {
       flex-direction: column;
@@ -401,7 +409,6 @@ body {
 }
 
 .project {
-  left: -4rem; // body padding
   position: relative;
   width: 100vw;
   flex-shrink: 0;
@@ -574,28 +581,36 @@ body {
     font-size: 1.2rem;
     padding: 2rem 0;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   &__item {
     margin: 2rem;
     padding-left: 1rem;
     border-left: 2px solid $bright-1;
+    flex-basis: 400px;
+  }
 
-    & p,
-    & span {
-      margin: 0;
-      font-size: 1rem;
-    }
+  &__item-title {
+    color: $bright-2;
+    font-size: 1.6rem;
+    margin: 0;
+  }
 
-    & p:first-child {
-      color: $bright-2;
-      font-size: 1.6rem;
-    }
+  &__item-subtitle {
+    color: $gray-1;
+    font-size: 1.4rem;
+    margin: 0;
+  }
 
-    & p:last-of-type {
-      color: $gray-1;
-      font-size: 1.4rem;
-    }
+  &__item__details {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  &__item-description {
+    font-size: 1.4rem;
+    margin: 2rem 0;
   }
 }
 
@@ -729,6 +744,12 @@ body {
   &:hover {
     transform: translate(2px, 2px) rotate(0);
   }
+
+  @media screen and (min-width: $max-width) {
+    right: calc(
+      (100% - #{$max-width}) / 2 + $sides
+    ); //vw counts scrollbar width
+  }
 }
 
 .scroll-arrow--rotated {
@@ -824,7 +845,6 @@ body {
   .project {
     flex-direction: column;
     align-items: center;
-    left: calc(-1 * #{$sides}); // as body padding
     padding: 0;
 
     &__title {
