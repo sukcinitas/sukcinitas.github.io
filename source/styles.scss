@@ -573,6 +573,11 @@ body {
   }
 }
 
+.note {
+  font-size: 1.2rem;
+  color: $bright-2;
+}
+
 .info {
   min-height: 50vh;
 
@@ -589,6 +594,11 @@ body {
     padding-left: 1rem;
     border-left: 2px solid $bright-1;
     flex-basis: 400px;
+    background: $dark-2;
+    padding: 2rem;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   &__item-title {

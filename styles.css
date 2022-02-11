@@ -767,6 +767,11 @@ body {
   transition: opacity 500ms, left 500ms;
 }
 
+.note {
+  font-size: 1.2rem;
+  color: #af5795;
+}
+
 .info {
   min-height: 50vh;
 }
@@ -782,6 +787,11 @@ body {
   padding-left: 1rem;
   border-left: 2px solid #28bfbf;
   flex-basis: 400px;
+  background: #161616;
+  padding: 2rem;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .info__item-title {
   color: #af5795;

@@ -143,6 +143,11 @@
             onClick="chooseDisplay(event)"
           ></i>
         </span>
+        <span class="note">
+          Note: Keep in mind that if it might take a couple of seconds for each app to wake up 
+          as all of the projects' APIs and some of full apps are hosted on Heroku
+          and left in a sleep mode if there's no traffic.
+        </span>
         <div class="projects__list projects__list--list">
           <article class="project">
             <div class="project__wrapper">
@@ -324,10 +329,9 @@
                   members and to chat in real-time using Socket.io.
                 </p>
                 <p class="project__text">
-                  I practised using Socket.io for bidirectional communication
-                  and utilized several APIs such as Youtube Data API, Youtube
-                  IFrame Player API, Web Storage API (sessionStorage) for my
-                  goals.
+                  This project was challenging because yet again I was trying out several things all at once (Vue.js, Socket.io, utilizing several APIs).
+                  Also I had to find a good enough solution to structuring this app to keep it maintainable.    
+                  But nothing beats the biggest challenge of coming up with a decent design 😀.           
                 </p>
                 <span class="project__stack"
                   >Sass Vue.js Vuex Express MongoDB & Mongoose Passport.js
@@ -402,12 +406,11 @@
                   represented in a D3.js chart.
                 </p>
                 <p class="project__text">
-                  I started building my skills by actualizing this app as my
-                  first big project. I learned how to connect front-end with
-                  back-end, also measures that can be taken to increase app
+                  It was challenging in a sense that I was building something from ground up 
+                  as started developing my skills by actualizing this app. I learned how to connect front-end with
+                  back-end, measures that can be taken to increase app
                   security. The app was my playground migrating from JavaScript
-                  to TypeScript, from using class based React components to
-                  functional components with hooks.
+                  to TypeScript, a place to practise using React hooks.
                 </p>
                 <span class="project__stack"
                   >Typescript Sass React Redux D3.js Express MongoDB & Mongoose
@@ -591,7 +594,14 @@
             <span class="info__item-details">Sep 2012 – Jun 2018</span>
           </div>
           <div class="info__item">
-            <h5 class="info__item-title">Legacy Full Stack</h5>
+            <h5 class="info__item-title">Legacy Full Stack
+              <a
+              href="https://www.freecodecamp.org/certification/sukcinitas/full-stack"
+              rel="noopener noreferrer"
+              target="_blank"
+              ><i class="fa fa-link" aria-hidden="true"></i
+                ></a>
+            </h5>
             <p class="info__item-subtitle">FreeCodeCamp</p>
             <span class="info__item-details">Sep 2018 – Dec 2019</span>
             <p class="info__item-description">This is the place where I first started learning programming.
