@@ -51,7 +51,6 @@ techIcons.forEach((techIcon) => {
 });
 
 function toggleInfo(e) {
-  e.stopPropagation();
   const target = e.target;
   const isMinified = target.classList.contains('minified');
   if (isMinified) {

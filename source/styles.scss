@@ -489,11 +489,13 @@ body {
     background-image: $gradient-1;
     @include vendor-prefix('background-clip', 'text');
     color: transparent;
+    pointer-events: none;
   }
 
   &__text {
     font-size: 1.4rem;
     line-height: 1.3;
+    pointer-events: none;
   }
 
   &__links {
@@ -524,6 +526,7 @@ body {
   &__stack {
     color: $bright-2;
     word-spacing: 4px;
+    pointer-events: none;
   }
 
   &:nth-child(even) {
