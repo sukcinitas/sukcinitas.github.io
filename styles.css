@@ -721,7 +721,9 @@ body {
   color: transparent;
 }
 .project__icons {
-  display: none;
+  opacity: 0;
+  transition: opacity 1000ms;
+  transition-delay: 500ms;
 }
 .project__stack {
   color: #af5795;
@@ -1055,11 +1057,9 @@ body {
     background-color: #161616;
     padding: 2rem;
     opacity: 1;
-    transition: bottom 1200ms;
+    transition: bottom 1000ms;
+    transition-delay: 500ms;
     height: 100%;
-  }
-  .project__info.minified {
-    bottom: -500px;
   }
   .project__text {
     padding: 0;
@@ -1072,7 +1072,24 @@ body {
   .project__img-num {
     background-color: #161616;
   }
-  .project__icons {
+  .project:nth-child(even) .project__carousel {
+    left: 0;
+    opacity: 1;
+  }
+  .project:nth-child(even) .project__info {
+    left: 0;
+    bottom: 0px;
+    transition: bottom 1000ms;
+    transition-delay: 500ms;
+  }
+
+  .project__info.minified,
+.project:nth-child(even) .project__info.minified {
+    bottom: -500px;
+    transition: bottom 1000ms;
+  }
+
+  .project__info.minified .project__icons {
     background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -1082,23 +1099,10 @@ body {
     font-size: 1.2rem;
     margin: 0;
     display: inline-block;
-  }
-  .project__icons:hover {
-    cursor: pointer;
-    color: transparent;
-  }
-  .project:nth-child(even) .project__carousel {
-    left: 0;
+    visibility: visible;
+    transition: opacity 1000ms;
+    transition-delay: 500ms;
     opacity: 1;
-  }
-  .project:nth-child(even) .project__info {
-    left: 0;
-    bottom: 0px;
-    transition: bottom 1000ms;
-    opacity: 1;
-  }
-  .project:nth-child(even) .project__info.minified {
-    bottom: -500px;
   }
 
   .about__category,
@@ -1117,11 +1121,13 @@ body {
 .project.active:nth-child(even) .project__info {
     bottom: 0;
     transition: bottom 1000ms;
+    transition-delay: 500ms;
     left: 0;
   }
   .project.active .project__info.minified,
 .project.active:nth-child(even) .project__info.minified {
     bottom: -500px;
+    transition: bottom 1000ms;
   }
 }
 

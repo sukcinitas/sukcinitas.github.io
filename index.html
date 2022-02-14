@@ -135,18 +135,16 @@
           <i
             class="fa fa-ellipsis-h projects__display-icon"
             aria-hidden="true"
-            onClick="chooseDisplay(event)"
+            onclick="chooseDisplay(event)"
           ></i>
           <i
             class="fa fa-list projects__display-icon selected"
             aria-hidden="true"
-            onClick="chooseDisplay(event)"
+            onclick="chooseDisplay(event)"
           ></i>
         </span>
         <span class="note">
-          Note: Keep in mind that it might take a couple of seconds for each app to wake up 
-          as all of the projects' APIs and some of full apps are hosted on Heroku
-          and left in a sleep mode if there's no traffic.
+          Note: Keep in mind that it might take a couple of seconds for the apps hosted on Heroku to wake up as they're left in a sleep mode if there's no traffic.
         </span>
         <div class="projects__list projects__list--list">
           <article class="project">
@@ -154,7 +152,7 @@
               <div class="project__carousel">
                 <img
                   class="project__img project__img--active"
-                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  onclick="changeActiveImg(event, 's', 6, 1)"
                   src="assets/shlist_1.jpg"
                   data-iid="s0"
                   alt="Shopping list app's product list"
@@ -162,7 +160,7 @@
                 <img
                   class="project__img"
                   src="assets/shlist_2.jpg"
-                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  onclick="changeActiveImg(event, 's', 6, 1)"
                   data-iid="s1"
                   loading="lazy"
                   alt="Shopping list app's history list"
@@ -170,7 +168,7 @@
                 <img
                   class="project__img"
                   src="assets/shlist_3.jpg"
-                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  onclick="changeActiveImg(event, 's', 6, 1)"
                   data-iid="s2"
                   loading="lazy"
                   alt="Shopping list app's statistics"
@@ -178,7 +176,7 @@
                 <img
                   class="project__img"
                   src="assets/shlist_4.jpg"
-                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  onclick="changeActiveImg(event, 's', 6, 1)"
                   data-iid="s3"
                   loading="lazy"
                   alt="Shopping list app's list"
@@ -186,7 +184,7 @@
                 <img
                   class="project__img"
                   src="assets/shlist_5.jpg"
-                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  onclick="changeActiveImg(event, 's', 6, 1)"
                   data-iid="s4"
                   loading="lazy"
                   alt="Shopping list app's product edit"
@@ -194,21 +192,21 @@
                 <img
                   class="project__img"
                   src="assets/shlist_6.jpg"
-                  onClick="changeActiveImg(event, 's', 6, 1)"
+                  onclick="changeActiveImg(event, 's', 6, 1)"
                   data-iid="s5"
                   loading="lazy"
                   alt="Shopping list app's product information"
                 />
                 <span class="project__img-num">01/06</span>
               </div>
-              <section class="project__info">
+              <section class="project__info" onclick="toggleInfo(event)">
                 <span class="project__icons"
                   ><i
-                    class="fa fa-chevron-down"
-                    aria-hidden="true"
-                    onClick="toggleInfo(event)"
-                  ></i
-                ></span>
+                  class="fa fa-chevron-up"
+                  aria-hidden="true"
+                  onclick="toggleInfo(event)"
+                ></i
+              ></span>
                 <h3 class="project__title">Shopping List</h3>
                 <p class="project__links">
                   <a
@@ -254,7 +252,7 @@
               <div class="project__carousel">
                 <img
                   class="project__img project__img--active"
-                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  onclick="changeActiveImg(event, 'y', 5, 2)"
                   src="assets/yoursnext_1.jpg"
                   data-iid="y0"
                   alt="Yours Next app's login/register page"
@@ -262,7 +260,7 @@
                 <img
                   class="project__img"
                   src="assets/yoursnext_2.jpg"
-                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  onclick="changeActiveImg(event, 'y', 5, 2)"
                   data-iid="y1"
                   loading="lazy"
                   alt="Yours Next app's member emoji choosing page"
@@ -270,7 +268,7 @@
                 <img
                   class="project__img"
                   src="assets/yoursnext_3.jpg"
-                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  onclick="changeActiveImg(event, 'y', 5, 2)"
                   data-iid="y2"
                   loading="lazy"
                   alt="Yours Next app's main page"
@@ -278,7 +276,7 @@
                 <img
                   class="project__img"
                   src="assets/yoursnext_4.jpg"
-                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  onclick="changeActiveImg(event, 'y', 5, 2)"
                   data-iid="y3"
                   loading="lazy"
                   alt="Yours Next app's chatting component"
@@ -286,21 +284,21 @@
                 <img
                   class="project__img"
                   src="assets/yoursnext_5.jpg"
-                  onClick="changeActiveImg(event, 'y', 5, 2)"
+                  onclick="changeActiveImg(event, 'y', 5, 2)"
                   data-iid="y4"
                   loading="lazy"
                   alt="Yours Next app's playlist page"
                 />
                 <span class="project__img-num">01/05</span>
               </div>
-              <section class="project__info">
+              <section class="project__info"  onclick="toggleInfo(event)">
                 <span class="project__icons"
                   ><i
-                    class="fa fa-chevron-down"
-                    aria-hidden="true"
-                    onClick="toggleInfo(event)"
-                  ></i
-                ></span>
+                  class="fa fa-chevron-up"
+                  aria-hidden="true"
+                  onclick="toggleInfo(event)"
+                ></i>
+              </span>
                 <h3 class="project__title">Yours Next</h3>
                 <p class="project__links">
                   <a
@@ -345,7 +343,7 @@
               <div class="project__carousel">
                 <img
                   class="project__img project__img--active"
-                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  onclick="changeActiveImg(event, 'u', 4, 3)"
                   src="assets/upup_1.jpg"
                   data-iid="u0"
                   alt="Voting app's main page with polls"
@@ -353,7 +351,7 @@
                 <img
                   class="project__img"
                   src="assets/upup_2.jpg"
-                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  onclick="changeActiveImg(event, 'u', 4, 3)"
                   data-iid="u1"
                   loading="lazy"
                   alt="Voting app's poll page with options part"
@@ -361,7 +359,7 @@
                 <img
                   class="project__img"
                   src="assets/upup_3.jpg"
-                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  onclick="changeActiveImg(event, 'u', 4, 3)"
                   data-iid="u2"
                   loading="lazy"
                   alt="Voting app's poll page with graph part"
@@ -369,20 +367,20 @@
                 <img
                   class="project__img"
                   src="assets/upup_4.jpg"
-                  onClick="changeActiveImg(event, 'u', 4, 3)"
+                  onclick="changeActiveImg(event, 'u', 4, 3)"
                   data-iid="u3"
                   loading="lazy"
                   alt="Voting app's login component"
                 />
                 <span class="project__img-num">01/04</span>
               </div>
-              <section class="project__info">
+              <section class="project__info" onclick="toggleInfo(event)">
                 <span class="project__icons"
                   ><i
-                    class="fa fa-chevron-down"
-                    aria-hidden="true"
-                    onClick="toggleInfo(event)"
-                  ></i
+                  class="fa fa-chevron-up"
+                  aria-hidden="true"
+                  onclick="toggleInfo(event)"
+                ></i
                 ></span>
                 <h3 class="project__title">Up up</h3>
                 <p class="project__links">
@@ -424,7 +422,7 @@
               <div class="project__carousel">
                 <img
                   class="project__img project__img--active"
-                  onClick="changeActiveImg(event, 'c', 2, 4)"
+                  onclick="changeActiveImg(event, 'c', 2, 4)"
                   src="assets/cw_1.jpg"
                   data-iid="c0"
                   alt="Cat Wiki main page"
@@ -432,20 +430,20 @@
                 <img
                   class="project__img"
                   src="assets/cw_2.jpg"
-                  onClick="changeActiveImg(event, 'c', 2, 4)"
+                  onclick="changeActiveImg(event, 'c', 2, 4)"
                   data-iid="c1"
                   loading="lazy"
                   alt="Cat Wiki cat page"
                 />
                 <span class="project__img-num">01/02</span>
               </div>
-              <section class="project__info">
+              <section class="project__info" onclick="toggleInfo(event)">
                 <span class="project__icons"
                   ><i
-                    class="fa fa-chevron-down"
-                    aria-hidden="true"
-                    onClick="toggleInfo(event)"
-                  ></i
+                  class="fa fa-chevron-up"
+                  aria-hidden="true"
+                  onclick="toggleInfo(event)"
+                ></i
                 ></span>
                 <h3 class="project__title">Cats Wiki</h3>
                 <p class="project__links">
@@ -489,7 +487,7 @@
               <div class="project__carousel">
                 <img
                   class="project__img project__img--active"
-                  onClick="changeActiveImg(event, 'i', 3, 5)"
+                  onclick="changeActiveImg(event, 'i', 3, 5)"
                   src="assets/iu_1.jpg"
                   data-iid="i0"
                   alt="Image uploader's upload component"
@@ -497,7 +495,7 @@
                 <img
                   class="project__img"
                   src="assets/iu_2.jpg"
-                  onClick="changeActiveImg(event, 'i', 3, 5)"
+                  onclick="changeActiveImg(event, 'i', 3, 5)"
                   data-iid="i1"
                   loading="lazy"
                   alt="Image uploader's loader component"
@@ -505,20 +503,20 @@
                 <img
                   class="project__img"
                   src="assets/iu_3.jpg"
-                  onClick="changeActiveImg(event, 'i', 3, 5)"
+                  onclick="changeActiveImg(event, 'i', 3, 5)"
                   data-iid="i2"
                   loading="lazy"
                   alt="Image uploader's component with loaded image"
                 />
                 <span class="project__img-num">01/03</span>
               </div>
-              <section class="project__info">
+              <section class="project__info" onclick="toggleInfo(event)">
                 <span class="project__icons"
                   ><i
-                    class="fa fa-chevron-down"
-                    aria-hidden="true"
-                    onClick="toggleInfo(event)"
-                  ></i
+                  class="fa fa-chevron-up"
+                  aria-hidden="true"
+                  onclick="toggleInfo(event)"
+                ></i
                 ></span>
                 <h3 class="project__title">Image Uploader</h3>
                 <p class="project__links">
@@ -558,27 +556,27 @@
         </div>
         <div class="projects__titles projects__titles--list">
           <span
-            onClick="slideProjectIn(0)"
+            onclick="slideProjectIn(0)"
             class="projects__title projects__title--selected"
             data-tid="0"
           ></span>
           <span
-            onClick="slideProjectIn(1)"
+            onclick="slideProjectIn(1)"
             class="projects__title"
             data-tid="1"
           ></span>
           <span
-            onClick="slideProjectIn(2)"
+            onclick="slideProjectIn(2)"
             class="projects__title"
             data-tid="2"
           ></span>
           <span
-            onClick="slideProjectIn(3)"
+            onclick="slideProjectIn(3)"
             class="projects__title"
             data-tid="3"
           ></span>
           <span
-            onClick="slideProjectIn(4)"
+            onclick="slideProjectIn(4)"
             class="projects__title"
             data-tid="4"
           ></span>

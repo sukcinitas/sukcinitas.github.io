@@ -516,7 +516,9 @@ body {
   }
 
   &__icons {
-    display: none;
+    opacity: 0;
+    transition: opacity 1000ms;
+    transition-delay: 500ms;
   }
 
   &__stack {
@@ -892,12 +894,9 @@ body {
       background-color: $dark-2;
       padding: 2rem;
       opacity: 1;
-      transition: bottom 1200ms;
+      transition: bottom 1000ms;
+      transition-delay: 500ms;
       height: 100%;
-
-      &.minified {
-        bottom: -500px;
-      }
     }
 
     &__text {
@@ -914,20 +913,6 @@ body {
       background-color: $dark-2;
     }
 
-    &__icons {
-      background-image: $gradient-1;
-      @include vendor-prefix('background-clip', 'text');
-
-      font-size: 1.2rem;
-      margin: 0;
-      display: inline-block;
-
-      &:hover {
-        cursor: pointer;
-        color: transparent;
-      }
-    }
-
     &:nth-child(even) {
       & .project__carousel {
         left: 0;
@@ -938,12 +923,29 @@ body {
         left: 0;
         bottom: 0px;
         transition: bottom 1000ms;
-        opacity: 1;
-
-        &.minified {
-          bottom: -500px;
-        }
+        transition-delay: 500ms;
       }
+    }
+  }
+
+  .project__info.minified,
+  .project:nth-child(even) .project__info.minified {
+    bottom: -500px;
+    transition: bottom 1000ms;
+  }
+
+  .project__info.minified {
+    & .project__icons {
+      background-image: $gradient-1;
+      @include vendor-prefix('background-clip', 'text');
+
+      font-size: 1.2rem;
+      margin: 0;
+      display: inline-block;
+      visibility: visible;
+      transition: opacity 1000ms;
+      transition-delay: 500ms;
+      opacity: 1;
     }
   }
 
@@ -966,10 +968,12 @@ body {
     & .project__info {
       bottom: 0;
       transition: bottom 1000ms;
+      transition-delay: 500ms;
       left: 0;
 
       &.minified {
         bottom: -500px;
+        transition: bottom 1000ms;
       }
     }
   }
