@@ -446,12 +446,14 @@ body {
     bottom: 0;
     right: 0;
     z-index: -1;
+    visibility: hidden;
     &:hover {
       cursor: pointer;
     }
 
     &--active {
       z-index: 0;
+      visibility: visible;
     }
   }
 

@@ -652,12 +652,14 @@ body {
   bottom: 0;
   right: 0;
   z-index: -1;
+  visibility: hidden;
 }
 .project__img:hover {
   cursor: pointer;
 }
 .project__img--active {
   z-index: 0;
+  visibility: visible;
 }
 .project__img-num {
   font-size: 2rem;

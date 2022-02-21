@@ -137,7 +137,6 @@ if (!!window.IntersectionObserver) {
     const contact = document.querySelector('.contact');
 
     entries.forEach((entry) => {
-      console.log(entry.target);
       entry.isIntersecting
         ? entry.target.classList.add('in')
         : entry.target.classList.remove('in');
