@@ -1,0 +1,81 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.header {
+  position: sticky;
+  top: -3rem;
+  $font-size: 1.4rem;
+  transform: translateY(-200px);
+  padding: $sides $sides 1rem;
+  background-color: inherit;
+  font-family: inherit;
+  color: $gray-2;
+  z-index: 1;
+  max-width: $max-width;
+  margin: 0 auto;
+  @include vendor-prefix('animation', 'slide-down 500ms ease-out');
+  @include vendor-prefix('animation-fill-mode', 'forwards');
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-image: $gradient-1;
+    @include vendor-prefix('background-clip', 'text');
+  }
+
+  &__brand-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  &__brand {
+    font-size: 1.6rem;
+    color: $gray-1;
+
+    &:hover {
+      color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__brand-additional {
+    font-size: $font-size;
+    line-height: 1.5;
+    align-self: flex-end;
+    color: $gray-2;
+
+    &:hover {
+      color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &__contact-info {
+    display: flex;
+    font-family: inherit;
+    font-size: $font-size;
+    color: $gray-2;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__contact-info-item {
+    color: gray-2;
+    margin-left: 10px;
+    line-height: 1.5;
+
+    &:hover {
+      color: transparent;
+    }
+
+    & i {
+      color: $gray-2;
+      font-size: calc(#{$font-size} + 4px);
+
+      &:hover {
+        color: transparent;
+      }
+    }
+  }
+}

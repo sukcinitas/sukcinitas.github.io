@@ -1,0 +1,81 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2rem;
+  }
+
+  &__icon {
+    background: $gradient-3;
+    @include vendor-prefix('background-clip', 'text');
+    font-size: 4.1rem;
+    padding: 10px;
+    transform: translateY(0); // animation
+    opacity: 0; // animation
+    color: transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__list-sub {
+    color: $bright-1;
+    font-size: 1.2rem;
+    border-top: 2px solid $bright-1;
+    margin: 2rem 0;
+    padding: 0.6rem 0 0;
+  }
+}
+
+@for $i from 2 through 6 {
+  .tech-stack__list:nth-child(1) i.active:nth-child(#{$i}) {
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i})'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
+  }
+}
+
+@for $i from 2 through 6 {
+  .tech-stack__list:nth-child(2) i.active:nth-child(#{$i}) {
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i} + 600ms)'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
+  }
+}
+
+@for $i from 2 through 6 {
+  .tech-stack__list:nth-child(3) i.active:nth-child(#{$i}) {
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i} + 1200ms)'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
+  }
+}
+
+@for $i from 2 through 6 {
+  .tech-stack__list:nth-child(4) i.active:nth-child(#{$i}) {
+    @include vendor-prefix(
+      'animation',
+      'stack-animation 600ms calc(100ms * #{$i} + 1800ms)'
+    );
+    @include vendor-prefix('animation-fill-mode', 'forwards');
+  }
+}

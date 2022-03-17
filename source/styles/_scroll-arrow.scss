@@ -1,0 +1,37 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.scroll-arrow {
+  position: fixed;
+  bottom: $sides;
+  right: $sides;
+  transform: rotate(0deg);
+  background-image: $gradient-1;
+  @include vendor-prefix('background-clip', 'text');
+  font-size: 2rem;
+  z-index: 2;
+  color: $gray-2;
+  transition: color 50ms ease-in;
+
+  &:hover {
+    color: transparent;
+    cursor: pointer;
+    transition: color 100ms ease-out;
+    transform: translate(2px, 2px) rotate(0);
+  }
+
+  @media screen and (min-width: $max-width) {
+    right: calc(
+      (100% - #{$max-width}) / 2 + $sides
+    ); //vw counts scrollbar width
+  }
+}
+
+.scroll-arrow--rotated {
+  transform: rotate(180deg);
+  transition: transform 100ms ease-in-out;
+
+  &:hover {
+    transform: translate(2px, 2px) rotate(180deg);
+  }
+}

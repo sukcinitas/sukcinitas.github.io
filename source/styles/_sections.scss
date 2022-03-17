@@ -1,0 +1,27 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.about,
+.tech-stack,
+.projects,
+.info,
+.contact {
+  min-height: 100vh;
+  padding: 6rem 0 6rem;
+
+  &:not(:first-child) {
+    border-top: 1px solid $dark-3;
+  }
+
+  &__category {
+    text-transform: uppercase;
+    color: $bright-1;
+    font-size: 2.8rem;
+    margin: 0 1rem 4rem 0;
+    font-family: 'Tourney', cursive;
+
+    &::after {
+      content: ':';
+    }
+  }
+}

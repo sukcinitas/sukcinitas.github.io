@@ -1,0 +1,58 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+@use 'util/keyframes' as *;
+
+.about {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-top: calc(-5rem - 37px);
+
+  &__title {
+    font-size: 12rem;
+    font-size: 11.6vw;
+    line-height: 14vw;
+    margin: 0;
+    text-transform: uppercase;
+    color: transparent;
+    font-family: 'Black Ops One', cursive;
+    opacity: 0;
+    transform: translateX(200px);
+    background-image: $gradient-2;
+    @include vendor-prefix('background-clip', 'text');
+    background-size: 200%;
+    color: transparent;
+    @include vendor-prefix(
+      'animation',
+      'slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate'
+    );
+  }
+
+  & h1:last-of-type {
+    margin-right: 4rem;
+    display: inline-block;
+    transform: translateX(200px);
+    @include vendor-prefix(
+      'animation',
+      'slide-right 500ms 600ms ease-out forwards, bg-animation 5s 1200ms infinite alternate'
+    );
+  }
+
+  &__text {
+    max-width: 500px;
+    font-size: 1.6rem;
+    display: inline-block;
+    color: $gray-2;
+    position: relative;
+    transform: translateY(200px);
+    opacity: 0;
+    @include vendor-prefix(
+      'animation',
+      'slide-up 500ms 900ms ease-out forwards'
+    );
+  }
+
+  &__category {
+    line-height: 0.5;
+  }
+}

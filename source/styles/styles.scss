@@ -1,0 +1,287 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+@use 'sections';
+@use 'header';
+@use 'footer';
+@use 'tech-stack';
+@use 'about';
+@use 'project';
+@use 'info';
+@use 'contact';
+@use 'scroll-arrow';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  &:visited,
+  &:active,
+  &:focus,
+  &:focus-within,
+  &:focus-visible,
+  &:hover {
+    transition: color 50ms ease-in;
+    color: inherit;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: color 100ms ease-out;
+  }
+}
+
+img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+body {
+  width: 100%;
+  background-color: $dark-1;
+  font-family: 'Teko', sans-serif;
+  color: $gray-2;
+  overflow-x: hidden;
+  margin: 0;
+  position: relative;
+  visibility: hidden;
+  overflow-y: scroll;
+}
+
+.main {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $sides;
+}
+
+.paused {
+  @include vendor-prefix('animation-play-state', 'paused');
+}
+
+.note {
+  font-size: 1.2rem;
+  color: $bright-2;
+  margin-top: -3rem;
+
+  & a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.link {
+  font-size: 1rem;
+  color: $gray-2;
+
+  &:hover {
+    color: $bright-2;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  $sides: 2rem;
+
+  :root {
+    font-size: 12px;
+  }
+
+  body {
+    background-color: $dark-3;
+  }
+
+  .main {
+    padding: $sides;
+  }
+
+  @supports (will-change: transform) {
+    .header,
+    .about__title,
+    .about h1:last-of-type,
+    .about__text {
+      will-change: transform;
+    }
+  }
+
+  .header,
+  .about__title,
+  .about h1:last-of-type,
+  .about__text {
+    transform: translateZ(0);
+  }
+
+  .about,
+  .tech-stack,
+  .projects,
+  .info,
+  .contact {
+    &:not(:first-child) {
+      border-top: 1px solid $gray-3;
+    }
+  }
+
+  .header {
+    position: relative;
+    top: 0;
+    padding: $sides;
+
+    &__wrapper {
+      align-items: flex-start;
+      overflow: hidden;
+    }
+
+    &__contact-info {
+      max-width: 140px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .about {
+    margin-top: calc(-2rem - 79px);
+  }
+
+  .tech-stack,
+  .projects {
+    min-height: 50vh;
+  }
+
+  .tech-stack {
+    &__list {
+      margin: 0.4rem;
+    }
+
+    &__icon {
+      font-size: 3.4rem;
+    }
+  }
+
+  .scroll-arrow {
+    bottom: $sides;
+    right: $sides;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    &__title {
+      font-size: 2.6rem;
+    }
+
+    &__wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      background-color: transparent;
+      border-radius: 7px;
+    }
+
+    &__carousel {
+      height: 562.9px;
+      width: 260px;
+      left: 0;
+      opacity: 1;
+    }
+
+    &__info {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      background-color: $dark-2;
+      padding: 2rem;
+      opacity: 1;
+      transition: bottom 1000ms;
+      transition-delay: 500ms;
+      height: 100%;
+    }
+
+    &__text {
+      padding: 0;
+      font-size: 1.3rem;
+      text-align: left;
+
+      &:last-child {
+        padding: 0 0 2rem;
+      }
+    }
+
+    &__img-num {
+      background-color: $dark-2;
+    }
+
+    &:nth-child(even) {
+      & .project__carousel {
+        left: 0;
+        opacity: 1;
+      }
+
+      & .project__info {
+        left: 0;
+        bottom: 0px;
+        transition: bottom 1000ms;
+        transition-delay: 500ms;
+      }
+    }
+  }
+
+  .project__info.minified,
+  .project:nth-child(even) .project__info.minified {
+    bottom: -500px;
+    transition: bottom 1000ms;
+  }
+
+  .project__info.minified {
+    & .project__icons {
+      background-image: $gradient-1;
+      @include vendor-prefix('background-clip', 'text');
+
+      font-size: 1.2rem;
+      margin: 0;
+      display: inline-block;
+      visibility: visible;
+      transition: opacity 1000ms;
+      transition-delay: 500ms;
+      opacity: 1;
+    }
+  }
+
+  .about,
+  .tech-stack,
+  .projects {
+    &__category {
+      font-size: 3rem;
+    }
+  }
+
+  .project.active,
+  .project.active:nth-child(even) {
+    & .project__carousel {
+      left: 0;
+      opacity: 1;
+      transition: none;
+    }
+
+    & .project__info {
+      bottom: 0;
+      transition: bottom 1000ms;
+      transition-delay: 500ms;
+      left: 0;
+
+      &.minified {
+        bottom: -500px;
+        transition: bottom 1000ms;
+      }
+    }
+  }
+}

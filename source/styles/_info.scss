@@ -1,0 +1,48 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.info {
+  min-height: 50vh;
+
+  &__wrapper {
+    display: flex;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__item {
+    margin: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid $bright-1;
+    flex-basis: 400px;
+    background: $dark-2;
+    padding: 2rem;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &__item-title {
+    color: $bright-2;
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  &__item-subtitle {
+    color: $gray-1;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  &__item__details {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  &__item-description {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+  }
+}

@@ -1,0 +1,28 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: $dark-2;
+  padding: 1rem;
+  word-spacing: 2px;
+
+  & p {
+    margin: 1rem 2rem;
+  }
+
+  &__link {
+    background-image: $gradient-1;
+    @include vendor-prefix('background-clip', 'text');
+    color: $gray-2;
+
+    &:hover {
+      color: transparent;
+    }
+  }
+}
