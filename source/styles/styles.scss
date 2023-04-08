@@ -61,7 +61,7 @@ body {
 .main {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $sides;
+  padding: 0 $sides;
 }
 
 .paused {
@@ -143,10 +143,6 @@ body {
       max-width: 140px;
       flex-wrap: wrap;
     }
-  }
-
-  .about {
-    margin-top: calc(-2rem - 79px);
   }
 
   .tech-stack,

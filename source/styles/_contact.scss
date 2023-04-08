@@ -2,8 +2,7 @@
 @use 'util/mixins' as *;
 
 .contact {
-  min-height: calc(100vh - 200px); //minus footer
-  margin-bottom: 6rem;
+  min-height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;

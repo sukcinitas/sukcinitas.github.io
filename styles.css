@@ -145,7 +145,7 @@
 .tech-stack__tech {
   display: flex;
   flex-wrap: wrap;
-  margin: 4rem auto;
+  margin: 0 auto;
 }
 .tech-stack__list {
   display: flex;
@@ -153,7 +153,7 @@
   margin: 2rem;
 }
 .tech-stack__icon {
-  background: radial-gradient(#d76d77, #ffaf7b);
+  background: radial-gradient(#3a1c71, #ffaf7b);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -ms-background-clip: text;
@@ -504,8 +504,10 @@
   position: relative;
   margin-top: calc(-5rem - 37px);
 }
+.about__wrapper {
+  margin-bottom: -4rem;
+}
 .about__title {
-  font-size: 12rem;
   font-size: 11.6vw;
   line-height: 14vw;
   margin: 0;
@@ -527,6 +529,7 @@
   -ms-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   -o-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
+  text-shadow: 0.7vw 0.7vw 0px rgba(255, 255, 255, 0.4117647059);
 }
 .about h1:last-of-type {
   margin-right: 4rem;
@@ -607,10 +610,10 @@
 }
 .projects__title:hover {
   cursor: pointer;
-  background-image: radial-gradient(#d76d77, #ffaf7b);
+  background-image: radial-gradient(#3a1c71, #ffaf7b);
 }
 .projects__title--selected {
-  background-image: radial-gradient(#d76d77, #ffaf7b);
+  background-image: radial-gradient(#3a1c71, #ffaf7b);
   width: 13px;
   height: 13px;
   border: none;
@@ -645,7 +648,7 @@
   padding: 3rem;
   background-color: #161616;
   border-radius: 20px;
-  box-shadow: 2px 2px 10px #0000000d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.0509803922);
   column-gap: 3rem;
 }
 .project__carousel {
@@ -787,7 +790,7 @@
 }
 
 .info {
-  min-height: 50vh;
+  min-height: 100vh;
 }
 .info__wrapper {
   display: flex;
@@ -827,8 +830,7 @@
 }
 
 .contact {
-  min-height: calc(100vh - 200px);
-  margin-bottom: 6rem;
+  min-height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -931,7 +933,7 @@ body {
 .main {
   max-width: 1540px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 0 4rem;
 }
 
 .paused {
@@ -964,38 +966,33 @@ body {
   :root {
     font-size: 12px;
   }
-
   body {
     background-color: #1b1b1b;
   }
-
   .main {
     padding: 2rem;
   }
-
   @supports (will-change: transform) {
     .header,
-.about__title,
-.about h1:last-of-type,
-.about__text {
+    .about__title,
+    .about h1:last-of-type,
+    .about__text {
       will-change: transform;
     }
   }
   .header,
-.about__title,
-.about h1:last-of-type,
-.about__text {
+  .about__title,
+  .about h1:last-of-type,
+  .about__text {
     transform: translateZ(0);
   }
-
   .about:not(:first-child),
-.tech-stack:not(:first-child),
-.projects:not(:first-child),
-.info:not(:first-child),
-.contact:not(:first-child) {
+  .tech-stack:not(:first-child),
+  .projects:not(:first-child),
+  .info:not(:first-child),
+  .contact:not(:first-child) {
     border-top: 1px solid #424242;
   }
-
   .header {
     position: relative;
     top: 0;
@@ -1009,28 +1006,20 @@ body {
     max-width: 140px;
     flex-wrap: wrap;
   }
-
-  .about {
-    margin-top: calc(-2rem - 79px);
-  }
-
   .tech-stack,
-.projects {
+  .projects {
     min-height: 50vh;
   }
-
   .tech-stack__list {
     margin: 0.4rem;
   }
   .tech-stack__icon {
     font-size: 3.4rem;
   }
-
   .scroll-arrow {
     bottom: 2rem;
     right: 2rem;
   }
-
   .project {
     flex-direction: column;
     align-items: center;
@@ -1085,13 +1074,11 @@ body {
     transition: bottom 1000ms;
     transition-delay: 500ms;
   }
-
   .project__info.minified,
-.project:nth-child(even) .project__info.minified {
+  .project:nth-child(even) .project__info.minified {
     bottom: -500px;
     transition: bottom 1000ms;
   }
-
   .project__info.minified .project__icons {
     background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
     -webkit-background-clip: text;
@@ -1107,28 +1094,26 @@ body {
     transition-delay: 500ms;
     opacity: 1;
   }
-
   .about__category,
-.tech-stack__category,
-.projects__category {
+  .tech-stack__category,
+  .projects__category {
     font-size: 3rem;
   }
-
   .project.active .project__carousel,
-.project.active:nth-child(even) .project__carousel {
+  .project.active:nth-child(even) .project__carousel {
     left: 0;
     opacity: 1;
     transition: none;
   }
   .project.active .project__info,
-.project.active:nth-child(even) .project__info {
+  .project.active:nth-child(even) .project__info {
     bottom: 0;
     transition: bottom 1000ms;
     transition-delay: 500ms;
     left: 0;
   }
   .project.active .project__info.minified,
-.project.active:nth-child(even) .project__info.minified {
+  .project.active:nth-child(even) .project__info.minified {
     bottom: -500px;
     transition: bottom 1000ms;
   }

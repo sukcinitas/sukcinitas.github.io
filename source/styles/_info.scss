@@ -2,7 +2,7 @@
 @use 'util/mixins' as *;
 
 .info {
-  min-height: 50vh;
+  min-height: 100vh;
 
   &__wrapper {
     display: flex;
