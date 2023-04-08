@@ -35,29 +35,25 @@ function changeActiveImg(e, project, imgNum, projectNum) {
   img.classList.add('project__img--active');
 }
 
-function toggleDevIcon(event) {
+function toggleClass(event, className) {
   const icon = event.currentTarget;
-  if (event.type === 'mouseout') {
-    icon.classList.remove('colored');
-  } else {
-    icon.classList.add('colored');
-  }
+  icon.classList.toggle(className);
 }
 
 const techIcons = Array.from(document.querySelectorAll('.tech-stack__icon'));
 techIcons.forEach((techIcon) => {
-  techIcon.addEventListener('mouseover', toggleDevIcon);
-  techIcon.addEventListener('mouseout', toggleDevIcon);
+  techIcon.addEventListener('mouseover', (e) => toggleClass(e, 'colored'));
+  techIcon.addEventListener('mouseout', (e) => toggleClass(e, 'colored'));
 });
 
-function toggleInfo(e) {
-  const target = e.target;
-  const isMinified = target.classList.contains('minified');
-  if (isMinified) {
-    target.classList.remove('minified');
-  } else {
-    target.classList.add('minified');
-  }
+function changeGreetings() {
+  const greetings = document.querySelector('.greetings')
+  setTimeout(() => {
+    greetings.innerHTML = 'Don\'t hesitate!'
+  }, 500)
+  setTimeout(() => {
+    greetings.innerHTML = 'Get in touch!'
+  }, 1600)
 }
 
 function chooseDisplay(e) {
@@ -91,12 +87,12 @@ function loadBody() {
 
 const portfolioBtn = document.querySelector('.header__brand-additional');
 portfolioBtn.addEventListener('click', () => {
-  window.scrollTo(0, document.querySelector('.projects').offsetTop);
+  window.scrollTo(0, document.querySelector('.projects').offsetTop, { behavior: smooth });
 });
 
 const homeBtn = document.querySelector('.header__brand');
 homeBtn.addEventListener('click', () => {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 0, { behavior: smooth });
 });
 
 const arrow = document.querySelector('.scroll-arrow');
@@ -167,6 +163,7 @@ if (!!window.IntersectionObserver) {
         }
       } else if (document.querySelector('.in') === contact) {
         arrow.classList.add('scroll-arrow--rotated');
+        changeGreetings()
       } else if (entry.target.classList.contains('project')) {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
