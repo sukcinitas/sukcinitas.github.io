@@ -32,10 +32,12 @@
   &__brand {
     font-size: 1.6rem;
     color: $gray-1;
+    transition: color 0.2s;
 
     &:hover {
       color: transparent;
       cursor: pointer;
+      transition: color 0.3s;
     }
   }
 
@@ -44,10 +46,12 @@
     line-height: 1.5;
     align-self: flex-end;
     color: $gray-2;
+    transition: color 0.2s;
 
     &:hover {
       color: transparent;
       cursor: pointer;
+      transition: color 0.3s;
     }
   }
 
@@ -64,9 +68,12 @@
     color: gray-2;
     margin-left: 10px;
     line-height: 1.5;
+    transition: color 0.2s;
 
     &:hover {
       color: transparent;
+      cursor: pointer;
+      transition: color 0.3s;
     }
 
     & i {

@@ -1,0 +1,16 @@
+@use 'util/variables' as *;
+@use 'util/mixins' as *;
+
+.link {
+  &--email {
+    color: inherit;
+    background-image: $gradient-1;
+    @include vendor-prefix('background-clip', 'text');
+    transition: color 0.2s;
+    &:hover {
+      color: transparent;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+  }
+}

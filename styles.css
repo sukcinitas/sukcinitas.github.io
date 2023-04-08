@@ -72,20 +72,24 @@
 .header__brand {
   font-size: 1.6rem;
   color: #ccc;
+  transition: color 0.2s;
 }
 .header__brand:hover {
   color: transparent;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .header__brand-additional {
   font-size: 1.4rem;
   line-height: 1.5;
   align-self: flex-end;
   color: #a6a6a6;
+  transition: color 0.2s;
 }
 .header__brand-additional:hover {
   color: transparent;
   cursor: pointer;
+  transition: color 0.3s;
 }
 .header__contact-info {
   display: flex;
@@ -99,9 +103,12 @@
   color: gray-2;
   margin-left: 10px;
   line-height: 1.5;
+  transition: color 0.2s;
 }
 .header__contact-info-item:hover {
   color: transparent;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 .header__contact-info-item i {
   color: #a6a6a6;
@@ -124,18 +131,6 @@
 }
 .footer p {
   margin: 1rem 2rem;
-}
-.footer__link {
-  background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
-  background-clip: text;
-  color: #a6a6a6;
-}
-.footer__link:hover {
-  color: transparent;
 }
 
 .tech-stack {
@@ -886,6 +881,22 @@
 }
 .scroll-arrow--rotated:hover {
   transform: translate(2px, 2px) rotate(180deg);
+}
+
+.link--email {
+  color: inherit;
+  background-image: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  transition: color 0.2s;
+}
+.link--email:hover {
+  color: transparent;
+  transition: color 0.3s;
+  cursor: pointer;
 }
 
 *,
