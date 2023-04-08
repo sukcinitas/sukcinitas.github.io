@@ -11,6 +11,8 @@
   background-color: $dark-2;
   padding: 1rem;
   word-spacing: 2px;
+  background-image: $gradient-1;
+  @include vendor-prefix('background-clip', 'text');
 
   & p {
     margin: 1rem 2rem;

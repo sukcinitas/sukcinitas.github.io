@@ -46,6 +46,16 @@ techIcons.forEach((techIcon) => {
   techIcon.addEventListener('mouseout', (e) => toggleClass(e, 'colored'));
 });
 
+function changeGreetings() {
+  const greetings = document.querySelector('.greetings')
+  setTimeout(() => {
+    greetings.innerHTML = 'Don\'t hesitate!'
+  }, 500)
+  setTimeout(() => {
+    greetings.innerHTML = 'Get in touch!'
+  }, 1600)
+}
+
 function chooseDisplay(e) {
   const target = e.target;
   const list = document.querySelector('.projects__list');
@@ -153,6 +163,7 @@ if (!!window.IntersectionObserver) {
         }
       } else if (document.querySelector('.in') === contact) {
         arrow.classList.add('scroll-arrow--rotated');
+        changeGreetings()
       } else if (entry.target.classList.contains('project')) {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');

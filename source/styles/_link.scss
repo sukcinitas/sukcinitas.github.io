@@ -4,7 +4,7 @@
 .link {
   &--email {
     color: inherit;
-    background-image: $gradient-1;
+    // background-image: $gradient-1;
     @include vendor-prefix('background-clip', 'text');
     transition: color 0.2s;
     &:hover {
