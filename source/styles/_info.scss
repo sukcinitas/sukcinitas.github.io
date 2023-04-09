@@ -2,8 +2,6 @@
 @use 'util/mixins' as *;
 
 .info {
-  min-height: 100vh;
-
   &__wrapper {
     display: flex;
     font-size: 1.2rem;

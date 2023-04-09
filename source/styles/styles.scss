@@ -104,6 +104,13 @@ body {
     padding: $sides;
   }
 
+  .about {
+    margin-top: -102px;
+    &__wrapper {
+      margin-bottom: 0
+    }
+  }
+
   @supports (will-change: transform) {
     .header,
     .about__title,
