@@ -92,22 +92,44 @@ arrow.addEventListener('click', () => {
   }
 });
 
+function renewNavbar(idx) {
+  const bars = Array.from(document.querySelectorAll('.navbar__bar'))
+  for (let i = 0; i < bars.length; i++) {
+    const bar = bars[i]
+    if (i <= idx) {
+      bar.classList.add('active')
+    } else {
+      bar.classList.remove('active')
+    }
+  }
+}
+const sections = [
+  document.querySelector('.about'),
+  document.querySelector('.tech-stack'),
+  document.querySelector('.projects'),
+  ...Array.from(document.querySelectorAll('.info')),
+  document.querySelector('.contact'),
+];
+let intersectionIndex = undefined
 if (!!window.IntersectionObserver) {
   const options = {
     rootMargin: '0px',
-    threshold: [0.3, 0.6],
+    threshold: [0.3, 0.3],
   };
   const callback = (entries) => {
     const about = document.querySelector('.about');
     const tech = document.querySelector('.tech-stack');
     const arrow = document.querySelector('.scroll-arrow');
     const contact = document.querySelector('.contact');
-    const projects = document.querySelector('.projects');
-
     entries.forEach((entry) => {
       entry.isIntersecting
         ? entry.target.classList.add('in')
         : entry.target.classList.remove('in');
+        if (entry.isIntersecting) {
+          intersectionIndex = sections.findIndex(e => e === entry.target)
+          renewNavbar(intersectionIndex)
+        }
+
       arrow.classList.remove('scroll-arrow--rotated');
       if (entry.target === tech) {
         // animate tech stacking whenever comes in viewport
@@ -139,14 +161,6 @@ if (!!window.IntersectionObserver) {
       }
     });
   };
-
-  const sections = [
-    document.querySelector('.about'),
-    document.querySelector('.tech-stack'),
-    document.querySelector('.projects'),
-    ...Array.from(document.querySelectorAll('.info')),
-    document.querySelector('.contact'),
-  ];
   const observer = new IntersectionObserver(callback, options);
 
   sections.forEach((section, index) => {

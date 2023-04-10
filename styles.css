@@ -897,7 +897,7 @@
   content: "";
   position: absolute;
   display: block;
-  width: 0.5rem;
+  width: 5px;
   right: 0;
   height: 100%;
   transform: scaleX(1);
@@ -906,32 +906,52 @@
 .navbar__bar:nth-child(1)::before {
   background-color: #3ab6c3;
 }
+.navbar__bar:nth-child(1).active::before {
+  transform: scalex(2);
+}
 .navbar__bar:nth-child(2)::before {
   background-color: #5089ae;
+}
+.navbar__bar:nth-child(2).active::before {
+  transform: scalex(3);
+  transition: transform 0.6s;
 }
 .navbar__bar:nth-child(3)::before {
   background-color: #665b98;
 }
+.navbar__bar:nth-child(3).active::before {
+  transform: scalex(4);
+  transition: transform 0.5s;
+}
 .navbar__bar:nth-child(4)::before {
   background-color: #7c3484;
+}
+.navbar__bar:nth-child(4).active::before {
+  transform: scalex(5);
+  transition: transform 0.4s;
 }
 .navbar__bar:nth-child(5)::before {
   background-color: #94565f;
 }
+.navbar__bar:nth-child(5).active::before {
+  transform: scalex(6);
+  transition: transform 0.3s;
+}
 .navbar__bar:nth-child(6)::before {
   background-color: #b17c36;
 }
+.navbar__bar:nth-child(6).active::before {
+  transform: scalex(7);
+  transition: transform 0.2s;
+}
 .navbar__bar:hover {
   cursor: pointer;
-  transition: width 0.1s;
 }
 .navbar__bar:hover::after {
+  top: 50%;
+  right: 2rem;
   opacity: 1;
   transition: opacity 0.1s;
-}
-.navbar__bar:hover::before {
-  transform: scalex(10);
-  transition: transform 0.1s;
 }
 
 *,
