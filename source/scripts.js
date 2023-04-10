@@ -6,7 +6,8 @@ function slideProjectIn(idx) {
   const title = document.querySelector(`.projects__title[data-tid="${idx}"]`);
 
   const whichScreen = `${idx * -100}vw`;
-  projectSlider.style.setProperty('left', `calc(50% + ${whichScreen})`);
+  projectSlider.style.setProperty('transform', `translateX(${whichScreen})`);
+  projectSlider.style.setProperty('transition', 'transform 3s ease');
   target.classList.remove('projects__title--selected');
   title.classList.add('projects__title--selected');
 
@@ -46,39 +47,11 @@ techIcons.forEach((techIcon) => {
   techIcon.addEventListener('mouseout', (e) => toggleClass(e, 'colored'));
 });
 
-function changeGreetings() {
+function changeGreetings(phrase) {
   const greetings = document.querySelector('.greetings')
   setTimeout(() => {
-    greetings.innerHTML = 'Don\'t hesitate!'
-  }, 500)
-  setTimeout(() => {
-    greetings.innerHTML = 'Get in touch!'
-  }, 1600)
-}
-
-function chooseDisplay(e) {
-  const target = e.target;
-  const list = document.querySelector('.projects__list');
-  const titles = document.querySelector('.projects__titles');
-  let sibling;
-  list.style.left = `${50}%`;
-  if (target.classList.contains('fa-ellipsis-h')) {
-    sibling = target.nextElementSibling;
-    list.classList.remove('projects__list--list');
-    titles.classList.remove('projects__titles--list');
-  } else {
-    sibling = target.previousElementSibling;
-    list.classList.add('projects__list--list');
-    titles.classList.add('projects__titles--list');
-  }
-  target.classList.add('selected');
-  sibling.classList.remove('selected');
-
-  const projectSlider = document.querySelector('.projects__list');
-  const projectSliderArray = Array.from(projectSlider.children);
-  projectSliderArray.forEach((project) => {
-    project.classList.remove('active');
-  });
+    greetings.innerHTML = phrase
+  }, 1000)
 }
 
 function loadBody() {
@@ -100,7 +73,7 @@ arrow.addEventListener('click', () => {
   const sections = [
     document.querySelector('.about'),
     document.querySelector('.tech-stack'),
-    ...Array.from(document.querySelectorAll('.project')),
+    document.querySelector('.projects'),
     ...Array.from(document.querySelectorAll('.info')),
     document.querySelector('.contact'),
   ];
@@ -112,9 +85,7 @@ arrow.addEventListener('click', () => {
     next = sections[sections.indexOf(current) + 1];
   }
 
-  if (next.classList.contains('project')) {
-    window.scrollTo(0, next.offsetTop + next.parentElement.offsetTop);
-  } else if (next.classList.contains('about')) {
+  if (next.classList.contains('about')) {
     window.scrollTo(0, 0);
   } else {
     window.scrollTo(0, next.offsetTop);
@@ -131,6 +102,7 @@ if (!!window.IntersectionObserver) {
     const tech = document.querySelector('.tech-stack');
     const arrow = document.querySelector('.scroll-arrow');
     const contact = document.querySelector('.contact');
+    const projects = document.querySelector('.projects');
 
     entries.forEach((entry) => {
       entry.isIntersecting
@@ -163,19 +135,7 @@ if (!!window.IntersectionObserver) {
         }
       } else if (document.querySelector('.in') === contact) {
         arrow.classList.add('scroll-arrow--rotated');
-        changeGreetings()
-      } else if (entry.target.classList.contains('project')) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          entry.target
-            .querySelector('.project__info')
-            .classList.remove('minified');
-        } else {
-          entry.target.classList.remove('active');
-          entry.target
-            .querySelector('.project__info')
-            .classList.add('minified');
-        }
+        changeGreetings('Get in touch!')
       }
     });
   };
@@ -183,7 +143,7 @@ if (!!window.IntersectionObserver) {
   const sections = [
     document.querySelector('.about'),
     document.querySelector('.tech-stack'),
-    ...Array.from(document.querySelectorAll('.project')),
+    document.querySelector('.projects'),
     ...Array.from(document.querySelectorAll('.info')),
     document.querySelector('.contact'),
   ];

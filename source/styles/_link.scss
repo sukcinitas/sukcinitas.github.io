@@ -1,16 +1,33 @@
 @use 'util/variables' as *;
 @use 'util/mixins' as *;
 
+.links {
+  display: flex;
+  column-gap: 1rem;
+  background-image: $gradient-1;
+  @include vendor-prefix('background-clip', 'text');
+}
+
 .link {
-  &--email {
-    color: inherit;
-    // background-image: $gradient-1;
-    @include vendor-prefix('background-clip', 'text');
-    transition: color 0.2s;
+  color: inherit;
+  @include vendor-prefix('background-clip', 'text');
+  transition: color 0.2s;
+  &:hover {
+    color: transparent;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  font-size: inherit;
+  &--icon {
+    font-size: 2rem;
+  }
+  &--bright {
+    color: $gray-2;
     &:hover {
-      color: transparent;
-      transition: color 0.3s;
-      cursor: pointer;
+      color: $bright-2;
     }
+  }
+  &--colored {
+    color: transparent; 
   }
 }

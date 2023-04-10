@@ -10,6 +10,7 @@
 @use 'contact';
 @use 'scroll-arrow';
 @use 'link';
+@use 'navbar';
 
 *,
 *::before,
@@ -80,16 +81,10 @@ body {
   }
 }
 
-.link {
-  font-size: 1rem;
-  color: $gray-2;
-
-  &:hover {
-    color: $bright-2;
-  }
-}
-
 @media screen and (max-width: 840px) {
+  .navbar {
+    display: none;
+  }
   $sides: 2rem;
 
   :root {
@@ -188,6 +183,7 @@ body {
       padding: 0;
       background-color: transparent;
       border-radius: 7px;
+      max-width: 300px;
     }
 
     &__carousel {
@@ -195,18 +191,13 @@ body {
       width: 260px;
       left: 0;
       opacity: 1;
+      display: none;
     }
 
     &__info {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      right: 0;
       background-color: $dark-2;
       padding: 2rem;
       opacity: 1;
-      transition: bottom 1000ms;
-      transition-delay: 500ms;
       height: 100%;
     }
 
@@ -223,41 +214,6 @@ body {
     &__img-num {
       background-color: $dark-2;
     }
-
-    &:nth-child(even) {
-      & .project__carousel {
-        left: 0;
-        opacity: 1;
-      }
-
-      & .project__info {
-        left: 0;
-        bottom: 0px;
-        transition: bottom 1000ms;
-        transition-delay: 500ms;
-      }
-    }
-  }
-
-  .project__info.minified,
-  .project:nth-child(even) .project__info.minified {
-    bottom: -500px;
-    transition: bottom 1000ms;
-  }
-
-  .project__info.minified {
-    & .project__icons {
-      background-image: $gradient-1;
-      @include vendor-prefix('background-clip', 'text');
-
-      font-size: 1.2rem;
-      margin: 0;
-      display: inline-block;
-      visibility: visible;
-      transition: opacity 1000ms;
-      transition-delay: 500ms;
-      opacity: 1;
-    }
   }
 
   .about,
@@ -265,27 +221,6 @@ body {
   .projects {
     &__category {
       font-size: 3rem;
-    }
-  }
-
-  .project.active,
-  .project.active:nth-child(even) {
-    & .project__carousel {
-      left: 0;
-      opacity: 1;
-      transition: none;
-    }
-
-    & .project__info {
-      bottom: 0;
-      transition: bottom 1000ms;
-      transition-delay: 500ms;
-      left: 0;
-
-      &.minified {
-        bottom: -500px;
-        transition: bottom 1000ms;
-      }
     }
   }
 }

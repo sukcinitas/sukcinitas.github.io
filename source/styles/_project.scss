@@ -6,26 +6,6 @@
   flex-direction: column;
   overflow: hidden;
 
-  &__display {
-    background-image: $gradient-1;
-    @include vendor-prefix('background-clip', 'text');
-    font-size: 1.4rem;
-  }
-
-  &__display-icon {
-    font-size: 1.8rem;
-    padding: 0.4rem;
-
-    &:hover {
-      color: transparent;
-      cursor: pointer;
-    }
-  }
-
-  &__display-icon.selected {
-    color: transparent;
-  }
-
   &__titles {
     background-image: $gradient-1;
     @include vendor-prefix('background-clip', 'text');
@@ -82,8 +62,8 @@
   flex-shrink: 0;
   display: flex;
   justify-content: center;
-  margin: 10rem 0 0;
   padding: 5rem;
+  padding-bottom: 1rem;
 
   &__wrapper {
     position: relative;
@@ -95,17 +75,25 @@
     border-radius: 20px;
     box-shadow: $shadow-1;
     column-gap: 3rem;
+    &:hover {
+      .project__carousel {
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 1s;
+        
+      }
+    }
   }
 
   &__carousel {
     height: 649.6px;
     width: 300px;
     overflow: hidden;
-    position: relative;
-    align-self: flex-end;
-    left: -200px;
+    position: absolute;
+    transform: translateX(-8rem);
+    z-index: -1;
     opacity: 0;
-    transition: opacity 500ms, left 500ms;
+    transition: opacity, z-index 500ms;
   }
 
   &__img {
@@ -143,13 +131,10 @@
   }
 
   &__info {
-    max-width: 300px;
+    max-width: 400px;
     padding: 0;
     text-align: left;
     align-self: flex-end;
-    position: relative;
-    left: 200px;
-    opacity: 0;
     transition: opacity 500ms, left 500ms;
     transition-delay: 500ms;
   }
@@ -198,52 +183,5 @@
     color: $bright-2;
     word-spacing: 4px;
     pointer-events: none;
-  }
-
-  &:nth-child(even) {
-    & .project__wrapper {
-      flex-direction: row-reverse;
-    }
-
-    & .project__carousel {
-      opacity: 0;
-      left: 200px;
-      transition: opacity 500ms, left 500ms;
-      transition-delay: 500ms;
-    }
-
-    & .project__info {
-      opacity: 0;
-      left: -200px;
-      transition: opacity 500ms, left 500ms;
-    }
-  }
-}
-
-.project.active {
-  & .project__carousel {
-    opacity: 1;
-    left: 0;
-    transition: opacity 500ms, left 500ms;
-  }
-  & .project__info {
-    opacity: 1;
-    left: 0;
-    transition: opacity 500ms, left 500ms;
-    transition-delay: 500ms;
-  }
-}
-
-.project.active:nth-child(even) {
-  & .project__carousel {
-    opacity: 1;
-    left: 0;
-    transition: opacity 500ms, left 500ms;
-    transition-delay: 500ms;
-  }
-  & .project__info {
-    opacity: 1;
-    left: 0;
-    transition: opacity 500ms, left 500ms;
   }
 }
