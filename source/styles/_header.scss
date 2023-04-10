@@ -69,20 +69,5 @@
     margin-left: 10px;
     line-height: 1.5;
     transition: color 0.2s;
-
-    &:hover {
-      color: transparent;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    & i {
-      color: $gray-2;
-      font-size: calc(#{$font-size} + 4px);
-
-      &:hover {
-        color: transparent;
-      }
-    }
   }
 }

@@ -7,9 +7,21 @@ $gray-3: #424242;
 $bright-1: #3ab7c4;
 $bright-2: #7b3386;
 $bright-3: #c89b15;
+
+$rainbow-1: #3ab6c3;
+$rainbow-2: #5089ae;
+$rainbow-3: #665b98;
+$rainbow-4: #7c3484;
+$rainbow-5: #94565f;
+$rainbow-6: #b17c36;
 $gradient-1: linear-gradient(to right, #3ab7c4, #7b3386, #c89b15);
 $gradient-2: linear-gradient(to right, #3ab7c4, #7b3386, #c89b15);
 $gradient-3: radial-gradient(#c89b15, #7b3386);
+$gradient-4: linear-gradient(to bottom, #3ab7c4, #7b3386, #c89b15);
 $sides: 4rem;
 $shadow-1: 2px 2px 10px #0000000d;
 $max-width: 1540px;
+
+@media screen and (max-width: 840px) {
+    $dark-1: #1b1b1b;
+}

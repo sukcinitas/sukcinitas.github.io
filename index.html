@@ -30,44 +30,7 @@
         </div>
         <div class="header__contact-info">
           <div class="header__contact-info-item">
-            <a href="mailto: sukcinitas@gmail.com" class="link--email">sukcinitas@gmail.com</a>
-          </div>
-          <div class="header__contact-info-item">
-            <a
-              href="https://www.linkedin.com/in/gintarecerniauskaite/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <i class="devicon-linkedin-plain"></i>
-            </a>
-          </div>
-          <div class="header__contact-info-item">
-            <a
-              href="https://codepen.io/sukcinitas"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <i class="devicon-codepen-plain"></i>
-            </a>
-          </div>
-          <div class="header__contact-info-item">
-            <a
-              href="assets/gintare_cerniauskaite_resume_v4.pdf"
-              download="gintare_cerniauskaite_resume"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="header__contact-info-item">
-            <a
-              href="https://github.com/sukcinitas"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <i class="devicon-github-original"></i>
-            </a>
+            <a href="mailto: sukcinitas@gmail.com" class="link link--email">sukcinitas@gmail.com</a>
           </div>
         </div>
       </div>
@@ -137,20 +100,7 @@
         <span class="note">
           Note: keep in mind that it might take a couple of seconds for the apps hosted on Heroku to wake up as I keep them in a sleep mode if there's no traffic.
         </span>
-        <span class="projects__display">
-          Choose display:
-          <i
-            class="fa fa-ellipsis-h projects__display-icon"
-            aria-hidden="true"
-            onclick="chooseDisplay(event)"
-          ></i>
-          <i
-            class="fa fa-list projects__display-icon selected"
-            aria-hidden="true"
-            onclick="chooseDisplay(event)"
-          ></i>
-        </span>
-        <div class="projects__list projects__list--list">
+        <div class="projects__list">
           <article class="project">
             <div class="project__wrapper">
               <div class="project__carousel">
@@ -204,13 +154,6 @@
                 <span class="project__img-num">01/06</span>
               </div>
               <section class="project__info" onclick="toggleInfo(event)">
-                <span class="project__icons"
-                  ><i
-                  class="fa fa-chevron-up"
-                  aria-hidden="true"
-                  onclick="toggleInfo(event)"
-                ></i
-              ></span>
                 <h3 class="project__title">Shopping List</h3>
                 <p class="project__links">
                   <a
@@ -296,13 +239,6 @@
                 <span class="project__img-num">01/05</span>
               </div>
               <section class="project__info"  onclick="toggleInfo(event)">
-                <span class="project__icons"
-                  ><i
-                  class="fa fa-chevron-up"
-                  aria-hidden="true"
-                  onclick="toggleInfo(event)"
-                ></i>
-              </span>
                 <h3 class="project__title">Yours Next</h3>
                 <p class="project__links">
                   <a
@@ -379,13 +315,6 @@
                 <span class="project__img-num">01/04</span>
               </div>
               <section class="project__info" onclick="toggleInfo(event)">
-                <span class="project__icons"
-                  ><i
-                  class="fa fa-chevron-up"
-                  aria-hidden="true"
-                  onclick="toggleInfo(event)"
-                ></i
-                ></span>
                 <h3 class="project__title">Up up</h3>
                 <p class="project__links">
                   <a
@@ -466,13 +395,6 @@
                 <span class="project__img-num">01/05</span>
               </div>
               <section class="project__info" onclick="toggleInfo(event)">
-                <span class="project__icons"
-                  ><i
-                  class="fa fa-chevron-up"
-                  aria-hidden="true"
-                  onclick="toggleInfo(event)"
-                ></i
-                ></span>
                 <h3 class="project__title">Cats Wiki</h3>
                 <p class="project__links">
                   <a
@@ -539,13 +461,6 @@
                 <span class="project__img-num">01/03</span>
               </div>
               <section class="project__info" onclick="toggleInfo(event)">
-                <span class="project__icons"
-                  ><i
-                  class="fa fa-chevron-up"
-                  aria-hidden="true"
-                  onclick="toggleInfo(event)"
-                ></i
-                ></span>
                 <h3 class="project__title">Image Uploader</h3>
                 <p class="project__links">
                   <a
@@ -582,29 +497,29 @@
             </div>
           </article>
         </div>
-        <div class="projects__titles projects__titles--list">
+        <div class="projects__titles">
           <span
-            onclick="slideProjectIn(0)"
+            onmouseover="slideProjectIn(0)"
             class="projects__title projects__title--selected"
             data-tid="0"
           ></span>
           <span
-            onclick="slideProjectIn(1)"
+            onmouseover="slideProjectIn(1)"
             class="projects__title"
             data-tid="1"
           ></span>
           <span
-            onclick="slideProjectIn(2)"
+            onmouseover="slideProjectIn(2)"
             class="projects__title"
             data-tid="2"
           ></span>
           <span
-            onclick="slideProjectIn(3)"
+            onmouseover="slideProjectIn(3)"
             class="projects__title"
             data-tid="3"
           ></span>
           <span
-            onclick="slideProjectIn(4)"
+            onmouseover="slideProjectIn(4)"
             class="projects__title"
             data-tid="4"
           ></span>
@@ -622,12 +537,13 @@
           <div class="info__item">
             <h5 class="info__item-title">Legacy Full Stack
               <a
-              class="link"
+              class="link link--bright"
               href="https://www.freecodecamp.org/certification/sukcinitas/full-stack"
               rel="noopener noreferrer"
               target="_blank"
-              ><i class="fa fa-link" aria-hidden="true"></i
-                ></a>
+              >
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </a>
             </h5>
             <p class="info__item-subtitle">FreeCodeCamp</p>
             <span class="info__item-details">Sep 2018 – Dec 2019</span>
@@ -664,31 +580,74 @@
               </ul>
             </p>
           </div>
-
-          <div class="info__item">
-            <h5 class="info__item-title">Intern</h5>
-            <p class="info__item-subtitle">
-              Vilnius University Children's Hospital,<br />
-              Vilnius University Hospital Santaros Klinikos,<br />
-              Vilnius City Clinical Hospital
-            </p>
-            <span class="info__item-details">Feb 2018 – May 2018</span>
-          </div>
         </div>
       </div>
 
       <div class="contact">
         <p class="contact__info greetings">Hello.</p>
         <p class="contact__info">
-          You can reach me via <a href="mailto: sukcinitas@gmail.com" class="link--email">sukcinitas@gmail.com</a>,
-          <a href="mailto: gintare.cerniauskaite@proton.me" class="link--email">gintare.cerniauskaite@proton.me</a> or any of the social
+          You can reach me via <a href="mailto: sukcinitas@gmail.com" class="link link--email link--colored">sukcinitas@gmail.com</a>,
+          <a href="mailto: gintare.cerniauskaite@proton.me" class="link link--email link--colored">gintare.cerniauskaite@proton.me</a> or any of the social
           media provided here.
         </p>
+        <div class="links">
+          <a
+            class="link link--icon"
+            href="https://www.linkedin.com/in/gintarecerniauskaite/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <a
+            class="link link--icon"
+            href="https://codepen.io/sukcinitas"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <i class="devicon-codepen-plain"></i>
+          </a>
+          <a
+            class="link link--icon"
+            href="assets/gintare_cerniauskaite_resume_v4.pdf"
+            download="gintare_cerniauskaite_resume"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          </a>
+          <a
+            class="link link--icon"
+            href="https://github.com/sukcinitas"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <i class="devicon-github-original"></i>
+          </a>
+        </div>
       </div>
       <span class="scroll-arrow"
         ><i class="fa fa-arrow-circle-down" aria-hidden="true"></i
       ></span>
     </main>
+
+    <navbar class="navbar">
+      <div class="navbar__bar" data-text="about"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+    </navbar>
+
+    <!-- <navbar class="navbar navbar--left">
+      <div class="navbar__bar" data-text="about"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+      <div class="navbar__bar"></div>
+    </navbar> -->
 
     <footer class="footer">
       <p>
@@ -697,7 +656,7 @@
         <i class="devicon-sass-original colored"></i>
         by Gintarė Černiauskaitė
         <a
-          class="link--email"
+          class="link link--email"
           href="https://github.com/sukcinitas"
           target="_blank"
           rel="noreferrer noopener"
