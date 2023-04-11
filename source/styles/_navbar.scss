@@ -1,5 +1,6 @@
 @use 'util/variables' as *;
 @use 'util/mixins' as *;
+
 .navbar {
     position: fixed;
     top: 50%;
@@ -9,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    z-index: 1;
     &__bar {
         width: 10rem;
         height: calc(100vh / 6);
@@ -37,7 +39,7 @@
             }
             &.active {
                 &::before {
-                    transform: scalex(2);
+                    transform: skew(-1.1deg) scalex(2);
                 } 
             }
         }
@@ -47,7 +49,7 @@
             }
             &.active {
                 &::before {
-                    transform: scalex(3);
+                    transform: skew(-1.1deg) scalex(3);
                     transition: transform 0.6s;
                 } 
             }
@@ -58,7 +60,7 @@
             }
             &.active {
                 &::before {
-                    transform: scalex(4);
+                    transform: skew(-1.1deg) scalex(4);
                     transition: transform 0.5s;
                 } 
             }
@@ -69,7 +71,7 @@
             }
             &.active {
                 &::before {
-                    transform: scalex(5);
+                    transform: skew(-1.1deg) scalex(5);
                     transition: transform 0.4s;
                 } 
             }
@@ -80,7 +82,7 @@
             }
             &.active {
                 &::before {
-                    transform: scalex(6);
+                    transform: skew(-1.1deg) scalex(6);
                     transition: transform 0.3s;
                 } 
             }
@@ -91,7 +93,7 @@
             }
             &.active {
                 &::before {
-                    transform: scalex(7);
+                    transform: skew(-1.1deg) scalex(7);
                     transition: transform 0.2s;
                 } 
             }
