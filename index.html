@@ -631,24 +631,6 @@
       ></span>
     </main>
 
-    <navbar class="navbar">
-      <div class="navbar__bar" data-text="about"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-    </navbar>
-
-    <!-- <navbar class="navbar navbar--left">
-      <div class="navbar__bar" data-text="about"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-      <div class="navbar__bar"></div>
-    </navbar> -->
-
     <footer class="footer">
       <p>
         Designed & coded with
@@ -665,6 +647,16 @@
         </a>
       </p>
     </footer>
+
+    <navbar class="navbar">
+      <div class="navbar__bar" data-text="about" onclick="clickBar(0)"></div>
+      <div class="navbar__bar" data-text="tech stack" onclick="clickBar(1)"></div>
+      <div class="navbar__bar" data-text="projects" onclick="clickBar(2)"></div>
+      <div class="navbar__bar" data-text="education" onclick="clickBar(3)"></div>
+      <div class="navbar__bar" data-text="experience" onclick="clickBar(4)"></div>
+      <div class="navbar__bar" data-text="contact" onclick="clickBar(5)"></div>
+    </navbar>
+
     <script type="text/javascript" src="source/scripts.js"></script>
   </body>
 </html>

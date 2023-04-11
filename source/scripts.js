@@ -103,6 +103,11 @@ function renewNavbar(idx) {
     }
   }
 }
+
+function clickBar(idx) {
+  sections[idx].scrollIntoView({ behavior: 'smooth' });
+}
+
 const sections = [
   document.querySelector('.about'),
   document.querySelector('.tech-stack'),
