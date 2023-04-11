@@ -1133,6 +1133,9 @@ body {
   .projects__category {
     font-size: 3rem;
   }
+  .contact {
+    padding: 6rem 4rem 6rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
