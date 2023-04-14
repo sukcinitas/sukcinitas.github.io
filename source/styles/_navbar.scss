@@ -11,6 +11,17 @@
     flex-direction: column;
     align-items: flex-end;
     z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0.8rem;
+        width: 10px;
+        height: 100vh;
+        background: $dark-1;
+        pointer-events: none;
+        transform: skewX(-1deg);
+    }
     &__bar {
         width: 10rem;
         height: calc(100vh / 6);

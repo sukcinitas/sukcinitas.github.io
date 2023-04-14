@@ -881,6 +881,17 @@
   align-items: flex-end;
   z-index: 1;
 }
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0.8rem;
+  width: 10px;
+  height: 100vh;
+  background: #111;
+  pointer-events: none;
+  transform: skewX(-1deg);
+}
 .navbar__bar {
   width: 10rem;
   height: 16.6666666667vh;
