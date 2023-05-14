@@ -613,6 +613,7 @@
 .project__wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   padding: 3rem;
@@ -630,18 +631,11 @@
   height: 649.6px;
   width: 300px;
   overflow: hidden;
-  position: absolute;
-  transform: translateX(-8rem);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity, z-index 500ms;
 }
 .project__img {
   width: inherit;
   border-radius: 10px;
   position: absolute;
-  bottom: 0;
-  right: 0;
   z-index: -1;
   visibility: hidden;
 }
