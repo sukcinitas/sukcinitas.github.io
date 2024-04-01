@@ -519,7 +519,6 @@
   -ms-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   -o-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
-  text-shadow: 0.7vw 0.7vw 0px rgba(255, 255, 255, 0.4117647059);
 }
 .about h1:last-of-type {
   margin-right: 4rem;
