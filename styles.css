@@ -915,6 +915,7 @@
 }
 .link--icon {
   font-size: 2rem;
+  display: flex;
 }
 .link--bright {
   color: #a6a6a6;

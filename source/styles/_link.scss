@@ -20,6 +20,7 @@
   font-size: inherit;
   &--icon {
     font-size: 2rem;
+    display: flex;
   }
   &--bright {
     color: $gray-2;
