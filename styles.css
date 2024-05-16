@@ -498,7 +498,7 @@
 }
 .about__title {
   font-size: 11.6vw;
-  font-size: clamp(60px, 12.6vw, 226px);
+  font-size: clamp(60px, 14.6vw, 340px);
   line-height: 14vw;
   margin: 0;
   text-transform: uppercase;
@@ -778,14 +778,77 @@
   -o-background-clip: text;
   background-clip: text;
 }
-.contact__info:first-child {
+.contact__info.greetings {
   font-size: 8rem;
   color: #ccc;
   font-family: "Teko", cursive;
 }
+.contact__info.greetings:nth-child(2) {
+  display: none;
+}
 
 .greetings {
   line-height: 0.7;
+}
+.greetings span {
+  opacity: 0;
+}
+
+.greetings.fade-in span:nth-child(1) {
+  opacity: 1;
+  transition: opacity 1.2s;
+}
+.greetings.fade-in span:nth-child(2) {
+  opacity: 1;
+  transition: opacity 1.4s;
+}
+.greetings.fade-in span:nth-child(3) {
+  opacity: 1;
+  transition: opacity 1.6s;
+}
+.greetings.fade-in span:nth-child(4) {
+  opacity: 1;
+  transition: opacity 1.8s;
+}
+.greetings.fade-in span:nth-child(5) {
+  opacity: 1;
+  transition: opacity 2s;
+}
+.greetings.fade-in span:nth-child(6) {
+  opacity: 1;
+  transition: opacity 2.2s;
+}
+.greetings.fade-in span:nth-child(7) {
+  opacity: 1;
+  transition: opacity 2.4s;
+}
+.greetings.fade-in span:nth-child(8) {
+  opacity: 1;
+  transition: opacity 2.6s;
+}
+.greetings.fade-in span:nth-child(9) {
+  opacity: 1;
+  transition: opacity 2.8s;
+}
+.greetings.fade-in span:nth-child(10) {
+  opacity: 1;
+  transition: opacity 3s;
+}
+.greetings.fade-in span:nth-child(11) {
+  opacity: 1;
+  transition: opacity 3.2s;
+}
+.greetings.fade-in span:nth-child(12) {
+  opacity: 1;
+  transition: opacity 3.4s;
+}
+.greetings.fade-in span:nth-child(13) {
+  opacity: 1;
+  transition: opacity 3.6s;
+}
+.greetings.fade-in span:nth-child(14) {
+  opacity: 1;
+  transition: opacity 3.8s;
 }
 
 .scroll-arrow {

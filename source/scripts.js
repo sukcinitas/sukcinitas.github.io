@@ -47,13 +47,6 @@ techIcons.forEach((techIcon) => {
   techIcon.addEventListener('mouseout', (e) => toggleClass(e, 'colored'));
 });
 
-function changeGreetings(phrase) {
-  const greetings = document.querySelector('.greetings')
-  setTimeout(() => {
-    greetings.innerHTML = phrase
-  }, 1000)
-}
-
 function loadBody() {
   document.body.style.visibility = 'visible';
 }
@@ -126,6 +119,7 @@ if (!!window.IntersectionObserver) {
     const tech = document.querySelector('.tech-stack');
     const arrow = document.querySelector('.scroll-arrow');
     const contact = document.querySelector('.contact');
+    const greetings = document.querySelectorAll('.greetings');
     entries.forEach((entry) => {
       entry.isIntersecting
         ? entry.target.classList.add('in')
@@ -162,7 +156,14 @@ if (!!window.IntersectionObserver) {
         }
       } else if (document.querySelector('.in') === contact) {
         arrow.classList.add('scroll-arrow--rotated');
-        changeGreetings('Get in touch!')
+        greetings[0].classList.add('fade-in');
+        setTimeout(() => {
+          greetings[0].style.display = 'none';
+          greetings[1].style.display = 'block';
+          setTimeout(() => {
+            greetings[1].classList.add('fade-in');
+          }, 100);
+        }, 1400);
       }
     });
   };

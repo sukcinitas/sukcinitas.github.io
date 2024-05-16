@@ -24,13 +24,29 @@
     }
   }
 
-  &__info:first-child {
+  &__info.greetings {
     font-size: 8rem;
     color: $gray-1;
     font-family: 'Teko', cursive;
+
+    &:nth-child(2) {
+      display: none;
+    }
   }
 }
 
 .greetings {
   line-height: 0.7;
+  span {
+    opacity: 0;
+  }
+}
+
+.greetings.fade-in {
+  @for $i from 1 through 14 {
+    span:nth-child(#{$i}) {
+      opacity: 1;
+      transition: opacity calc(1s + 0.2s * $i);
+    }
+  }
 }
