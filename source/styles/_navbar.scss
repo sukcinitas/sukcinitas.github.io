@@ -23,10 +23,16 @@
         transform: skewX(-1deg);
     }
     &__bar {
+        display: block;
+        background-color: transparent;
+        border: none;
         width: 10rem;
         height: calc(100vh / 6);
         transition: width 0.1s;
         position: relative;
+        color: $gray-2;
+        font-family: "Teko", sans-serif;
+        font-size: inherit;
         &::after {
             content: attr(data-text);
             position: absolute;
@@ -39,6 +45,7 @@
             position: absolute;
             display: block;
             width: 5px;
+            top: 0;
             right: 0;
             height: 100%;
             transform: scaleX(1);

@@ -911,10 +911,16 @@
   transform: skewX(-1deg);
 }
 .navbar__bar {
+  display: block;
+  background-color: transparent;
+  border: none;
   width: 10rem;
   height: 16.6666666667vh;
   transition: width 0.1s;
   position: relative;
+  color: #a6a6a6;
+  font-family: "Teko", sans-serif;
+  font-size: inherit;
 }
 .navbar__bar::after {
   content: attr(data-text);
@@ -928,6 +934,7 @@
   position: absolute;
   display: block;
   width: 5px;
+  top: 0;
   right: 0;
   height: 100%;
   transform: scaleX(1);
