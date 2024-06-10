@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "title": "List it off",
+      "content": [
+        "A full stack React & Express.js application which allows to create and save shopping lists, to review shopping history and statistics. This app was built for completing a challenge actualizing an already made design (Figma).",
+        "While building this app I practised using Redux (Redux Toolkit approach) to manage complex state and I used a relationaldatabase management system (SQLite) instead of NoSQL one for the first time."
+      ],
+      "tools": "Typescript Sass React Redux Express SQLite Webpack Mocha & Chai"
+    },
+    {
+      "title": "Yours Next",
+      "content": [
+        "A full stack application which allows to create groups with shared playlists stored in the database, to watch Youtube videos separately or in a synchronized manner among group members and to chat in real-time using Socket.io.",
+        "This project was challenging because yet again I was trying out several things all at once (Vue.js, Socket.io, utilizing several APIs). Also I had to find a good enough solution to structuring this app to keep it maintainable. But nothing beats the biggest challenge of coming up with a decent design 😀."
+      ],
+      "tools": "Sass Vue.js Vuex Express MongoDB & Mongoose Passport.js Bcryptjs Socket.io Jest Webpack"
+    },
+    {
+      "title": "Up Up",
+      "content": [
+        "A full stack app that allows users to vote in polls while authenticated users are allowed to create polls and to manage their profile information and created polls. Poll results are represented in a D3.js chart.",
+        "It was challenging in a sense that I was building something from ground up as started developing my skills by actualizing this app. I learned how to connect front-end with back-end, measures that can be taken to increase app security. The app was my playground migrating from JavaScript to TypeScript, a place to practise using React hooks."
+      ],
+      "tools": "Typescript Sass React Redux D3.js Express MongoDB & Mongoose Passport.js Jest & React Testing Library Webpack"
+    },
+    {
+      "title": "Cats Wiki",
+      "content": [
+        "A responsive React & Express.js app that fetches information about cat breeds from CatAPI and keeps track of the most searched ones. This app was built for completing a challenge actualizing an already made design (Figma).",
+        "While building this app I improved skills regarding responsive design, images, and TypeScript."
+      ],
+      "tools": "Typescript Sass React Express Mocha & Chai Webpack"
+    },
+    {
+      "title": "Metaless Upload",
+      "content": [
+        "A responsive React & Express.js app that allows to upload images with removed EXIF data. Images are stored on a server. This app was also built for completing a challenge actualizing an already made design (Figma).",
+        "While building this app I learned about file upload, drop events, browser Clipboard API."
+      ],
+      "tools": "React Styled-Components Express Piexifjs"
+    }
+  ]
+}

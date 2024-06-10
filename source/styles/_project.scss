@@ -6,101 +6,47 @@
   flex-direction: column;
   overflow: hidden;
 
-  &__titles {
-    background-image: $gradient-1;
-    @include vendor-prefix('background-clip', 'text');
-    display: flex;
-    font-size: 2.4rem;
-    justify-content: center;
-    margin: 0 4rem 4rem;
-
-    &--list {
-      display: none;
-    }
-  }
-
-  &__title {
-    width: 12px;
-    height: 12px;
-    padding: 2px;
-    margin: 1rem;
-    border-radius: 100%;
+  &__wrapper {
     position: relative;
-    border: 1px solid $gray-1;
-
-    &:hover {
-      cursor: pointer;
-      background-image: $gradient-3;
-    }
-
-    &--selected {
-      background-image: $gradient-3;
-      width: 13px; // width + border
-      height: 13px; // height + border
-      border: none;
-    }
-  }
-
-  &__list {
-    position: relative;
+    background: #161616;
+    padding: 4rem;
+    border-radius: 20px;
     display: flex;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    gap: 2rem;
+    margin: 4rem 0;
 
-    &--list {
+    @media screen and (max-width: 1000px)  {
       flex-direction: column;
+
+      & .project__info {
+        flex-basis: auto;
+      }
     }
   }
 }
 
 .project {
-  position: relative;
-  width: 100vw;
+  width: 100%;
   flex-shrink: 0;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
-  padding: 5rem;
-  padding-bottom: 1rem;
+  align-items: center;
 
   &__wrapper {
+    width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    padding: 3rem;
-    background-color: $dark-2;
     border-radius: 20px;
     box-shadow: $shadow-1;
     column-gap: 3rem;
-    &:hover {
-      .project__carousel {
-        z-index: 1;
-        opacity: 1;
-        transition: opacity 1s;
-        
-      }
-    }
-  }
-
-  &__carousel {
-    height: 649.6px;
-    width: 300px;
-    overflow: hidden;
   }
 
   &__img {
     width: inherit;
     border-radius: 10px;
-    position: absolute;
-    z-index: -1;
-    visibility: hidden;
-    &:hover {
-      cursor: pointer;
-    }
 
     &--active {
       z-index: 0;
@@ -108,27 +54,12 @@
     }
   }
 
-  &__img-num {
-    font-size: 2rem;
-    font-family: 'Teko', sans-serif;
-    color: $bright-1;
-    padding: 0.5rem;
-    width: 5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-color: $dark-3;
-    border-bottom-right-radius: 7px;
-    border-top-left-radius: 7px;
-    position: absolute;
-  }
-
   &__info {
+    flex-basis: 400px;
     max-width: 400px;
     padding: 0;
     text-align: left;
-    align-self: flex-end;
+    align-self: flex-start;
     transition: opacity 500ms, left 500ms;
     transition-delay: 500ms;
   }
@@ -140,6 +71,7 @@
     @include vendor-prefix('background-clip', 'text');
     color: transparent;
     pointer-events: none;
+    margin-top: 0;
   }
 
   &__text {
@@ -177,5 +109,33 @@
     color: $bright-2;
     word-spacing: 4px;
     pointer-events: none;
+  }
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: $gray-2;
+  &:hover {
+    cursor: pointer;
+    color: $gray-1;
+  }
+
+  &__left {
+    left: 5px;
+  }
+
+  &__right {
+    right: 5px;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
