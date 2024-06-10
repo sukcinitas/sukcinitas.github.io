@@ -513,14 +513,13 @@
   -o-background-clip: text;
   background-clip: text;
   background-size: 200%;
-  color: transparent;
   -webkit-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   -moz-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   -ms-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   -o-animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
   animation: slide-left 500ms 300ms ease-out forwards, bg-animation 10s 1200ms infinite alternate;
 }
-.about h1:last-of-type {
+.about__title:nth-child(2) {
   margin-right: 4rem;
   display: inline-block;
   transform: translateX(200px);
@@ -688,7 +687,6 @@
 }
 .info__item {
   margin: 2rem;
-  padding-left: 1rem;
   border-left: 2px solid #3ab7c4;
   flex-basis: 400px;
   background: #161616;
@@ -1073,14 +1071,14 @@ body {
   @supports (will-change: transform) {
     .header,
     .about__title,
-    .about h1:last-of-type,
+    .about .about__title:nth-child(2),
     .about__text {
       will-change: transform;
     }
   }
   .header,
   .about__title,
-  .about h1:last-of-type,
+  .about .about__title:nth-child(2),
   .about__text {
     transform: translateZ(0);
   }

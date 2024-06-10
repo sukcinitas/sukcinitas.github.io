@@ -108,7 +108,7 @@ body {
   @supports (will-change: transform) {
     .header,
     .about__title,
-    .about h1:last-of-type,
+    .about .about__title:nth-child(2),
     .about__text {
       will-change: transform;
     }
@@ -116,7 +116,7 @@ body {
 
   .header,
   .about__title,
-  .about h1:last-of-type,
+  .about .about__title:nth-child(2),
   .about__text {
     transform: translateZ(0);
   }
