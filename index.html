@@ -20,6 +20,15 @@
     <title>gintarė černiauskaitė | portfolio</title>
   </head>
   <body onLoad="loadBody()">
+    <navbar class="navbar">
+      <div class="navbar__bar" data-text="about" onclick="clickBar(0)"></div>
+      <div class="navbar__bar" data-text="tech stack" onclick="clickBar(1)"></div>
+      <div class="navbar__bar" data-text="projects" onclick="clickBar(2)"></div>
+      <div class="navbar__bar" data-text="education" onclick="clickBar(3)"></div>
+      <div class="navbar__bar" data-text="experience" onclick="clickBar(4)"></div>
+      <div class="navbar__bar" data-text="contact" onclick="clickBar(5)"></div>
+    </navbar>
+
     <header class="header">
       <div class="header__wrapper">
         <div class="header__brand-wrapper">
@@ -35,6 +44,7 @@
     </header>
 
     <main class="main">
+      <!-- About -->
       <div class="about">
         <div class="about__wrapper">
           <h1 class="about__title">Web</h1>
@@ -49,6 +59,7 @@
         </div>
       </div>
 
+      <!-- Tech stack -->
       <div class="tech-stack">
         <span class="tech-stack__category">What I use</span>
         <span class="note">
@@ -93,437 +104,38 @@
         </div>
       </div>
 
+      <!-- Projects -->
       <div class="projects">
         <span class="projects__category">Personal Projects</span>
         <span class="note">
-          Note: keep in mind that it might take a couple of seconds for the apps hosted on Heroku to wake up as I keep them in a sleep mode if there's no traffic.
+          Note: keep in mind that it might take a couple of seconds for the apps to wake as they are kept in a sleep mode if there's no traffic.
         </span>
-        <div class="projects__list">
-          <article class="project">
-            <div class="project__wrapper">
-              <div class="project__carousel">
-                <img
-                  class="project__img project__img--active"
-                  onclick="changeActiveImg(event, 's', 6, 1)"
-                  src="assets/shlist_1.jpg"
-                  data-iid="s0"
-                  alt="Shopping list app's product list"
-                />
-                <img
-                  class="project__img"
-                  src="assets/shlist_2.jpg"
-                  onclick="changeActiveImg(event, 's', 6, 1)"
-                  data-iid="s1"
-                  loading="lazy"
-                  alt="Shopping list app's history list"
-                />
-                <img
-                  class="project__img"
-                  src="assets/shlist_3.jpg"
-                  onclick="changeActiveImg(event, 's', 6, 1)"
-                  data-iid="s2"
-                  loading="lazy"
-                  alt="Shopping list app's statistics"
-                />
-                <img
-                  class="project__img"
-                  src="assets/shlist_4.jpg"
-                  onclick="changeActiveImg(event, 's', 6, 1)"
-                  data-iid="s3"
-                  loading="lazy"
-                  alt="Shopping list app's list"
-                />
-                <img
-                  class="project__img"
-                  src="assets/shlist_5.jpg"
-                  onclick="changeActiveImg(event, 's', 6, 1)"
-                  data-iid="s4"
-                  loading="lazy"
-                  alt="Shopping list app's product edit"
-                />
-                <img
-                  class="project__img"
-                  src="assets/shlist_6.jpg"
-                  onclick="changeActiveImg(event, 's', 6, 1)"
-                  data-iid="s5"
-                  loading="lazy"
-                  alt="Shopping list app's product information"
-                />
-                <span class="project__img-num">01/06</span>
-              </div>
-              <section class="project__info" onclick="toggleInfo(event)">
-                <h3 class="project__title">Shopping List</h3>
-                <p class="project__links">
-                  <a
-                    href="https://github.com/sukcinitas/dc-shopping-list"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://github.com/sukcinitas/dc-shopping-list-api"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://shlist.netlify.app"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="fa fa-link" aria-hidden="true"></i
-                  ></a>
-                </p>
-                <p class="project__text">
-                  A full stack React & Express.js application which allows to
-                  create and save shopping lists, to review shopping history and
-                  statistics. This app was built for completing a challenge
-                  actualizing an already made design (Figma).
-                </p>
-                <p class="project__text">
-                  While building this app I practised using Redux (Redux Toolkit
-                  approach) to manage complex state and I used a relational
-                  database management system (SQLite) instead of NoSQL one for
-                  the first time.
-                </p>
-                <span class="project__stack"
-                  >Typescript Sass React Redux Express SQLite Webpack Mocha &
-                  Chai</span
-                >
-              </section>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project__wrapper">
-              <div class="project__carousel">
-                <img
-                  class="project__img project__img--active"
-                  onclick="changeActiveImg(event, 'y', 5, 2)"
-                  src="assets/yoursnext_1.jpg"
-                  data-iid="y0"
-                  alt="Yours Next app's login/register page"
-                />
-                <img
-                  class="project__img"
-                  src="assets/yoursnext_2.jpg"
-                  onclick="changeActiveImg(event, 'y', 5, 2)"
-                  data-iid="y1"
-                  loading="lazy"
-                  alt="Yours Next app's member emoji choosing page"
-                />
-                <img
-                  class="project__img"
-                  src="assets/yoursnext_3.jpg"
-                  onclick="changeActiveImg(event, 'y', 5, 2)"
-                  data-iid="y2"
-                  loading="lazy"
-                  alt="Yours Next app's main page"
-                />
-                <img
-                  class="project__img"
-                  src="assets/yoursnext_4.jpg"
-                  onclick="changeActiveImg(event, 'y', 5, 2)"
-                  data-iid="y3"
-                  loading="lazy"
-                  alt="Yours Next app's chatting component"
-                />
-                <img
-                  class="project__img"
-                  src="assets/yoursnext_5.jpg"
-                  onclick="changeActiveImg(event, 'y', 5, 2)"
-                  data-iid="y4"
-                  loading="lazy"
-                  alt="Yours Next app's playlist page"
-                />
-                <span class="project__img-num">01/05</span>
-              </div>
-              <section class="project__info"  onclick="toggleInfo(event)">
-                <h3 class="project__title">Yours Next</h3>
-                <p class="project__links">
-                  <a
-                    href="https://github.com/sukcinitas/yours-next-client"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://github.com/sukcinitas/yours-next-server"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://yours-next-server.onrender.com/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="fa fa-link" aria-hidden="true"></i
-                  ></a>
-                </p>
-                <p class="project__text">
-                  A full stack application which allows to create groups with
-                  shared playlists stored in the database, to watch Youtube
-                  videos separately or in a synchronized manner among group
-                  members and to chat in real-time using Socket.io.
-                </p>
-                <p class="project__text">
-                  This project was challenging because yet again I was trying out several things all at once (Vue.js, Socket.io, utilizing several APIs).
-                  Also I had to find a good enough solution to structuring this app to keep it maintainable.    
-                  But nothing beats the biggest challenge of coming up with a decent design 😀.           
-                </p>
-                <span class="project__stack"
-                  >Sass Vue.js Vuex Express MongoDB & Mongoose Passport.js
-                  Bcryptjs Socket.io Jest Webpack</span
-                >
-              </section>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project__wrapper">
-              <div class="project__carousel">
-                <img
-                  class="project__img project__img--active"
-                  onclick="changeActiveImg(event, 'u', 4, 3)"
-                  src="assets/upup_1.jpg"
-                  data-iid="u0"
-                  alt="Voting app's main page with polls"
-                />
-                <img
-                  class="project__img"
-                  src="assets/upup_2.jpg"
-                  onclick="changeActiveImg(event, 'u', 4, 3)"
-                  data-iid="u1"
-                  loading="lazy"
-                  alt="Voting app's poll page with options part"
-                />
-                <img
-                  class="project__img"
-                  src="assets/upup_3.jpg"
-                  onclick="changeActiveImg(event, 'u', 4, 3)"
-                  data-iid="u2"
-                  loading="lazy"
-                  alt="Voting app's poll page with graph part"
-                />
-                <img
-                  class="project__img"
-                  src="assets/upup_4.jpg"
-                  onclick="changeActiveImg(event, 'u', 4, 3)"
-                  data-iid="u3"
-                  loading="lazy"
-                  alt="Voting app's login component"
-                />
-                <span class="project__img-num">01/04</span>
-              </div>
-              <section class="project__info" onclick="toggleInfo(event)">
-                <h3 class="project__title">Up up</h3>
-                <p class="project__links">
-                  <a
-                    href="https://github.com/sukcinitas/voting-app"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://lead-thoughtful-olivine.glitch.me/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="fa fa-link" aria-hidden="true"></i
-                  ></a>
-                </p>
-                <p class="project__text">
-                  A full stack app that allows users to vote in polls while
-                  authenticated users are allowed to create polls and to manage
-                  their profile information and created polls. Poll results are
-                  represented in a D3.js chart.
-                </p>
-                <p class="project__text">
-                  It was challenging in a sense that I was building something from ground up 
-                  as started developing my skills by actualizing this app. I learned how to connect front-end with
-                  back-end, measures that can be taken to increase app
-                  security. The app was my playground migrating from JavaScript
-                  to TypeScript, a place to practise using React hooks.
-                </p>
-                <span class="project__stack"
-                  >Typescript Sass React Redux D3.js Express MongoDB & Mongoose
-                  Passport.js Jest & React Testing Library Webpack</span
-                >
-              </section>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project__wrapper">
-              <div class="project__carousel">
-                <img
-                  class="project__img project__img--active"
-                  onclick="changeActiveImg(event, 'c', 5, 4)"
-                  src="assets/cw_1.jpg"
-                  data-iid="c0"
-                  alt="Cat Wiki cat page"
-                />
-                <img
-                  class="project__img"
-                  src="assets/cw_2.jpg"
-                  onclick="changeActiveImg(event, 'c', 5, 4)"
-                  data-iid="c1"
-                  loading="lazy"
-                  alt="Cat Wiki main page"
-                />
-                <img
-                  class="project__img"
-                  src="assets/cw_3.jpg"
-                  onclick="changeActiveImg(event, 'c', 5, 4)"
-                  data-iid="c2"
-                  loading="lazy"
-                  alt="Cat Wiki breed photos"
-                />
-                <img
-                  class="project__img"
-                  src="assets/cw_4.jpg"
-                  onclick="changeActiveImg(event, 'c', 5, 4)"
-                  data-iid="c3"
-                  loading="lazy"
-                  alt="Cat Wiki main page"
-                />
-                <img
-                  class="project__img"
-                  src="assets/cw_5.jpg"
-                  onclick="changeActiveImg(event, 'c', 5, 4)"
-                  data-iid="c4"
-                  loading="lazy"
-                  alt="Cat Wiki cat photos"
-                />
-                <span class="project__img-num">01/05</span>
-              </div>
-              <section class="project__info" onclick="toggleInfo(event)">
-                <h3 class="project__title">Cats Wiki</h3>
-                <p class="project__links">
-                  <a
-                    href="https://github.com/sukcinitas/dc-cat-wiki"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://github.com/sukcinitas/dc-cat-wiki-api"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://cats-wiki.netlify.app"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="fa fa-link" aria-hidden="true"></i
-                  ></a>
-                </p>
-                <p class="project__text">
-                  A responsive React & Express.js app that fetches information
-                  about cat breeds from CatAPI and keeps track of the most
-                  searched ones. This app was built for completing a challenge
-                  actualizing an already made design (Figma).
-                </p>
-                <p class="project__text">
-                  While building this app I improved skills regarding responsive
-                  design, images, and TypeScript.
-                </p>
-                <span class="project__stack"
-                  >Typescript Sass React Express Mocha & Chai Webpack</span
-                >
-              </section>
-            </div>
-          </article>
-          <article class="project">
-            <div class="project__wrapper">
-              <div class="project__carousel">
-                <img
-                  class="project__img project__img--active"
-                  onclick="changeActiveImg(event, 'i', 3, 5)"
-                  src="assets/iu_1.jpg"
-                  data-iid="i0"
-                  alt="Image uploader's upload component"
-                />
-                <img
-                  class="project__img"
-                  src="assets/iu_2.jpg"
-                  onclick="changeActiveImg(event, 'i', 3, 5)"
-                  data-iid="i1"
-                  loading="lazy"
-                  alt="Image uploader's loader component"
-                />
-                <img
-                  class="project__img"
-                  src="assets/iu_3.jpg"
-                  onclick="changeActiveImg(event, 'i', 3, 5)"
-                  data-iid="i2"
-                  loading="lazy"
-                  alt="Image uploader's component with loaded image"
-                />
-                <span class="project__img-num">01/03</span>
-              </div>
-              <section class="project__info" onclick="toggleInfo(event)">
-                <h3 class="project__title">Image Uploader</h3>
-                <p class="project__links">
-                  <a
-                    href="https://github.com/sukcinitas/dc-img-uploader"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://github.com/sukcinitas/dc-img-uploader-api"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="devicon-github-original"></i
-                  ></a>
-                  <a
-                    href="https://imago-uploader.netlify.app"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    ><i class="fa fa-link" aria-hidden="true"></i
-                  ></a>
-                </p>
-                <p class="project__text">
-                  A responsive React & Express.js app that allows to upload
-                  images with removed EXIF data. Images are stored on a server.
-                  This app was also built for completing a challenge actualizing
-                  an already made design (Figma).
-                </p>
-                <p class="project__text">
-                  While building this app I learned about file upload, drop
-                  events, browser Clipboard API.
-                </p>
-                <span class="project__stack">React Styled-Components Express Piexifjs</span>
-              </section>
-            </div>
-          </article>
-        </div>
-        <div class="projects__titles">
-          <span
-            onmouseover="slideProjectIn(0)"
-            class="projects__title projects__title--selected"
-            data-tid="0"
-          ></span>
-          <span
-            onmouseover="slideProjectIn(1)"
-            class="projects__title"
-            data-tid="1"
-          ></span>
-          <span
-            onmouseover="slideProjectIn(2)"
-            class="projects__title"
-            data-tid="2"
-          ></span>
-          <span
-            onmouseover="slideProjectIn(3)"
-            class="projects__title"
-            data-tid="3"
-          ></span>
-          <span
-            onmouseover="slideProjectIn(4)"
-            class="projects__title"
-            data-tid="4"
-          ></span>
+        <span class="note">
+          You might need to enable third party cookies to explore full features of List it off and Up Up apps as
+          currently they are hosted across two different domains and session cookie are cross-site, which is not ideal. 
+        </span>
+
+        <div class="projects__wrapper">
+          <section class="project__info"></section>
+          <div class="projects__list">
+            <article class="project">
+              <img
+                class="project__img project__img--active"
+                alt="Project gif"
+              />
+            </article>
+          </div>
+          <!-- Arrows -->
+           <button class="arrow arrow__left" onclick="setProject('left')">
+            <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+           </button>
+           <button class="arrow arrow__right" onclick="setProject('right')">
+            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+           </button>
         </div>
       </div>
 
+      <!-- Experience -->
       <div class="info">
         <span class="info__category">Experience</span>
         <div class="info__wrapper">
@@ -592,6 +204,7 @@
         </div>
       </div>
 
+      <!-- Education -->
       <div class="info">
         <span class="info__category">Education</span>
         <div class="info__wrapper">
@@ -701,15 +314,6 @@
         </a>
       </p>
     </footer>
-
-    <navbar class="navbar">
-      <div class="navbar__bar" data-text="about" onclick="clickBar(0)"></div>
-      <div class="navbar__bar" data-text="tech stack" onclick="clickBar(1)"></div>
-      <div class="navbar__bar" data-text="projects" onclick="clickBar(2)"></div>
-      <div class="navbar__bar" data-text="education" onclick="clickBar(3)"></div>
-      <div class="navbar__bar" data-text="experience" onclick="clickBar(4)"></div>
-      <div class="navbar__bar" data-text="contact" onclick="clickBar(5)"></div>
-    </navbar>
 
     <script type="text/javascript" src="source/scripts.js"></script>
   </body>
