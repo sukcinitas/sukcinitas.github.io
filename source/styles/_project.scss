@@ -27,31 +27,13 @@
 
 .project {
   width: 100%;
-  flex-shrink: 0;
   border-radius: 20px;
   display: flex;
   align-items: center;
 
-  &__wrapper {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: $shadow-1;
-    column-gap: 3rem;
-  }
-
   &__img {
     width: inherit;
     border-radius: 10px;
-
-    &--active {
-      z-index: 0;
-      visibility: visible;
-    }
   }
 
   &__info {

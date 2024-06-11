@@ -76,6 +76,7 @@ const { projects } = {
   ],
 };
 
+// set project
 let currentProjectIdx = -1;
 function setProject(direction) {
   if (!projects.length) {
@@ -104,7 +105,9 @@ function setProject(direction) {
 
   const projectData = projects[currentProjectIdx];
   const projectInfo = document.querySelector(".project__info");
+  const project = document.querySelector(".project");
   projectInfo.innerHTML = "";
+  project.innerHTML = "";
 
   /* set project title, text, links and tech stack */
   createElement("h3", ["project__title"], [projectData.title], projectInfo);
@@ -134,7 +137,13 @@ function setProject(direction) {
   createElement("span", ["project__stack"], [projectData.tools], projectInfo);
 
   // set image
-  const image = document.querySelector(".project__img");
+  const image = createElement(
+    "img",
+    ["project__img", "project__img--active"],
+    [],
+    project
+  );
+  image.alt = "Project name";
   image.src = projectData.images[0];
 }
 
@@ -152,30 +161,7 @@ function createElement(tag, classNames, textChildren, appendTo) {
   return element;
 }
 
-function changeActiveImg(e, project, imgNum, projectNum) {
-  const target = e.currentTarget;
-  const idx = Number(target.dataset.iid[1]) + 1; // only numbers till 10s
-  const imgTrackList = Array.from(
-    document.querySelectorAll(`.project__img-num`)
-  );
-  const imgTrack = imgTrackList[projectNum - 1];
-  let img;
-  if (idx === imgNum) {
-    img = document.querySelector(`.project__img[data-iid="${project}${0}"]`);
-    imgTrack.innerHTML = `01/0${imgNum}`;
-  } else {
-    img = target.nextElementSibling;
-    imgTrack.innerHTML = `0${idx + 1}/0${imgNum}`;
-  }
-  target.classList.remove("project__img--active");
-  img.classList.add("project__img--active");
-}
-
-function toggleClass(event, className) {
-  const icon = event.currentTarget;
-  icon.classList.toggle(className);
-}
-
+// stacking animation
 const techIcons = Array.from(document.querySelectorAll(".tech-stack__icon"));
 techIcons.forEach((techIcon) => {
   techIcon.addEventListener("mouseover", (e) => toggleClass(e, "colored"));
@@ -194,11 +180,13 @@ portfolioBtn.addEventListener("click", () => {
   });
 });
 
+// home button click
 const homeBtn = document.querySelector(".header__brand");
 homeBtn.addEventListener("click", () => {
   window.scrollTo(0, 0, { behavior: smooth });
 });
 
+// down arror behavior
 const arrow = document.querySelector(".scroll-arrow");
 arrow.addEventListener("click", () => {
   const sections = [
@@ -223,6 +211,7 @@ arrow.addEventListener("click", () => {
   }
 });
 
+// renew navbar
 function renewNavbar(idx) {
   const bars = Array.from(document.querySelectorAll(".navbar__bar"));
   for (let i = 0; i < bars.length; i++) {
