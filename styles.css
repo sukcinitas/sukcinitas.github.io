@@ -836,6 +836,7 @@
   display: flex;
   column-gap: 1rem;
   background-image: linear-gradient(to right, #3ab7c4, #7b3386, #c89b15);
+  margin-top: 1rem;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -ms-background-clip: text;
@@ -859,7 +860,7 @@
   cursor: pointer;
 }
 .link--icon {
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
 }
 .link--bright {

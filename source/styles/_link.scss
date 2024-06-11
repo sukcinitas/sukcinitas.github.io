@@ -5,6 +5,7 @@
   display: flex;
   column-gap: 1rem;
   background-image: $gradient-1;
+  margin-top: 1rem;
   @include vendor-prefix('background-clip', 'text');
 }
 
@@ -19,7 +20,7 @@
   }
   font-size: inherit;
   &--icon {
-    font-size: 2rem;
+    font-size: 1.6rem;
     display: flex;
   }
   &--bright {
