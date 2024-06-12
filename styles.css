@@ -550,12 +550,11 @@
 .projects {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 .projects__wrapper {
   position: relative;
   background: #161616;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 20px;
   display: flex;
   gap: 2rem;
@@ -567,6 +566,14 @@
   }
   .projects__wrapper .project__info {
     flex-basis: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .projects__wrapper {
+    padding: 1rem;
+  }
+  .projects__wrapper .project, .projects__wrapper .project__info {
+    padding: 1rem;
   }
 }
 
@@ -581,16 +588,18 @@
   border-radius: 10px;
 }
 .project__info {
-  flex-basis: 400px;
-  max-width: 400px;
+  flex-basis: 500px;
+  max-width: 500px;
   padding: 0;
   text-align: left;
-  align-self: flex-start;
+  align-self: stretch;
   transition: opacity 500ms, left 500ms;
   transition-delay: 500ms;
+  display: flex;
+  flex-direction: column;
 }
 .project__title {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-family: "Tourney", cursive;
   background-image: linear-gradient(to right, #3ab7c4, #7b3386, #c89b15);
   -webkit-background-clip: text;
@@ -603,14 +612,15 @@
   margin-top: 0;
 }
 .project__text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   pointer-events: none;
 }
 .project__links {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: left;
-  margin: 2rem 0;
+  padding: 2rem 0;
+  margin-top: auto;
   background-image: linear-gradient(to right, #3ab7c4, #7b3386, #c89b15);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -646,17 +656,17 @@
   font-size: 2rem;
   background-color: transparent;
   border: none;
-  color: #a6a6a6;
+  color: #424242;
 }
 .arrow:hover {
   cursor: pointer;
   color: #ccc;
 }
 .arrow__left {
-  left: 5px;
+  left: -12px;
 }
 .arrow__right {
-  right: 5px;
+  right: -12px;
 }
 .arrow--hidden {
   display: none;

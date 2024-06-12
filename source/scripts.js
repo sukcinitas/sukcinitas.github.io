@@ -18,8 +18,8 @@ const { projects } = {
     {
       title: "Yours Next",
       content: [
-        "A full stack application which allows to create groups with shared playlists stored in the database, to watch Youtube videos separately or in a synchronized manner among group members and to chat in real-time using Socket.io.",
-        "This project was challenging because yet again I was trying out several things all at once (Vue.js, Socket.io, utilizing several APIs). Also I had to find a good enough solution to structuring this app to keep it maintainable. But nothing beats the biggest challenge of coming up with a decent design 😀.",
+        "A full stack application which allows to create groups with shared playlists stored in the database, to watch Youtube videos separately or in a synchronized (sort of) manner among group members and to chat in real-time using Socket.io.",
+        "This project was challenging because yet again I was trying out several things all at once (Vue.js, Socket.io, utilizing several APIs). Also I had to find a good enough solution to structuring this app to keep it maintainable. But nothing beats the biggest challenge of coming up with a decent design 🥲.",
       ],
       links: [
         "https://github.com/sukcinitas/yours-next-client",
