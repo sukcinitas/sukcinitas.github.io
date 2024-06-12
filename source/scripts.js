@@ -128,6 +128,14 @@ function setProject(direction) {
     linkNode.target = "_blank";
     linkNode.rel = "noopener noreferrer";
 
+    if (!link.includes("github")) {
+      linkNode.title = "To demo site";
+    } else {
+      linkNode.title = /(api|server|up-up$)/.test(link)
+        ? "Backend code"
+        : "Frontend code";
+    }
+
     const classList = link.includes("github")
       ? ["devicon-github-original"]
       : ["fa", "fa-link"];

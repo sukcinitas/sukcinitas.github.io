@@ -633,9 +633,19 @@
 .project__links a {
   margin-right: 1rem;
   color: #a6a6a6;
+  position: relative;
 }
 .project__links a:hover {
   color: transparent;
+}
+.project__links a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #a6a6a6;
+  z-index: 1;
 }
 .project__icons {
   opacity: 0;
