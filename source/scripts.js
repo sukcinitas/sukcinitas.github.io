@@ -76,6 +76,20 @@ const { projects } = {
   ],
 };
 
+function toggleArrows() {
+  // toggle arrows
+  const leftArrow = document.querySelector(".arrow__left");
+  const rightArrow = document.querySelector(".arrow__right");
+  if (currentProjectIdx === 0) {
+    leftArrow.classList.add("arrow--hidden");
+  } else if (currentProjectIdx === projects.length - 1) {
+    rightArrow.classList.add("arrow--hidden");
+  } else {
+    leftArrow.classList.remove("arrow--hidden");
+    rightArrow.classList.remove("arrow--hidden");
+  }
+}
+
 // set project
 let currentProjectIdx = -1;
 function setProject(direction) {
@@ -91,17 +105,7 @@ function setProject(direction) {
     return;
   }
 
-  // toggle arrows
-  const leftArrow = document.querySelector(".arrow__left");
-  const rightArrow = document.querySelector(".arrow__right");
-  if (currentProjectIdx === 0) {
-    leftArrow.classList.add("arrow--hidden");
-  } else if (currentProjectIdx === projects.length - 1) {
-    rightArrow.classList.add("arrow--hidden");
-  } else {
-    leftArrow.classList.remove("arrow--hidden");
-    rightArrow.classList.remove("arrow--hidden");
-  }
+  toggleArrows();
 
   const projectData = projects[currentProjectIdx];
   const projectInfo = document.querySelector(".project__info");
@@ -315,7 +319,14 @@ if (window.IntersectionObserver) {
     observer.observe(section);
   });
 } else {
+  // instead of intersection observer
   document.querySelector(".scroll-arrow").style.dislay = "none";
+  document.addEventListener("scroll", toggleActiveIfNoIntersectionObserver, {
+    passive: true,
+  });
+}
+
+function toggleActiveIfNoIntersectionObserver() {
   function comesInViewport(element, idx = 0) {
     const rect = element.getBoundingClientRect();
     return (
@@ -329,57 +340,26 @@ if (window.IntersectionObserver) {
     );
   }
 
-  document.addEventListener(
-    "scroll",
-    function () {
-      // checking if tech stack comes in viewport
-      const el = document.querySelector(".tech-stack");
-      const divs = document.querySelectorAll(".tech-stack__list i");
-      if (comesInViewport(el, 0)) {
-        for (const element of divs) {
-          element.classList.add("active");
-        }
-      } else {
-        for (const element of divs) {
-          element.classList.remove("active");
-        }
-      }
-      //checking if project comes in viewport
-      const projectArray = Array.from(document.querySelectorAll(".project"));
-
-      projectArray.forEach((project, idx) => {
-        toggleActiveClass(project, idx);
-      });
-
-      function toggleActiveClass(element, idx) {
-        if (comesInViewport(element, idx)) {
-          element.classList.add("active");
-          const target = element
-            .querySelector(".project__wrapper")
-            .querySelector(".project__info")
-            .querySelector(".project__icons")
-            .querySelector(".fa-chevron-up");
-          if (target) {
-            target.classList.remove("fa-chevron-up");
-            target.classList.add("fa-chevron-down");
-          }
-        } else {
-          element.classList.remove("active");
-        }
-      }
-
-      // checking if title is in viewport
-      const titles = Array.from(document.querySelector(".about__title"));
-      titles.forEach((title) => {
-        if (comesInViewport(title)) {
-          title.classList.remove("paused");
-        } else {
-          title.classList.add("paused");
-        }
-      });
-    },
-    {
-      passive: true,
+  // checking if tech stack comes in viewport
+  const el = document.querySelector(".tech-stack");
+  const divs = document.querySelectorAll(".tech-stack__list i");
+  if (comesInViewport(el, 0)) {
+    for (const element of divs) {
+      element.classList.add("active");
     }
-  );
+  } else {
+    for (const element of divs) {
+      element.classList.remove("active");
+    }
+  }
+
+  // checking if title is in viewport
+  const titles = Array.from(document.querySelector(".about__title"));
+  titles.forEach((title) => {
+    if (comesInViewport(title)) {
+      title.classList.remove("paused");
+    } else {
+      title.classList.add("paused");
+    }
+  });
 }
