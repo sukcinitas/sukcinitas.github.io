@@ -161,6 +161,11 @@ function createElement(tag, classNames, textChildren, appendTo) {
   return element;
 }
 
+function toggleClass(event, className) {
+  const element = event.currentTarget;
+  element.classList.toggle(className);
+}
+
 // stacking animation
 const techIcons = Array.from(document.querySelectorAll(".tech-stack__icon"));
 techIcons.forEach((techIcon) => {
@@ -247,10 +252,12 @@ if (window.IntersectionObserver) {
     const arrow = document.querySelector(".scroll-arrow");
     const contact = document.querySelector(".contact");
     const greetings = document.querySelectorAll(".greetings");
+
     entries.forEach((entry) => {
       entry.isIntersecting
         ? entry.target.classList.add("in")
         : entry.target.classList.remove("in");
+
       if (entry.isIntersecting) {
         intersectionIndex = sections.findIndex((e) => e === entry.target);
         renewNavbar(intersectionIndex);
