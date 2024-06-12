@@ -70,6 +70,10 @@ body {
   @include vendor-prefix('animation-play-state', 'paused');
 }
 
+.notes {
+  margin-top: -2rem;
+}
+
 .note {
   font-size: 1.2rem;
   color: $bright-2;
