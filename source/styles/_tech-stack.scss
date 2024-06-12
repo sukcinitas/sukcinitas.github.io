@@ -40,7 +40,7 @@
   }
 }
 
-@for $i from 2 through 6 {
+@for $i from 2 through 8 {
   .tech-stack__list:nth-child(1) i.active:nth-child(#{$i}) {
     @include vendor-prefix(
       'animation',
@@ -50,7 +50,7 @@
   }
 }
 
-@for $i from 2 through 6 {
+@for $i from 2 through 8 {
   .tech-stack__list:nth-child(2) i.active:nth-child(#{$i}) {
     @include vendor-prefix(
       'animation',
@@ -60,7 +60,7 @@
   }
 }
 
-@for $i from 2 through 6 {
+@for $i from 2 through 8 {
   .tech-stack__list:nth-child(3) i.active:nth-child(#{$i}) {
     @include vendor-prefix(
       'animation',
@@ -70,7 +70,7 @@
   }
 }
 
-@for $i from 2 through 6 {
+@for $i from 2 through 8 {
   .tech-stack__list:nth-child(4) i.active:nth-child(#{$i}) {
     @include vendor-prefix(
       'animation',

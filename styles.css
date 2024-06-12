@@ -230,6 +230,32 @@
   animation-fill-mode: forwards;
 }
 
+.tech-stack__list:nth-child(1) i.active:nth-child(7) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 7);
+  -moz-animation: stack-animation 600ms calc(100ms * 7);
+  -ms-animation: stack-animation 600ms calc(100ms * 7);
+  -o-animation: stack-animation 600ms calc(100ms * 7);
+  animation: stack-animation 600ms calc(100ms * 7);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.tech-stack__list:nth-child(1) i.active:nth-child(8) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 8);
+  -moz-animation: stack-animation 600ms calc(100ms * 8);
+  -ms-animation: stack-animation 600ms calc(100ms * 8);
+  -o-animation: stack-animation 600ms calc(100ms * 8);
+  animation: stack-animation 600ms calc(100ms * 8);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 .tech-stack__list:nth-child(2) i.active:nth-child(2) {
   -webkit-animation: stack-animation 600ms calc(100ms * 2 + 600ms);
   -moz-animation: stack-animation 600ms calc(100ms * 2 + 600ms);
@@ -288,6 +314,32 @@
   -ms-animation: stack-animation 600ms calc(100ms * 6 + 600ms);
   -o-animation: stack-animation 600ms calc(100ms * 6 + 600ms);
   animation: stack-animation 600ms calc(100ms * 6 + 600ms);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.tech-stack__list:nth-child(2) i.active:nth-child(7) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 7 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 7 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 7 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 7 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 7 + 600ms);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.tech-stack__list:nth-child(2) i.active:nth-child(8) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 8 + 600ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 8 + 600ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 8 + 600ms);
+  -o-animation: stack-animation 600ms calc(100ms * 8 + 600ms);
+  animation: stack-animation 600ms calc(100ms * 8 + 600ms);
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
@@ -360,6 +412,32 @@
   animation-fill-mode: forwards;
 }
 
+.tech-stack__list:nth-child(3) i.active:nth-child(7) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 7 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 7 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 7 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 7 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 7 + 1200ms);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.tech-stack__list:nth-child(3) i.active:nth-child(8) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 8 + 1200ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 8 + 1200ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 8 + 1200ms);
+  -o-animation: stack-animation 600ms calc(100ms * 8 + 1200ms);
+  animation: stack-animation 600ms calc(100ms * 8 + 1200ms);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 .tech-stack__list:nth-child(4) i.active:nth-child(2) {
   -webkit-animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
   -moz-animation: stack-animation 600ms calc(100ms * 2 + 1800ms);
@@ -418,6 +496,32 @@
   -ms-animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
   -o-animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
   animation: stack-animation 600ms calc(100ms * 6 + 1800ms);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.tech-stack__list:nth-child(4) i.active:nth-child(7) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 7 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 7 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 7 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 7 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 7 + 1800ms);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.tech-stack__list:nth-child(4) i.active:nth-child(8) {
+  -webkit-animation: stack-animation 600ms calc(100ms * 8 + 1800ms);
+  -moz-animation: stack-animation 600ms calc(100ms * 8 + 1800ms);
+  -ms-animation: stack-animation 600ms calc(100ms * 8 + 1800ms);
+  -o-animation: stack-animation 600ms calc(100ms * 8 + 1800ms);
+  animation: stack-animation 600ms calc(100ms * 8 + 1800ms);
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
