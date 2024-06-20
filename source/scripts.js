@@ -114,7 +114,7 @@ function setProject(direction) {
   project.innerHTML = "";
 
   /* set project title, text, links and tech stack */
-  createElement("h3", ["project__title"], [projectData.title], projectInfo);
+  createElement("h4", ["project__title"], [projectData.title], projectInfo);
 
   for (const text of projectData.content) {
     createElement("p", ["project__text"], [text], projectInfo);
@@ -139,6 +139,7 @@ function setProject(direction) {
         ? "Backend code"
         : "Frontend code";
     }
+    linkNode['aria-label'] =linkNode.title;
 
     const classList = link.includes("github")
       ? ["devicon-github-original"]

@@ -99,7 +99,7 @@
   }
 
   &__stack {
-    color: $bright-2;
+    color: lighten($bright-2, 20%);
     word-spacing: 4px;
     pointer-events: none;
   }

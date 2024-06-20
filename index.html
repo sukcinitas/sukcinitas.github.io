@@ -21,12 +21,12 @@
   </head>
   <body onLoad="loadBody()">
     <navbar class="navbar">
-      <button class="navbar__bar" data-text="about" onclick="clickBar(0)"></button>
-      <button class="navbar__bar" data-text="tech stack" onclick="clickBar(1)"></button>
-      <button class="navbar__bar" data-text="projects" onclick="clickBar(2)"></button>
-      <button class="navbar__bar" data-text="education" onclick="clickBar(3)"></button>
-      <button class="navbar__bar" data-text="experience" onclick="clickBar(4)"></button>
-      <button class="navbar__bar" data-text="contact" onclick="clickBar(5)"></button>
+      <button class="navbar__bar" data-text="about" aria-label="about" onclick="clickBar(0)"></button>
+      <button class="navbar__bar" data-text="tech stack" aria-label="tech stack" onclick="clickBar(1)"></button>
+      <button class="navbar__bar" data-text="projects" aria-label="projects" onclick="clickBar(2)"></button>
+      <button class="navbar__bar" data-text="education" aria-label="education" onclick="clickBar(3)"></button>
+      <button class="navbar__bar" data-text="experience" aria-label="experience" onclick="clickBar(4)"></button>
+      <button class="navbar__bar" data-text="contact" aria-label="contact" onclick="clickBar(5)"></button>
     </navbar>
 
     <header class="header">
@@ -131,10 +131,10 @@
             <!-- Project image -->
           </div>
           <!-- Arrows -->
-           <button class="arrow arrow__left" onclick="setProject('left')">
+           <button class="arrow arrow__left" aria-label="previous project" onclick="setProject('left')">
             <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
            </button>
-           <button class="arrow arrow__right" onclick="setProject('right')">
+           <button class="arrow arrow__right" aria-label="next project" onclick="setProject('right')">
             <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
            </button>
         </div>
@@ -145,7 +145,7 @@
         <h3 class="info__category">Experience</h3>
         <div class="info__wrapper">
           <div class="info__item">
-            <h5 class="info__item-title">Front-end Developer</h5>
+            <h4 class="info__item-title">Front-end Developer</h4>
             <p class="info__item-subtitle">
               Cherry TEAM
             </p>
@@ -170,7 +170,7 @@
             </p>
           </div>
           <div class="info__item">
-            <h5 class="info__item-title">Junior Front-end Developer</h5>
+            <h4 class="info__item-title">Junior Front-end Developer</h4>
             <p class="info__item-subtitle">
               Cherry TEAM
             </p>
@@ -192,7 +192,7 @@
             </p>
           </div>
           <div class="info__item">
-            <h5 class="info__item-title">Front-end Developer Intern</h5>
+            <h4 class="info__item-title">Front-end Developer Intern</h4>
             <p class="info__item-subtitle">
               Cherry TEAM
             </p>
@@ -214,16 +214,17 @@
         <h3 class="info__category">Education</h3>
         <div class="info__wrapper">
           <div class="info__item">
-            <h5 class="info__item-title">Legacy Full Stack
+            <h4 class="info__item-title">Legacy Full Stack
               <a
               class="link link--bright"
               href="https://www.freecodecamp.org/certification/sukcinitas/full-stack"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="freecodecamp legacy full-stack certification"
               >
                 <i class="fa fa-link"></i>
               </a>
-            </h5>
+            </h4>
             <p class="info__item-subtitle">FreeCodeCamp</p>
             <span class="info__item-details">Sep 2018 – Dec 2019</span>
             <p class="info__item-description">This is the place where I first started learning programming.
@@ -235,7 +236,7 @@
             </p>
           </div>
           <div class="info__item">
-            <h5 class="info__item-title">Medical Doctor, Master’s Degree in Medicine</h5>
+            <h4 class="info__item-title">Medical Doctor, Master’s Degree in Medicine</h4>
             <p class="info__item-subtitle">Vilnius University, Vilnius</p>
             <span class="info__item-details">Sep 2012 – Jun 2018</span>
           </div>
@@ -260,6 +261,7 @@
             href="https://github.com/sukcinitas"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="github"
           >
             <i class="devicon-github-original"></i>
           </a>
@@ -268,6 +270,7 @@
             href="https://www.linkedin.com/in/gintarecerniauskaite/"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="linkedin"
           >
             <i class="devicon-linkedin-plain"></i>
           </a>
@@ -277,6 +280,7 @@
             download="gintare_cerniauskaite_resume"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="resume file"
           >
             <i class="fa fa-file-pdf-o"></i>
           </a>
@@ -285,6 +289,7 @@
             href="https://replit.com/@sukcinitas"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="replit"
           >
             <i class="devicon-replit-original"></i>
           </a>
@@ -293,6 +298,7 @@
             href="https://codepen.io/sukcinitas"
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="codepen"
           >
             <i class="devicon-codepen-plain"></i>
           </a>

@@ -22,7 +22,7 @@
   }
 
   &__item-title {
-    color: $bright-2;
+    color: lighten($bright-2, 20%);
     font-size: 1.6rem;
     margin: 0;
   }

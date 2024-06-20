@@ -76,7 +76,7 @@ body {
 
 .note {
   font-size: 1.2rem;
-  color: $bright-2;
+  color: lighten($bright-2, 20%);
 
   & a {
     color: inherit;

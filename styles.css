@@ -747,7 +747,7 @@
   transition-delay: 500ms;
 }
 .project__stack {
-  color: #7b3386;
+  color: #b45dc2;
   word-spacing: 4px;
   pointer-events: none;
 }
@@ -794,7 +794,7 @@
   border-bottom-left-radius: 0;
 }
 .info__item-title {
-  color: #7b3386;
+  color: #b45dc2;
   font-size: 1.6rem;
   margin: 0;
 }
@@ -1152,7 +1152,7 @@ body {
 
 .note {
   font-size: 1.2rem;
-  color: #7b3386;
+  color: #b45dc2;
 }
 .note a {
   color: inherit;
