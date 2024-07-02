@@ -49,6 +49,7 @@ const { projects } = {
       title: "Cats Wiki",
       content: [
         "A responsive React & Express.js app that fetches information about cat breeds from CatAPI and keeps track of the most searched ones. This app was built for completing a challenge actualizing an already made design (Figma).",
+        "I created two versions of this app: one using pure React and the other with Next.js. Both are hosted online, so feel free to explore them if you're interested how they compare.",
         "While building this app I improved skills regarding responsive design, images, and TypeScript.",
       ],
       links: [
@@ -56,7 +57,11 @@ const { projects } = {
         "https://github.com/sukcinitas/dc-cat-wiki-api",
         "https://cats-wiki.netlify.app/#/",
       ],
-      tools: "Typescript Sass React Express Mocha & Chai Webpack",
+      additionalLinks: [
+        "https://github.com/sukcinitas/dc-cat-wiki-next",
+        "https://dc-cat-wiki-next.vercel.app/",
+      ],
+      tools: "Typescript Sass React Next.js Express Mocha & Chai Webpack",
       images: ["assets/cw-1.gif"],
     },
     {
@@ -120,31 +125,9 @@ function setProject(direction) {
     createElement("p", ["project__text"], [text], projectInfo);
   }
 
-  const projectLinks = createElement(
-    "div",
-    ["project__links"],
-    [],
-    projectInfo
-  );
-  for (const link of projectData.links) {
-    const linkNode = createElement("a", [], [], projectLinks);
-    linkNode.href = link;
-    linkNode.target = "_blank";
-    linkNode.rel = "noopener noreferrer";
-
-    if (!link.includes("github")) {
-      linkNode.title = "To demo site";
-    } else {
-      linkNode.title = /(api|server|up-up$)/.test(link)
-        ? "Backend code"
-        : "Frontend code";
-    }
-    linkNode['aria-label'] =linkNode.title;
-
-    const classList = link.includes("github")
-      ? ["devicon-github-original"]
-      : ["fa", "fa-link"];
-    createElement("i", classList, [], linkNode);
+  createLinkList(projectData.links, projectInfo);
+  if (projectData.additionalLinks) {
+    createLinkList(projectData.additionalLinks, projectInfo);
   }
 
   createElement("span", ["project__stack"], [projectData.tools], projectInfo);
@@ -172,6 +155,30 @@ function createElement(tag, classNames, textChildren, appendTo) {
   appendTo.append(element);
 
   return element;
+}
+
+function createLinkList(links, appendTo) {
+  const projectLinks = createElement("div", ["project__links"], [], appendTo);
+  for (const link of links) {
+    const linkNode = createElement("a", [], [], projectLinks);
+    linkNode.href = link;
+    linkNode.target = "_blank";
+    linkNode.rel = "noopener noreferrer";
+
+    if (!link.includes("github")) {
+      linkNode.title = "To demo site";
+    } else {
+      linkNode.title = /(api|server|up-up$)/.test(link)
+        ? "Backend code"
+        : "Frontend code";
+    }
+    linkNode["aria-label"] = linkNode.title;
+
+    const classList = link.includes("github")
+      ? ["devicon-github-original"]
+      : ["fa", "fa-link"];
+    createElement("i", classList, [], linkNode);
+  }
 }
 
 function toggleClass(event, className) {

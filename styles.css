@@ -752,6 +752,10 @@
   pointer-events: none;
 }
 
+.project__links + .project__links {
+  padding-top: 0;
+}
+
 .arrow {
   position: absolute;
   top: 50%;
